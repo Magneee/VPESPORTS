@@ -1,0 +1,16 @@
+{
+  "name": "vpesports-html",
+  "version": "1.0.0",
+  "description": "VPEsports website layout for WordPress theme",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/style.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0"
+  },
+  "keywords": ["esports", "website", "tailwind", "wordpress"],
+  "author": "",
+  "license": "ISC"
+} 
