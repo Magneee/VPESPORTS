@@ -1,0 +1,317 @@
+/**
+ * Esports Slider Styles
+ * Additional styles for the slider functionality
+ */
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider Track */
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Individual Slides */
+.slider-slide {
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Navigation Buttons */
+.slider-prev,
+.slider-next {
+    opacity: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.slider-container:hover .slider-prev,
+.slider-container:hover .slider-next {
+    opacity: 1;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(1.1);
+}
+
+/* Dots Navigation */
+.slider-dot {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.slider-dot:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    transform: scale(1.2);
+}
+
+
+/* Content Slides */
+.slide-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.slide-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Texture Layer Animations */
+.slider-slide .absolute[style*="backdrop-filter"] {
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effects for Interactive Elements */
+.slider-container .bg-brand-red\/20 {
+    transition: all 0.3s ease;
+}
+
+.slider-container:hover .bg-brand-red\/20 {
+    background-color: rgba(255, 68, 85, 0.3) !important;
+}
+
+/* Loading States */
+.slider-container.loading {
+    pointer-events: none;
+}
+
+.slider-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 30;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Touch Feedback */
+.slider-container.touching {
+    cursor: grabbing;
+}
+
+.slider-container.touching .slider-track {
+    transition: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slider-prev,
+    .slider-next {
+        width: 36px;
+        height: 36px;
+        opacity: 1;
+    }
+    
+    .slider-prev {
+        left: 8px;
+    }
+    
+    .slider-next {
+        right: 8px;
+    }
+    
+    .slider-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-prev,
+    .slider-next {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .slider-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Accessibility */
+.slider-prev:focus,
+.slider-next:focus,
+.slider-dot:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .slider-prev,
+    .slider-next {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        border: 2px solid white;
+    }
+    
+    .slider-dot {
+        border: 1px solid white;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .slider-track {
+        transition: transform 0.1s ease-in-out;
+    }
+    
+    .slide-content {
+        transition: opacity 0.1s ease;
+    }
+    
+    .slider-prev,
+    .slider-next,
+    .slider-dot {
+        transition: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .slider-container {
+        break-inside: avoid;
+    }
+    
+    .slider-prev,
+    .slider-next,
+    .slider-dot {
+        display: none;
+    }
+    
+    .slider-track {
+        transform: none !important;
+    }
+    
+    .slider-slide {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* WordPress Specific Styles */
+.wp-admin .slider-container {
+    pointer-events: none;
+}
+
+.wp-admin .slider-container::before {
+    content: 'Slider Preview - Interactive in Frontend';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 40;
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Focus Visible for Better Accessibility */
+.slider-prev:focus-visible,
+.slider-next:focus-visible,
+.slider-dot:focus-visible {
+    outline: 2px solid #FF4655;
+    outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .slider-container {
+        /* Already dark themed */
+    }
+}
+
+/* Custom Properties for Easy Theming */
+:root {
+    --slider-transition-duration: 0.5s;
+    --slider-autoplay-delay: 5s;
+    --slider-dot-size: 16px;
+    --slider-nav-size: 40px;
+    --slider-blur-amount: 16px;
+}
+
+/* Animation for Slide Content */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-content.active {
+    animation: slideInFromBottom 0.6s ease-out;
+}
+
+/* Hover Effects for Content */
+.slider-container:hover .slide-content.active {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+/* Custom Cursor for Dragging */
+.slider-container.dragging {
+    cursor: grabbing;
+}
+
+.slider-container.dragging * {
+    cursor: grabbing !important;
+    user-select: none;
+}
+
+/* Performance Optimizations */
+.slider-track {
+    will-change: transform;
+}
+
+.slider-slide img {
+    will-change: transform;
+}
+
+/* Error States */
+.slider-container.error::after {
+    content: 'Failed to load slider content';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 68, 85, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 30;
+} 

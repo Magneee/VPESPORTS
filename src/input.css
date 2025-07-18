@@ -195,6 +195,39 @@
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     background: #FF6B75;
   }
+  
+  /* Стили для радиокнопок в блоке голосования */
+  input[type="radio"] {
+    @apply text-brand-red border-brand-red border-[1.5px] rounded-full appearance-none opacity-50; 
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked {
+    @apply opacity-100 bg-transparent border-brand-red;
+  }
+  
+  input[type="radio"]:checked::after {
+    @apply bg-brand-red border-brand-red rounded-full;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  input[type="radio"]:not(:checked) {
+    @apply opacity-50 bg-transparent;
+  } 
+}
+.slider-dot.active {
+  @apply bg-white/90 w-[38px] h-4 rounded-full;
 }
 
 @layer utilities {
