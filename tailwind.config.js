@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html", "./assets/js/*.js"],
+  content: ["./*.html", "./pages/*.html", "./assets/js/**/*.js"],
   theme: {
     extend: {
       colors: {
@@ -10,9 +10,13 @@ module.exports = {
         'brand-darker': '#0E0E10',
         'brand-gray': '#1B1B1E',
         'brand-light-gray': '#1B1B1E',
+        'brand-yellow': '#FFC107',
         'brand-accent': '#FF6B75',
         'brand-dark-gray': '#171719',
         'brand-tags-bg': '#29292A',
+        'brand-border-dark': '#FFFFFF',
+        'brand-bg-dark': '#FFFFFF',
+
         // Цвета для статусов
         'success': '#10B981',
         'warning': '#F59E0B',
@@ -24,6 +28,16 @@ module.exports = {
         'team-orange': '#F5A623',
         'team-purple': '#7B68EE',
         'team-green': '#50E3C2',
+        'team-gray': '#EEEEEE',
+        'team-red-2': '#FF2C2C',
+        'team-red-1': '#FF0000',
+        
+        'tag-legendary': '#D83BD8',
+        'tag-new': '#0CC70C',
+        'tag-popular': '#FFC107',
+        'tag-top': '#FF2C2C',
+        'tag-free': '#00B9FF',
+        'tag-bonus': '#FF9900',
         
         // Градиенты
         'gradient-start': '#FF4655',
@@ -36,14 +50,15 @@ module.exports = {
         'furore': ['Furore', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'xs': ['0.75rem', { lineHeight: '100%' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '100%' }],
-        'lg': ['1.125rem', { lineHeight: '100%' }],
+        'xs': ['0.75rem', { lineHeight: '15px' }],
+        'sm': ['0.875rem', { lineHeight: '1.0625rem' }],
+        'base': ['1rem', { lineHeight: '19px' }],
+        'lg': ['1.125rem', { lineHeight: '1.5625rem' }],
         'xl': ['1.25rem', { lineHeight: '100%' }],
-        '2xl': ['1.5rem', { lineHeight: '100%' }],
+        'xl-2': ['1.375rem', { lineHeight: '140%' }],
+        '2xl': ['1.5rem', { lineHeight: '140%' }],
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '3.5xl': ['2rem', { lineHeight: '2.3125rem' }],
+        '3.5xl': ['2rem', { lineHeight: '2.4375rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         '5xl': ['3rem', { lineHeight: '1' }],
         '6xl': ['3.75rem', { lineHeight: '1' }],

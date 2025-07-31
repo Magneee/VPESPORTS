@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — VPEsports</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/slider.css">
+  <style>
+    body {  
+      min-height: 100vh;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), url('../assets/images/login-register-bg.png') lightgray 0px -6.328px / 100% 210.938% no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      width: 1440px;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      position: relative;
+      padding: 66px 128px 66px 117px;
+
+    }
+
+    .wrapper-logo {
+      position: relative;
+      z-index: 2;
+    }
+
+    .login-logo-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #222224;
+      filter: blur(101.5px);
+    }
+
+    .login-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-logo img {
+      width: 424px !important;
+      width: 100%;
+      height: 127.931px;
+      user-select: none;
+      position: relative;
+      pointer-events: none;
+    }
+
+    .login-form-wrap {
+      width: 557px;
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      z-index: 2;
+      min-height: 650px;
+      background: rgba(45, 45, 45, 0.50);
+      backdrop-filter: blur(82px);
+    }
+
+    .login-form-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .login-form-title svg {
+      min-width: 24px;
+      min-height: 24px;
+    }
+
+    .login-form-title span {
+      font-family: 'Furore', 'Orbitron', 'sans-serif';
+      font-size: 2.1rem;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .login-form-sub {
+      font-size: 20px;
+      height: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.4px;
+    }
+
+    .login-form-sub a {
+      color: #FFF;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.4px;
+      transition: color 0.2s;
+      border-bottom: 1px solid #FFF;
+    }
+
+    .login-form-sub a:hover {
+      color: #FF2C2C;
+      border-bottom: 1px solid #FF2C2C;
+    }
+
+    .login-input-label {
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: -0.32px;
+      opacity: 0.5;
+    }
+
+    .login-input {
+      border-radius: 56px;
+      border: 1px solid rgba(255, 255, 255, 0.50);
+      color: #fff;
+      background: transparent;
+      font-size: 1rem;
+      width: 100%;
+      outline: none;
+      transition: border 0.2s;
+      display: flex;
+      height: 52px;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.4px;
+    }
+
+    .login-input.has-icon {
+      padding: 0 52px 0 20px;
+    }
+
+    .login-input:not(.has-icon) {
+      padding: 0 20px;
+    }
+
+    .login-input::placeholder {
+      color: #FFF;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      opacity: 0.5;
+    }
+
+    /* Custom password field with SVG stars */
+    .password-field-wrapper {
+      position: relative;
+    }
+
+    .password-stars-placeholder {
+      position: absolute;
+      left: 20px;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      opacity: 0.5;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .password-stars-display {
+      position: absolute;
+      left: 20px;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 1;
+      display: none;
+      align-items: center;
+      flex-wrap: nowrap;
+      height: 10px;
+      line-height: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .password-stars-container {
+      position: relative;
+      transition: transform 0.1s ease;
+    }
+
+    .password-input-hidden {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 60px);
+      height: 100%;
+      z-index: 3;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      padding: 0 20px;
+      color: transparent;
+      caret-color: transparent;
+    }
+
+    .password-cursor {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 20px;
+      background: white;
+      z-index: 2;
+      animation: blink 1s infinite;
+      display: none;
+      max-left: calc(100% - 60px);
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .password-input-visible {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 60px);
+      height: 100%;
+      z-index: 3;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      padding: 0 20px;
+      color: white;
+      caret-color: white;
+      display: none;
+    }
+
+    .login-input-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .login-select {
+      cursor: pointer;
+      color: #fff8;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 4;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    .login-eye {
+      cursor: pointer;
+      color: #fff8;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+
+
+    .login-recaptcha {
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .login-divider {
+      border: none;
+      border-top: 1.5px solid #fff2;
+      margin: 18px 0 16px 0;
+    }
+
+    .login-divider-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0 24px 0;
+    }
+
+    .login-divider-line {
+      flex: 1;
+      height: 2px;
+      background: #fff;
+      opacity: 0.3;
+      border-radius: 16px;
+    }
+
+    .login-or {
+      color: #FFFFFF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.54px;
+      opacity: 0.5;
+    }
+
+    .login-google {
+      display: flex;
+      height: 56px;
+      padding: 10px 16px;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      background: #fff;
+      color: #232325;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      border: none;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+      color: #1F1F1F;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .login-google:hover {
+      box-shadow: 0 2px 8px 0 #0002;
+    }
+
+    @media (max-width: 900px) {
+      .login-container {
+        flex-direction: column;
+        width: 100vw;
+        min-width: 320px;
+        max-width: 100vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px 66px 20px;
+        gap: 0;
+      }
+
+      .login-form-wrap {
+        width: 100%;
+      }
+
+      .login-logo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+      }
+
+      .login-logo img {
+        width: 144.957px !important;
+        height: 43.737px !important;
+      }
+
+
+    }
+
+    @media (max-width: 430px) {
+      body {
+        align-items: start;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), url(../assets/images/login-register-bg.png) lightgray -46.333px 0px / 203.419% 140.995% no-repeat;
+      }
+
+      .login-container {
+        display: inline-flex;
+        padding: 50.135px 20px 0px 20px;
+        gap: 51.25px;
+      }
+
+      .login-logo {
+        margin-bottom: 0px;
+      }
+
+      .login-logo-bg {
+        background: #222224;
+        filter: blur(34.70085525512695px);
+      }
+
+      .login-input-wrap {
+        gap: 8px;
+      }
+
+      .login-form-wrap {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        margin: 0 auto;
+        min-height: auto;
+      }
+
+      .login-form-title span {
+        font-size: 1.5rem;
+      }
+
+      .login-form-sub {
+        font-size: 12px;
+        height: auto;
+        line-height: 16px;
+      }
+
+      .login-form-sub a {
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .login-input-label {
+        font-size: 11px;
+        letter-spacing: -0.22px;
+        line-height: 13px;
+      }
+
+      .login-input::placeholder {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .password-input-visible {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+
+      .login-input {
+        height: 40px;
+        font-size: 14px;
+        padding: 0 16px;
+      }
+
+      .login-input.has-icon {
+        padding: 0 44px 0 16px;
+      }
+
+      .login-select {
+        right: 16px;
+        width: 24px;
+        height: 24px;
+      }
+
+      .login-select svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .login-form-wrap .login-svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .login-eye {
+        right: 16px;
+        width: 24px;
+        height: 24px;
+      }
+
+      .login-eye svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .password-input-hidden {
+        width: calc(100% - 44px);
+        padding: 0 16px;
+      }
+
+      .password-input-visible {
+        width: calc(100% - 44px);
+        padding: 0 16px;
+      }
+
+      .password-stars-placeholder {
+        left: 16px;
+        right: 44px;
+      }
+
+      .password-stars-display {
+        left: 16px;
+        right: 44px;
+      }
+
+      .password-cursor {
+        left: 16px;
+      }
+
+
+      .login-divider-row {
+        margin: 24px 0 16px 0;
+        gap: 16px;
+      }
+
+      .login-or {
+        font-size: 14px;
+        letter-spacing: -0.42px;
+        line-height: 17px;
+      }
+
+      .login-google {
+        height: 48px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <!-- Левая часть: логотип -->
+    <div class="login-logo">
+      <div
+        class="wrapper-logo px-[22px] pt-[31px] pb-[30.07px] max-[430px]:pt-[10.28px] max-[430px]:pb-[10.6px] max-[430px]:px-[7.52px]">
+        <div class="login-logo-bg"></div>
+        <img src="../assets/images/login-register-logo.png" alt="VPEsports" draggable="false">
+      </div>
+    </div>
+    <!-- Правая часть: форма -->
+    <div class="login-form-wrap">
+      <div class="flex items-center justify-between">
+        <div class="flex items-start gap-2 max-[430px]:items-start">
+          <span class="text-brand-red">
+            <span class="block pt-3 max-[430px]:pt-1.5 ">
+              <svg class="login-svg" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="#FF2C2C" />
+              </svg>
+            </span>
+          </span>
+          <div class="flex flex-col gap-3 max-[430px]:gap-1 mb-9 max-[430px]:mb-6">
+            <span
+              class="font-furore text-5xl font-normal tracking-tightest text-white leading-[55px] max-[430px]:text-2xl max-[430px]:leading-[28px]">Create
+              account</span>
+            <div class="login-form-sub text-white/70 max-[430px]:pl-0 max-[430px]:mb-0 max-[430px]:text-xs">Already have an account? <a
+                href="#">Sign in</a></div>
+          </div>
+        </div>
+
+      </div>
+      <form class="flex flex-col" autocomplete="off">
+        <div class="login-input-wrap">
+          <label class="login-input-label" for="username">Username</label>
+          <input id="username" type="text" class="login-input" placeholder="Name123">
+        </div>
+        <div class="login-input-wrap">
+          <label class="login-input-label" for="email">Email post</label>
+          <div style="position: relative;">
+            <input id="email" type="email" class="login-input" placeholder="vpesports@gmail.com">
+            <span class="login-select" id="email-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M4.5 12.75L10.5 18.75L19.5 5.25" stroke="#FF2C2C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="login-input-wrap">
+          <label class="login-input-label" for="password">Password</label>
+          <div class="password-field-wrapper">
+            <div class="login-input" style="position: relative;" id="password-stars-scroll">
+              <div class="password-stars-placeholder" id="password-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="123" height="10" viewBox="0 0 123 10" fill="none">
+                  <g opacity="0.5">
+                    <path
+                      d="M3.21023 9.091L3.32386 5.966L0.681818 7.64213L0 6.44895L2.78409 5.00009L0 3.55122L0.681818 2.35804L3.32386 4.03418L3.21023 0.90918H4.57386L4.46023 4.03418L7.10227 2.35804L7.78409 3.55122L5 5.00009L7.78409 6.44895L7.10227 7.64213L4.46023 5.966L4.57386 9.091H3.21023Z"
+                      fill="white" />
+                    <path
+                      d="M12.8102 9.091L12.9239 5.966L10.2818 7.64213L9.6 6.44895L12.3841 5.00009L9.6 3.55122L10.2818 2.35804L12.9239 4.03418L12.8102 0.90918H14.1739L14.0602 4.03418L16.7023 2.35804L17.3841 3.55122L14.6 5.00009L17.3841 6.44895L16.7023 7.64213L14.0602 5.966L14.1739 9.091H12.8102Z"
+                      fill="white" />
+                    <path
+                      d="M22.4102 9.091L22.5239 5.966L19.8818 7.64213L19.2 6.44895L21.9841 5.00009L19.2 3.55122L19.8818 2.35804L22.5239 4.03418L22.4102 0.90918H23.7739L23.6602 4.03418L26.3023 2.35804L26.9841 3.55122L24.2 5.00009L26.9841 6.44895L26.3023 7.64213L23.6602 5.966L23.7739 9.091H22.4102Z"
+                      fill="white" />
+                    <path
+                      d="M32.0102 9.091L32.1239 5.966L29.4818 7.64213L28.8 6.44895L31.5841 5.00009L28.8 3.55122L29.4818 2.35804L32.1239 4.03418L32.0102 0.90918H33.3739L33.2602 4.03418L35.9023 2.35804L36.5841 3.55122L33.8 5.00009L36.5841 6.44895L35.9023 7.64213L33.2602 5.966L33.3739 9.091H32.0102Z"
+                      fill="white" />
+                    <path
+                      d="M41.6102 9.091L41.7239 5.966L39.0818 7.64213L38.4 6.44895L41.1841 5.00009L38.4 3.55122L39.0818 2.35804L41.7239 4.03418L41.6102 0.90918H42.9739L42.8602 4.03418L45.5023 2.35804L46.1841 3.55122L43.4 5.00009L46.1841 6.44895L45.5023 7.64213L42.8602 5.966L42.9739 9.091H41.6102Z"
+                      fill="white" />
+                    <path
+                      d="M51.2102 9.091L51.3239 5.966L48.6818 7.64213L48 6.44895L50.7841 5.00009L48 3.55122L48.6818 2.35804L51.3239 4.03418L51.2102 0.90918H52.5739L52.4602 4.03418L55.1023 2.35804L55.7841 3.55122L53 5.00009L55.7841 6.44895L55.1023 7.64213L52.4602 5.966L52.5739 9.091H51.2102Z"
+                      fill="white" />
+                    <path
+                      d="M60.8102 9.091L60.9239 5.966L58.2818 7.64213L57.6 6.44895L60.3841 5.00009L57.6 3.55122L58.2818 2.35804L60.9239 4.03418L60.8102 0.90918H62.1739L62.0602 4.03418L64.7023 2.35804L65.3841 3.55122L62.6 5.00009L65.3841 6.44895L64.7023 7.64213L62.0602 5.966L62.1739 9.091H60.8102Z"
+                      fill="white" />
+                    <path
+                      d="M70.4102 9.091L70.5239 5.966L67.8818 7.64213L67.2 6.44895L69.9841 5.00009L67.2 3.55122L67.8818 2.35804L70.5239 4.03418L70.4102 0.90918H71.7739L71.6602 4.03418L74.3023 2.35804L74.9841 3.55122L72.2 5.00009L74.9841 6.44895L74.3023 7.64213L71.6602 5.966L71.7739 9.091H70.4102Z"
+                      fill="white" />
+                    <path
+                      d="M80.0102 9.091L80.1239 5.966L77.4818 7.64213L76.8 6.44895L79.5841 5.00009L76.8 3.55122L77.4818 2.35804L80.1239 4.03418L80.0102 0.90918H81.3739L81.2602 4.03418L83.9023 2.35804L84.5841 3.55122L81.8 5.00009L84.5841 6.44895L83.9023 7.64213L81.2602 5.966L81.3739 9.091H80.0102Z"
+                      fill="white" />
+                    <path
+                      d="M89.6102 9.091L89.7239 5.966L87.0818 7.64213L86.4 6.44895L89.1841 5.00009L86.4 3.55122L87.0818 2.35804L89.7239 4.03418L89.6102 0.90918H90.9739L90.8602 4.03418L93.5023 2.35804L94.1841 3.55122L91.4 5.00009L94.1841 6.44895L93.5023 7.64213L90.8602 5.966L90.9739 9.091H89.6102Z"
+                      fill="white" />
+                    <path
+                      d="M99.2102 9.091L99.3239 5.966L96.6818 7.64213L96 6.44895L98.7841 5.00009L96 3.55122L96.6818 2.35804L99.3239 4.03418L99.2102 0.90918H100.574L100.46 4.03418L103.102 2.35804L103.784 3.55122L101 5.00009L103.784 6.44895L103.102 7.64213L100.46 5.966L100.574 9.091H99.2102Z"
+                      fill="white" />
+                    <path
+                      d="M108.81 9.091L108.924 5.966L106.282 7.64213L105.6 6.44895L108.384 5.00009L105.6 3.55122L106.282 2.35804L108.924 4.03418L108.81 0.90918H110.174L110.06 4.03418L112.702 2.35804L113.384 3.55122L110.6 5.00009L113.384 6.44895L112.702 7.64213L110.06 5.966L110.174 9.091H108.81Z"
+                      fill="white" />
+                    <path
+                      d="M118.41 9.091L118.524 5.966L115.882 7.64213L115.2 6.44895L117.984 5.00009L115.2 3.55122L115.882 2.35804L118.524 4.03418L118.41 0.90918H119.774L119.66 4.03418L122.302 2.35804L122.984 3.55122L120.2 5.00009L122.984 6.44895L122.302 7.64213L119.66 5.966L119.774 9.091H118.41Z"
+                      fill="white" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="password-stars-display" id="password-display">
+                <div class="password-stars-container" id="password-stars-container"></div>
+              </div>
+
+              <div class="password-cursor" id="password-cursor"></div>
+
+              <input id="password" type="password" class="password-input-hidden" autocomplete="current-password">
+
+              <input id="password-visible" type="text" class="password-input-visible" autocomplete="current-password">
+            </div>
+            <span class="login-eye" id="password-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15Z"
+                  fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.32308 11.447C2.81108 6.976 7.02808 3.75 12.0011 3.75C16.9711 3.75 21.1861 6.973 22.6761 11.44C22.7961 11.802 22.7961 12.192 22.6761 12.553C21.1891 17.024 16.9711 20.25 11.9991 20.25C7.02908 20.25 2.81308 17.027 1.32408 12.56C1.20382 12.1987 1.20382 11.8083 1.32408 11.447H1.32308ZM17.2501 12C17.2501 13.3924 16.697 14.7277 15.7124 15.7123C14.7278 16.6969 13.3925 17.25 12.0001 17.25C10.6077 17.25 9.27233 16.6969 8.28777 15.7123C7.3032 14.7277 6.75008 13.3924 6.75008 12C6.75008 10.6076 7.3032 9.27225 8.28777 8.28769C9.27233 7.30312 10.6077 6.75 12.0001 6.75C13.3925 6.75 14.7278 7.30312 15.7124 8.28769C16.697 9.27225 17.2501 10.6076 17.2501 12Z"
+                  fill="white" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="login-input-wrap">
+          <label class="login-input-label" for="confirm-password">Confirm password</label>
+          <div class="password-field-wrapper">
+            <div class="login-input" style="position: relative;" id="confirm-password-stars-scroll">
+              <div class="password-stars-placeholder" id="confirm-password-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="123" height="10" viewBox="0 0 123 10" fill="none">
+                  <g opacity="0.5">
+                    <path
+                      d="M3.21023 9.091L3.32386 5.966L0.681818 7.64213L0 6.44895L2.78409 5.00009L0 3.55122L0.681818 2.35804L3.32386 4.03418L3.21023 0.90918H4.57386L4.46023 4.03418L7.10227 2.35804L7.78409 3.55122L5 5.00009L7.78409 6.44895L7.10227 7.64213L4.46023 5.966L4.57386 9.091H3.21023Z"
+                      fill="white" />
+                    <path
+                      d="M12.8102 9.091L12.9239 5.966L10.2818 7.64213L9.6 6.44895L12.3841 5.00009L9.6 3.55122L10.2818 2.35804L12.9239 4.03418L12.8102 0.90918H14.1739L14.0602 4.03418L16.7023 2.35804L17.3841 3.55122L14.6 5.00009L17.3841 6.44895L16.7023 7.64213L14.0602 5.966L14.1739 9.091H12.8102Z"
+                      fill="white" />
+                    <path
+                      d="M22.4102 9.091L22.5239 5.966L19.8818 7.64213L19.2 6.44895L21.9841 5.00009L19.2 3.55122L19.8818 2.35804L22.5239 4.03418L22.4102 0.90918H23.7739L23.6602 4.03418L26.3023 2.35804L26.9841 3.55122L24.2 5.00009L26.9841 6.44895L26.3023 7.64213L23.6602 5.966L23.7739 9.091H22.4102Z"
+                      fill="white" />
+                    <path
+                      d="M32.0102 9.091L32.1239 5.966L29.4818 7.64213L28.8 6.44895L31.5841 5.00009L28.8 3.55122L29.4818 2.35804L32.1239 4.03418L32.0102 0.90918H33.3739L33.2602 4.03418L35.9023 2.35804L36.5841 3.55122L33.8 5.00009L36.5841 6.44895L35.9023 7.64213L33.2602 5.966L33.3739 9.091H32.0102Z"
+                      fill="white" />
+                    <path
+                      d="M41.6102 9.091L41.7239 5.966L39.0818 7.64213L38.4 6.44895L41.1841 5.00009L38.4 3.55122L39.0818 2.35804L41.7239 4.03418L41.6102 0.90918H42.9739L42.8602 4.03418L45.5023 2.35804L46.1841 3.55122L43.4 5.00009L46.1841 6.44895L45.5023 7.64213L42.8602 5.966L42.9739 9.091H41.6102Z"
+                      fill="white" />
+                    <path
+                      d="M51.2102 9.091L51.3239 5.966L48.6818 7.64213L48 6.44895L50.7841 5.00009L48 3.55122L48.6818 2.35804L51.3239 4.03418L51.2102 0.90918H52.5739L52.4602 4.03418L55.1023 2.35804L55.7841 3.55122L53 5.00009L55.7841 6.44895L55.1023 7.64213L52.4602 5.966L52.5739 9.091H51.2102Z"
+                      fill="white" />
+                    <path
+                      d="M60.8102 9.091L60.9239 5.966L58.2818 7.64213L57.6 6.44895L60.3841 5.00009L57.6 3.55122L58.2818 2.35804L60.9239 4.03418L60.8102 0.90918H62.1739L62.0602 4.03418L64.7023 2.35804L65.3841 3.55122L62.6 5.00009L65.3841 6.44895L64.7023 7.64213L62.0602 5.966L62.1739 9.091H60.8102Z"
+                      fill="white" />
+                    <path
+                      d="M70.4102 9.091L70.5239 5.966L67.8818 7.64213L67.2 6.44895L69.9841 5.00009L67.2 3.55122L67.8818 2.35804L70.5239 4.03418L70.4102 0.90918H71.7739L71.6602 4.03418L74.3023 2.35804L74.9841 3.55122L72.2 5.00009L74.9841 6.44895L74.3023 7.64213L71.6602 5.966L71.7739 9.091H70.4102Z"
+                      fill="white" />
+                    <path
+                      d="M80.0102 9.091L80.1239 5.966L77.4818 7.64213L76.8 6.44895L79.5841 5.00009L76.8 3.55122L77.4818 2.35804L80.1239 4.03418L80.0102 0.90918H81.3739L81.2602 4.03418L83.9023 2.35804L84.5841 3.55122L81.8 5.00009L84.5841 6.44895L83.9023 7.64213L81.2602 5.966L81.3739 9.091H80.0102Z"
+                      fill="white" />
+                    <path
+                      d="M89.6102 9.091L89.7239 5.966L87.0818 7.64213L86.4 6.44895L89.1841 5.00009L86.4 3.55122L87.0818 2.35804L89.7239 4.03418L89.6102 0.90918H90.9739L90.8602 4.03418L93.5023 2.35804L94.1841 3.55122L91.4 5.00009L94.1841 6.44895L93.5023 7.64213L90.8602 5.966L90.9739 9.091H89.6102Z"
+                      fill="white" />
+                    <path
+                      d="M99.2102 9.091L99.3239 5.966L96.6818 7.64213L96 6.44895L98.7841 5.00009L96 3.55122L96.6818 2.35804L99.3239 4.03418L99.2102 0.90918H100.574L100.46 4.03418L103.102 2.35804L103.784 3.55122L101 5.00009L103.784 6.44895L103.102 7.64213L100.46 5.966L100.574 9.091H99.2102Z"
+                      fill="white" />
+                    <path
+                      d="M108.81 9.091L108.924 5.966L106.282 7.64213L105.6 6.44895L108.384 5.00009L105.6 3.55122L106.282 2.35804L108.924 4.03418L108.81 0.90918H110.174L110.06 4.03418L112.702 2.35804L113.384 3.55122L110.6 5.00009L113.384 6.44895L112.702 7.64213L110.06 5.966L110.174 9.091H108.81Z"
+                      fill="white" />
+                    <path
+                      d="M118.41 9.091L118.524 5.966L115.882 7.64213L115.2 6.44895L117.984 5.00009L115.2 3.55122L115.882 2.35804L118.524 4.03418L118.41 0.90918H119.774L119.66 4.03418L122.302 2.35804L122.984 3.55122L120.2 5.00009L122.984 6.44895L122.302 7.64213L119.66 5.966L119.774 9.091H118.41Z"
+                      fill="white" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="password-stars-display" id="confirm-password-display">
+                <div class="password-stars-container" id="confirm-password-stars-container"></div>
+              </div>
+
+              <div class="password-cursor" id="confirm-password-cursor"></div>
+
+              <input id="confirm-password" type="password" class="password-input-hidden" autocomplete="new-password">
+
+              <input id="confirm-password-visible" type="text" class="password-input-visible" autocomplete="new-password">
+            </div>
+            <span class="login-eye" id="confirm-password-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15Z"
+                  fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.32308 11.447C2.81108 6.976 7.02808 3.75 12.0011 3.75C16.9711 3.75 21.1861 6.973 22.6761 11.44C22.7961 11.802 22.7961 12.192 22.6761 12.553C21.1891 17.024 16.9711 20.25 11.9991 20.25C7.02908 20.25 2.81308 17.027 1.32408 12.56C1.20382 12.1987 1.20382 11.8083 1.32408 11.447H1.32308ZM17.2501 12C17.2501 13.3924 16.697 14.7277 15.7124 15.7123C14.7278 16.6969 13.3925 17.25 12.0001 17.25C10.6077 17.25 9.27233 16.6969 8.28777 15.7123C7.3032 14.7277 6.75008 13.3924 6.75008 12C6.75008 10.6076 7.3032 9.27225 8.28777 8.28769C9.27233 7.30312 10.6077 6.75 12.0001 6.75C13.3925 6.75 14.7278 7.30312 15.7124 8.28769C16.697 9.27225 17.2501 10.6076 17.2501 12Z"
+                  fill="white" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <button type="submit"
+          class="btn-primary py-2 px-4 h-12 font-normal tracking-[-0.48px] text-base leading-[19px] mt-2 max-[430px]:h-11 max-[430px]:text-sm max-[430px]:leading-[17px]">Continue</button>
+        <!-- <div class="login-recaptcha min-h-[73px]">
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+        </div> -->
+      </form>
+      <div class="login-divider-row">
+        <div class="login-divider-line"></div>
+        <span class="login-or">Or register with</span>
+        <div class="login-divider-line"></div>
+      </div>
+      <button class="login-google">
+        <img src="../assets/images/google-icon.svg" alt="Google" class="w-6 h-6">
+        Sign in with Google
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const emailInput = document.getElementById('email');
+      const emailCheck = document.getElementById('email-check');
+      const passwordInput = document.getElementById('password');
+      const passwordVisible = document.getElementById('password-visible');
+      const passwordPlaceholder = document.getElementById('password-placeholder');
+      const passwordDisplay = document.getElementById('password-display');
+      const passwordToggle = document.getElementById('password-toggle');
+      const passwordCursor = document.getElementById('password-cursor');
+      const passwordStarsScroll = document.getElementById('password-stars-scroll');
+      const passwordStarsContainer = document.getElementById('password-stars-container');
+
+      // Confirm password elements
+      const confirmPasswordInput = document.getElementById('confirm-password');
+      const confirmPasswordVisible = document.getElementById('confirm-password-visible');
+      const confirmPasswordPlaceholder = document.getElementById('confirm-password-placeholder');
+      const confirmPasswordDisplay = document.getElementById('confirm-password-display');
+      const confirmPasswordToggle = document.getElementById('confirm-password-toggle');
+      const confirmPasswordCursor = document.getElementById('confirm-password-cursor');
+      const confirmPasswordStarsScroll = document.getElementById('confirm-password-stars-scroll');
+      const confirmPasswordStarsContainer = document.getElementById('confirm-password-stars-container');
+
+      let isPasswordVisible = false;
+      let isConfirmPasswordVisible = false;
+      let cursorPosition = 0;
+      let confirmCursorPosition = 0;
+
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      emailInput.addEventListener('input', function () {
+        const isValid = validateEmail(this.value);
+        if (isValid) {
+          emailCheck.style.display = 'flex';
+          emailInput.classList.add('has-icon');
+        } else {
+          emailCheck.style.display = 'none';
+          emailInput.classList.remove('has-icon');
+        }
+      });
+
+      const starSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="9.46" height="10" viewBox="0 0 9.46 10" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 0;"><g><path d="M3.21023 9.091L3.32386 5.966L0.681818 7.64213L0 6.44895L2.78409 5.00009L0 3.55122L0.681818 2.35804L3.32386 4.03418L3.21023 0.90918H4.57386L4.46023 4.03418L7.10227 2.35804L7.78409 3.55122L5 5.00009L7.78409 6.44895L7.10227 7.64213L4.46023 5.966L4.57386 9.091H3.21023Z" fill="white"/></g></svg>`;
+
+      // Password field functions
+      function updateCursorPosition() {
+        const isMobile = window.innerWidth <= 900;
+        const leftPadding = isMobile ? 16 : 20;
+        const rightPadding = isMobile ? 44 : 60;
+
+        const cursorLeft = leftPadding + (cursorPosition * 9.46);
+        const containerWidth = passwordStarsScroll.clientWidth - (leftPadding + rightPadding);
+        const maxVisibleCursorLeft = containerWidth;
+
+        let scrollOffset = 0;
+        let displayCursorLeft = cursorLeft;
+
+        if (cursorLeft > maxVisibleCursorLeft) {
+          scrollOffset = cursorLeft - maxVisibleCursorLeft;
+          displayCursorLeft = maxVisibleCursorLeft;
+        }
+
+        if (passwordStarsContainer) {
+          passwordStarsContainer.style.transform = `translateX(-${scrollOffset}px)`;
+        }
+
+        passwordCursor.style.left = displayCursorLeft + 'px';
+
+        if (!isPasswordVisible) {
+          passwordInput.setSelectionRange(cursorPosition, cursorPosition);
+        }
+      }
+
+      function updatePasswordDisplay() {
+        const passwordLength = passwordInput.value.length;
+
+        if (cursorPosition > passwordLength) {
+          cursorPosition = passwordLength;
+        }
+
+        if (passwordLength === 0) {
+          passwordPlaceholder.style.display = 'block';
+          passwordDisplay.style.display = 'none';
+          cursorPosition = 0;
+
+          if (document.activeElement === passwordInput && !isPasswordVisible) {
+            updateCursorPosition();
+            passwordCursor.style.display = 'block';
+          } else {
+            passwordCursor.style.display = 'none';
+          }
+        } else {
+          passwordPlaceholder.style.display = 'none';
+          passwordDisplay.style.display = 'block';
+
+          let starsHTML = '';
+          for (let i = 0; i < passwordLength; i++) {
+            starsHTML += starSVG;
+          }
+          passwordStarsContainer.innerHTML = starsHTML;
+
+          updateCursorPosition();
+
+          if (document.activeElement === passwordInput && !isPasswordVisible) {
+            passwordCursor.style.display = 'block';
+          } else {
+            passwordCursor.style.display = 'none';
+          }
+        }
+      }
+
+      passwordInput.addEventListener('input', function () {
+        if (!isPasswordVisible) {
+          cursorPosition = passwordInput.selectionStart || passwordInput.value.length;
+          updatePasswordDisplay();
+        }
+        passwordVisible.value = passwordInput.value;
+      });
+
+      passwordVisible.addEventListener('input', function () {
+        passwordInput.value = passwordVisible.value;
+      });
+
+      passwordToggle.addEventListener('click', function () {
+        isPasswordVisible = !isPasswordVisible;
+
+        if (isPasswordVisible) {
+          passwordInput.style.display = 'none';
+          passwordVisible.style.display = 'block';
+          passwordPlaceholder.style.display = 'none';
+          passwordDisplay.style.display = 'none';
+          passwordCursor.style.display = 'none';
+          passwordVisible.focus();
+
+          passwordToggle.innerHTML = `
+            <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a21.77 21.77 0 0 1 5.06-6.06M1 1l22 22"/>
+            </svg>
+          `;
+        } else {
+          passwordInput.style.display = 'block';
+          passwordVisible.style.display = 'none';
+          updatePasswordDisplay();
+          passwordInput.focus();
+
+          passwordToggle.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.32308 11.447C2.81108 6.976 7.02808 3.75 12.0011 3.75C16.9711 3.75 21.1861 6.973 22.6761 11.44C22.7961 11.802 22.7961 12.192 22.6761 12.553C21.1891 17.024 16.9711 20.25 11.9991 20.25C7.02908 20.25 2.81308 17.027 1.32408 12.56C1.20382 12.1987 1.20382 11.8083 1.32408 11.447H1.32308ZM17.2501 12C17.2501 13.3924 16.697 14.7277 15.7124 15.7123C14.7278 16.6969 13.3925 17.25 12.0001 17.25C10.6077 17.25 9.27233 16.6969 8.28777 15.7123C7.3032 14.7277 6.75008 13.3924 6.75008 12C6.75008 10.6076 7.3032 9.27225 8.28777 8.28769C9.27233 7.30312 10.6077 6.75 12.0001 6.75C13.3925 6.75 14.7278 7.30312 15.7124 8.28769C16.697 9.27225 17.2501 10.6076 17.2501 12Z" fill="white"/>
+</svg>
+          `;
+        }
+      });
+
+      passwordInput.addEventListener('keydown', function (e) {
+        if (!isPasswordVisible) {
+          const passwordLength = passwordInput.value.length;
+
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            if (cursorPosition > 0) {
+              cursorPosition--;
+              updateCursorPosition();
+            }
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            if (cursorPosition < passwordLength) {
+              cursorPosition++;
+              updateCursorPosition();
+            }
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            cursorPosition = 0;
+            updateCursorPosition();
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            cursorPosition = passwordLength;
+            updateCursorPosition();
+          }
+        }
+      });
+
+      passwordInput.addEventListener('focus', function () {
+        if (!isPasswordVisible) {
+          cursorPosition = passwordInput.selectionStart || passwordInput.value.length;
+          updatePasswordDisplay();
+        }
+      });
+
+      passwordInput.addEventListener('blur', function () {
+        passwordCursor.style.display = 'none';
+      });
+
+      document.querySelector('.password-field-wrapper .login-input').addEventListener('click', function (e) {
+        if (!isPasswordVisible) {
+          passwordInput.focus();
+
+          const rect = this.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const relativeX = clickX - 20;
+
+          if (relativeX >= 0) {
+            const clickPosition = Math.round(relativeX / 9.46);
+            const passwordLength = passwordInput.value.length;
+            cursorPosition = Math.min(Math.max(0, clickPosition), passwordLength);
+
+            setTimeout(() => {
+              updateCursorPosition();
+            }, 0);
+          }
+        } else {
+          passwordVisible.focus();
+        }
+      });
+
+      // Confirm password field functions
+      function updateConfirmCursorPosition() {
+        const isMobile = window.innerWidth <= 900;
+        const leftPadding = isMobile ? 16 : 20;
+        const rightPadding = isMobile ? 44 : 60;
+
+        const cursorLeft = leftPadding + (confirmCursorPosition * 9.46);
+        const containerWidth = confirmPasswordStarsScroll.clientWidth - (leftPadding + rightPadding);
+        const maxVisibleCursorLeft = containerWidth;
+
+        let scrollOffset = 0;
+        let displayCursorLeft = cursorLeft;
+
+        if (cursorLeft > maxVisibleCursorLeft) {
+          scrollOffset = cursorLeft - maxVisibleCursorLeft;
+          displayCursorLeft = maxVisibleCursorLeft;
+        }
+
+        if (confirmPasswordStarsContainer) {
+          confirmPasswordStarsContainer.style.transform = `translateX(-${scrollOffset}px)`;
+        }
+
+        confirmPasswordCursor.style.left = displayCursorLeft + 'px';
+
+        if (!isConfirmPasswordVisible) {
+          confirmPasswordInput.setSelectionRange(confirmCursorPosition, confirmCursorPosition);
+        }
+      }
+
+      function updateConfirmPasswordDisplay() {
+        const passwordLength = confirmPasswordInput.value.length;
+
+        if (confirmCursorPosition > passwordLength) {
+          confirmCursorPosition = passwordLength;
+        }
+
+        if (passwordLength === 0) {
+          confirmPasswordPlaceholder.style.display = 'block';
+          confirmPasswordDisplay.style.display = 'none';
+          confirmCursorPosition = 0;
+
+          if (document.activeElement === confirmPasswordInput && !isConfirmPasswordVisible) {
+            updateConfirmCursorPosition();
+            confirmPasswordCursor.style.display = 'block';
+          } else {
+            confirmPasswordCursor.style.display = 'none';
+          }
+        } else {
+          confirmPasswordPlaceholder.style.display = 'none';
+          confirmPasswordDisplay.style.display = 'block';
+
+          let starsHTML = '';
+          for (let i = 0; i < passwordLength; i++) {
+            starsHTML += starSVG;
+          }
+          confirmPasswordStarsContainer.innerHTML = starsHTML;
+
+          updateConfirmCursorPosition();
+
+          if (document.activeElement === confirmPasswordInput && !isConfirmPasswordVisible) {
+            confirmPasswordCursor.style.display = 'block';
+          } else {
+            confirmPasswordCursor.style.display = 'none';
+          }
+        }
+      }
+
+      // Confirm password event listeners
+      confirmPasswordInput.addEventListener('input', function () {
+        if (!isConfirmPasswordVisible) {
+          confirmCursorPosition = confirmPasswordInput.selectionStart || confirmPasswordInput.value.length;
+          updateConfirmPasswordDisplay();
+        }
+        confirmPasswordVisible.value = confirmPasswordInput.value;
+      });
+
+      confirmPasswordVisible.addEventListener('input', function () {
+        confirmPasswordInput.value = confirmPasswordVisible.value;
+      });
+
+      confirmPasswordToggle.addEventListener('click', function () {
+        isConfirmPasswordVisible = !isConfirmPasswordVisible;
+
+        if (isConfirmPasswordVisible) {
+          confirmPasswordInput.style.display = 'none';
+          confirmPasswordVisible.style.display = 'block';
+          confirmPasswordPlaceholder.style.display = 'none';
+          confirmPasswordDisplay.style.display = 'none';
+          confirmPasswordCursor.style.display = 'none';
+          confirmPasswordVisible.focus();
+
+          confirmPasswordToggle.innerHTML = `
+            <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a21.77 21.77 0 0 1 5.06-6.06M1 1l22 22"/>
+            </svg>
+          `;
+        } else {
+          confirmPasswordInput.style.display = 'block';
+          confirmPasswordVisible.style.display = 'none';
+          updateConfirmPasswordDisplay();
+          confirmPasswordInput.focus();
+
+          confirmPasswordToggle.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.32308 11.447C2.81108 6.976 7.02808 3.75 12.0011 3.75C16.9711 3.75 21.1861 6.973 22.6761 11.44C22.7961 11.802 22.7961 12.192 22.6761 12.553C21.1891 17.024 16.9711 20.25 11.9991 20.25C7.02908 20.25 2.81308 17.027 1.32408 12.56C1.20382 12.1987 1.20382 11.8083 1.32408 11.447H1.32308ZM17.2501 12C17.2501 13.3924 16.697 14.7277 15.7124 15.7123C14.7278 16.6969 13.3925 17.25 12.0001 17.25C10.6077 17.25 9.27233 16.6969 8.28777 15.7123C7.3032 14.7277 6.75008 13.3924 6.75008 12C6.75008 10.6076 7.3032 9.27225 8.28777 8.28769C9.27233 7.30312 10.6077 6.75 12.0001 6.75C13.3925 6.75 14.7278 7.30312 15.7124 8.28769C16.697 9.27225 17.2501 10.6076 17.2501 12Z" fill="white"/>
+            </svg>
+          `;
+        }
+      });
+
+      confirmPasswordInput.addEventListener('keydown', function (e) {
+        if (!isConfirmPasswordVisible) {
+          const passwordLength = confirmPasswordInput.value.length;
+
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            if (confirmCursorPosition > 0) {
+              confirmCursorPosition--;
+              updateConfirmCursorPosition();
+            }
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            if (confirmCursorPosition < passwordLength) {
+              confirmCursorPosition++;
+              updateConfirmCursorPosition();
+            }
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            confirmCursorPosition = 0;
+            updateConfirmCursorPosition();
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            confirmCursorPosition = passwordLength;
+            updateConfirmCursorPosition();
+          }
+        }
+      });
+
+      confirmPasswordInput.addEventListener('focus', function () {
+        if (!isConfirmPasswordVisible) {
+          confirmCursorPosition = confirmPasswordInput.selectionStart || confirmPasswordInput.value.length;
+          updateConfirmPasswordDisplay();
+        }
+      });
+
+      confirmPasswordInput.addEventListener('blur', function () {
+        confirmPasswordCursor.style.display = 'none';
+      });
+
+      document.querySelector('#confirm-password-stars-scroll').addEventListener('click', function (e) {
+        if (!isConfirmPasswordVisible) {
+          confirmPasswordInput.focus();
+
+          const rect = this.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const relativeX = clickX - 20;
+
+          if (relativeX >= 0) {
+            const clickPosition = Math.round(relativeX / 9.46);
+            const passwordLength = confirmPasswordInput.value.length;
+            confirmCursorPosition = Math.min(Math.max(0, clickPosition), passwordLength);
+
+            setTimeout(() => {
+              updateConfirmCursorPosition();
+            }, 0);
+          }
+        } else {
+          confirmPasswordVisible.focus();
+        }
+      });
+
+      updatePasswordDisplay();
+      updateConfirmPasswordDisplay();
+    });
+  </script>
+</body>
+
+</html>

@@ -99,9 +99,12 @@
 @layer components {
   /* Кнопки */
   .btn-primary {
-    @apply bg-brand-red hover:bg-brand-accent text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-glow;
+    @apply bg-brand-red hover:bg-brand-accent text-white text-base tracking-tightest px-6 py-3 rounded-[12px] font-medium transition-all duration-300 hover:shadow-glow;
   }
-  
+  .btn-secondary-small {
+    @apply bg-brand-red hover:bg-brand-accent text-white tracking-tightest px-5 py-[14.5px] rounded-[12px] leading-[19px] font-medium transition-all duration-300 hover:shadow-glow;
+  }
+
   .btn-secondary {
     @apply bg-brand-gray hover:bg-brand-light-gray text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
@@ -112,11 +115,17 @@
   
   /* Карточки */
   .card {
-    @apply bg-brand-gray rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply  p-6 transition-all duration-300;
   }
   
+  .slots-btn{
+    @apply h-11 bg-transparent border border-white/30 text-white leading-[22px] px-4 py-[11px] rounded-full text-lg font-normal tracking-tightest whitespace-nowrap flex-shrink-0;
+  }
+  .slots-btn-active{
+    @apply bg-white text-brand-darker;
+  }
   .card-dark {
-    @apply bg-brand-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply  transition-all duration-300;
   }
   
   /* Навигация */
@@ -127,7 +136,16 @@
   .nav-link-active {
     @apply text-brand-red opacity-100;
   }
-  
+  .games-item-wrapper {
+    @apply w-20 h-20 rounded-full border border-brand-border-dark/50 p-1 flex items-center justify-center;
+  }
+  .games-item {
+    @apply w-auto h-auto;
+  }
+  .cas-item {
+    @apply text-white text-base font-normal leading-[100%] tracking-tightest py-[9px] px-[12px] rounded-full border border-white/30 w-fit;
+  }
+
   /* Градиенты */
   .gradient-red {
     @apply bg-gradient-to-r from-gradient-start to-gradient-end;
@@ -196,6 +214,13 @@
     background: #FF6B75;
   }
   
+.voting-single input[type="radio"] {
+  @apply h-5 w-5;
+}
+.voting-single input[type="radio"]:checked::after {
+  @apply h-[12.5px] w-[12.5px];
+}
+
   /* Стили для радиокнопок в блоке голосования */
   input[type="radio"] {
     @apply text-brand-red border-brand-red border-[1.5px] rounded-full appearance-none opacity-50; 
@@ -243,4 +268,13 @@
     background-image: radial-gradient(circle at 1px 1px, rgba(255, 70, 85, 0.1) 1px, transparent 0);
     background-size: 20px 20px;
   }
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 } 
