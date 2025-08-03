@@ -249,12 +249,95 @@
   
   input[type="radio"]:not(:checked) {
     @apply opacity-50 bg-transparent;
-  } 
+  }
+
+  /* Game Filter Checkboxes */
+  .filter-section {
+    @apply px-2 py-5 relative; 
+  }
+  .filter-section-active {
+    @apply py-4;
+  }
+  .filter-section-active::after {
+    @apply hidden;
+  }
+  .filter-content {
+    @apply mt-6;
+  }
+  .filter-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0rem;
+    right: 0rem;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .filter-section:nth-last-child(2)::after{
+    @apply hidden;
+  }
+  .game-filter-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    @apply border border-brand-red;
+    border-radius: 4px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .game-filter-checkbox:checked {
+    @apply bg-brand-red border-brand-red;
+  }
+
+  .game-filter-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8.5L7 12.5L13 3.5" stroke="%23171719" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+    background-size: contain;
+  }
+
+  .game-filter-checkbox:not(:checked) {
+    background: transparent;
+    @apply border border-brand-red;
+  }
+
+  .game-filter-checkbox:hover {
+    border-color: #FF2C2C;
+  }
+
+  .game-filter-checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 44, 44, 0.3);
+  }
 }
 .slider-dot.active {
   @apply bg-white/90 w-[38px] h-4 rounded-full;
 }
 
+.steam-account-dot{
+  @apply border border-brand-red border-opacity-[23%];
+}
+.steam-account-dot:hover {
+  @apply bg-brand-red;
+  transform: scale(1.2);
+}
+
+.steam-account-dot-active {
+  @apply bg-brand-red !important;
+}
+.steam-account-nav{
+  @apply bg-brand-red/20 text-brand-red;
+}
 @layer utilities {
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);

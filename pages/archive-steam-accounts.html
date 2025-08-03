@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — VPEsports</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/slider.css">
+    <script src="../../assets/js/config.js"></script>
+    <style>
+    </style>
+</head>
+
+<body class="text-white font-primary min-h-screen">
+    <!-- Header -->
+    <header class="w-full min-h-12">
+        <div class="max-w-8xl container mx-auto flex items-center mt-25 lg:px-0">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="../../assets/images/logo-vpe.png" alt="VPEsports" class="w-24 h-[28.97px]">
+            </a>
+            <!-- Navigation -->
+            <nav class="flex gap-8 items-center ml-10">
+                <a href="#"
+                    class="relative nav-link font-furore text-lg tracking-tightest nav-link-active text-brand-red font-normal flex items-center gap-1">
+                    HOME
+                    <span class="ml-1 text-brand-red text-lg">
+                        <!-- Ромбик -->
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 0L12 6L6 12L0 6L6 0Z" fill="#FF2C2C" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" class="nav-link font-furore tracking-tightest font-normal text-lg">SLOTS</a>
+                <div class="relative group">
+                    <a href="#"
+                        class="nav-link font-furore tracking-tightest font-normal text-lg flex items-center gap-1">GAMES
+                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L9 10L2 2" stroke="white" stroke-width="2.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- dropdown imitation -->
+                </div>
+                <div class="relative group">
+                    <a href="#"
+                        class="nav-link font-furore text-lg tracking-tightest font-normal flex items-center gap-1">ESPORTS
+                        BETTING
+                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L9 10L2 2" stroke="white" stroke-width="2.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- dropdown imitation -->
+                </div>
+            </nav>
+            <!-- Search and actions -->
+            <div class="flex items-center gap-4 ml-auto">
+                <div class="flex items-center gap-2">
+                    <form
+                        class="relative flex items-center font-primary text-base font-normal tracking-tightest text-white opacity-100 h-12">
+                        <input type="text" placeholder="Search"
+                            class="form-input w-[181px] h-12 bg-brand-gray text-white rounded-[11px] focus:ring-2 focus:ring-brand-red pr-12" />
+                        <span class="absolute right-5 inset-y-0 flex items-center h-full text-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path
+                                        d="M17.4998 17.5L13.169 13.1692M13.169 13.1692C14.3411 11.9971 14.9996 10.4073 14.9996 8.74962C14.9996 7.09196 14.3411 5.50219 13.169 4.33004C11.9968 3.15789 10.4071 2.49939 8.74941 2.49939C7.09175 2.49939 5.50197 3.15789 4.32983 4.33004C3.15768 5.50219 2.49918 7.09196 2.49918 8.74962C2.49918 10.4073 3.15768 11.9971 4.32983 13.1692C5.50197 14.3414 7.09175 14.9999 8.74941 14.9999C10.4071 14.9999 11.9968 14.3414 13.169 13.1692Z"
+                                        stroke="white" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </span>
+                    </form>
+                    <!-- Theme button -->
+                    <button
+                        class="bg-brand-red bg-opacity-30 hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 2.625C14.2321 2.625 14.4546 2.71719 14.6187 2.88128C14.7828 3.04538 14.875 3.26794 14.875 3.5V6.125C14.875 6.35706 14.7828 6.57962 14.6187 6.74372C14.4546 6.90781 14.2321 7 14 7C13.7679 7 13.5454 6.90781 13.3813 6.74372C13.2172 6.57962 13.125 6.35706 13.125 6.125V3.5C13.125 3.26794 13.2172 3.04538 13.3813 2.88128C13.5454 2.71719 13.7679 2.625 14 2.625ZM8.75 14C8.75 12.6076 9.30312 11.2723 10.2877 10.2877C11.2723 9.30312 12.6076 8.75 14 8.75C15.3924 8.75 16.7277 9.30312 17.7123 10.2877C18.6969 11.2723 19.25 12.6076 19.25 14C19.25 15.3924 18.6969 16.7277 17.7123 17.7123C16.7277 18.6969 15.3924 19.25 14 19.25C12.6076 19.25 11.2723 18.6969 10.2877 17.7123C9.30312 16.7277 8.75 15.3924 8.75 14ZM22.043 7.19367C22.1976 7.0278 22.2817 6.80841 22.2777 6.58172C22.2737 6.35504 22.1819 6.13876 22.0216 5.97844C21.8612 5.81813 21.645 5.7263 21.4183 5.7223C21.1916 5.7183 20.9722 5.80244 20.8063 5.957L18.9502 7.812C18.8666 7.89268 18.7999 7.9892 18.7539 8.09593C18.708 8.20266 18.6838 8.31747 18.6828 8.43365C18.6817 8.54983 18.7038 8.66506 18.7477 8.77261C18.7917 8.88017 18.8566 8.97789 18.9387 9.06009C19.0209 9.14228 19.1185 9.2073 19.226 9.25134C19.3335 9.29539 19.4488 9.31758 19.5649 9.31663C19.6811 9.31568 19.7959 9.29159 19.9027 9.24579C20.0095 9.19998 20.1061 9.13337 20.1868 9.04983L22.043 7.19367ZM25.375 14C25.375 14.2321 25.2828 14.4546 25.1187 14.6187C24.9546 14.7828 24.7321 14.875 24.5 14.875H21.875C21.6429 14.875 21.4204 14.7828 21.2563 14.6187C21.0922 14.4546 21 14.2321 21 14C21 13.7679 21.0922 13.5454 21.2563 13.3813C21.4204 13.2172 21.6429 13.125 21.875 13.125H24.5C24.7321 13.125 24.9546 13.2172 25.1187 13.3813C25.2828 13.5454 25.375 13.7679 25.375 14ZM20.8063 22.043C20.9722 22.1976 21.1916 22.2817 21.4183 22.2777C21.645 22.2737 21.8612 22.1819 22.0216 22.0216C22.1819 21.8612 22.2737 21.645 22.2777 21.4183C22.2817 21.1916 22.1976 20.9722 22.043 20.8063L20.188 18.9502C20.1073 18.8666 20.0108 18.7999 19.9041 18.7539C19.7973 18.708 19.6825 18.6838 19.5664 18.6828C19.4502 18.6817 19.3349 18.7038 19.2274 18.7477C19.1198 18.7917 19.0221 18.8566 18.9399 18.9387C18.8577 19.0209 18.7927 19.1185 18.7487 19.226C18.7046 19.3335 18.6824 19.4488 18.6834 19.5649C18.6843 19.6811 18.7084 19.7959 18.7542 19.9027C18.8 20.0095 18.8666 20.1061 18.9502 20.1868L20.8063 22.043ZM14 21C14.2321 21 14.4546 21.0922 14.6187 21.2563C14.7828 21.4204 14.875 21.6429 14.875 21.875V24.5C14.875 24.7321 14.7828 24.9546 14.6187 25.1187C14.4546 25.2828 14.2321 25.375 14 25.375C13.7679 25.375 13.5454 25.2828 13.3813 25.1187C13.2172 24.9546 13.125 24.7321 13.125 24.5V21.875C13.125 21.6429 13.2172 21.4204 13.3813 21.2563C13.5454 21.0922 13.7679 21 14 21ZM9.051 20.1868C9.21031 20.0217 9.2984 19.8007 9.2963 19.5712C9.2942 19.3418 9.20208 19.1224 9.03977 18.9602C8.87746 18.7981 8.65795 18.7062 8.42853 18.7043C8.1991 18.7024 7.97812 18.7907 7.81317 18.9502L5.957 20.8052C5.79753 20.9701 5.70923 21.1911 5.71112 21.4205C5.713 21.65 5.80492 21.8695 5.96708 22.0318C6.12923 22.1941 6.34865 22.2862 6.57807 22.2883C6.8075 22.2904 7.02856 22.2023 7.19367 22.043L9.04983 20.188L9.051 20.1868ZM7 14C7 14.2321 6.90781 14.4546 6.74372 14.6187C6.57962 14.7828 6.35706 14.875 6.125 14.875H3.5C3.26794 14.875 3.04538 14.7828 2.88128 14.6187C2.71719 14.4546 2.625 14.2321 2.625 14C2.625 13.7679 2.71719 13.5454 2.88128 13.3813C3.04538 13.2172 3.26794 13.125 3.5 13.125H6.125C6.35706 13.125 6.57962 13.2172 6.74372 13.3813C6.90781 13.5454 7 13.7679 7 14ZM7.81317 9.04983C7.97904 9.20439 8.19842 9.28854 8.42511 9.28454C8.65179 9.28054 8.86808 9.18871 9.02839 9.02839C9.18871 8.86808 9.28054 8.65179 9.28454 8.42511C9.28854 8.19842 9.20439 7.97904 9.04983 7.81317L7.19483 5.957C7.02988 5.79753 6.8089 5.70923 6.57947 5.71112C6.35005 5.713 6.13054 5.80492 5.96823 5.96708C5.80592 6.12923 5.7138 6.34865 5.7117 6.57807C5.7096 6.8075 5.79769 7.02856 5.957 7.19367L7.81317 9.04983Z"
+                                fill="#FF2C2C" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <!-- Free Steam Account -->
+                    <a href="#"
+                        class="btn-outline  text-center  min-h-12 py-[14.5px] px-4 border-brand-red border-opacity-30 text-brand-red hover:bg-brand-red hover:text-white text-base tracking-tightest font-normal rounded-[11px] font-primary transition">Free
+                        Steam Account</a>
+                    <!-- Log In -->
+                    <a href="#"
+                        class="btn-primary min-w-[77px] min-h-12 py-[14.5px] px-4 rounded-[11px]  font-medium text-base tracking-tightest font-primary">Log
+                        In</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main Content -->
+    <main class="flex gap-6 max-w-8xl mx-auto mt-[33px]">
+        <!-- Sidebar Left -->
+        <aside class="w-[213px] hidden lg:block">
+            <!-- User Card -->
+            <div class="bg-brand-dark-gray rounded-2xl p-5 mb-4">
+                <div class="flex items-center mb-4 gap-2">
+                    <img src="../../assets/images/user-example.png" alt="User"
+                        class="w-11 h-11 rounded-full object-cover">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-white bg-opacity-10 p-2 rounded-[10px]"><svg width="28" height="28"
+                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.1054 2.625C12.0356 2.625 11.1232 3.3985 10.9471 4.45317L10.7394 5.70383C10.7161 5.84383 10.6052 6.00717 10.3929 6.10983C9.99315 6.302 9.6086 6.5243 9.24258 6.77483C9.04891 6.909 8.85291 6.92183 8.71758 6.87167L7.53108 6.426C7.04602 6.24428 6.51222 6.24057 6.02469 6.41554C5.53717 6.59052 5.12754 6.93281 4.86874 7.3815L3.79308 9.24467C3.53418 9.69308 3.44274 10.2188 3.53503 10.7283C3.62732 11.2378 3.89734 11.698 4.29708 12.0272L5.27708 12.8345C5.38791 12.9255 5.47541 13.1017 5.45674 13.3362C5.4235 13.7785 5.4235 14.2227 5.45674 14.665C5.47424 14.8983 5.38791 15.0757 5.27824 15.1667L4.29708 15.974C3.89734 16.3031 3.62732 16.7634 3.53503 17.2729C3.44274 17.7824 3.53418 18.3081 3.79308 18.7565L4.86874 20.6197C5.12773 21.0681 5.53743 21.4102 6.02494 21.5849C6.51245 21.7597 7.04616 21.7558 7.53108 21.574L8.71991 21.1283C8.85408 21.0782 9.05008 21.0922 9.24491 21.224C9.60891 21.4737 9.99274 21.6965 10.3941 21.889C10.6064 21.9917 10.7172 22.155 10.7406 22.2973L10.9482 23.5468C11.1244 24.6015 12.0367 25.375 13.1066 25.375H15.2579C16.3266 25.375 17.2401 24.6015 17.4162 23.5468L17.6239 22.2962C17.6472 22.1562 17.7569 21.9928 17.9704 21.889C18.3717 21.6965 18.7556 21.4737 19.1196 21.224C19.3144 21.091 19.5104 21.0782 19.6446 21.1283L20.8346 21.574C21.3193 21.7551 21.8526 21.7585 22.3396 21.5835C22.8266 21.4086 23.2359 21.0667 23.4946 20.6185L24.5714 18.7553C24.8303 18.3069 24.9217 17.7812 24.8295 17.2717C24.7372 16.7622 24.4671 16.302 24.0674 15.9728L23.0874 15.1655C22.9766 15.0745 22.8891 14.8983 22.9077 14.6638C22.9409 14.2215 22.9409 13.7773 22.9077 13.335C22.8891 13.1017 22.9766 12.9243 23.0862 12.8333L24.0662 12.026C24.8922 11.347 25.1057 10.171 24.5714 9.2435L23.4957 7.38033C23.2368 6.93185 22.8271 6.5898 22.3395 6.41505C21.852 6.2403 21.3183 6.24418 20.8334 6.426L19.6434 6.87167C19.5104 6.92183 19.3144 6.90783 19.1196 6.77483C18.7539 6.52434 18.3698 6.30204 17.9704 6.10983C17.7569 6.00833 17.6472 5.845 17.6239 5.70383L17.4151 4.45317C17.33 3.94224 17.0664 3.47808 16.6711 3.14331C16.2759 2.80854 15.7747 2.62487 15.2567 2.625H13.1066H13.1054ZM14.1811 18.375C15.3414 18.375 16.4542 17.9141 17.2747 17.0936C18.0951 16.2731 18.5561 15.1603 18.5561 14C18.5561 12.8397 18.0951 11.7269 17.2747 10.9064C16.4542 10.0859 15.3414 9.625 14.1811 9.625C13.0208 9.625 11.908 10.0859 11.0875 10.9064C10.267 11.7269 9.80608 12.8397 9.80608 14C9.80608 15.1603 10.267 16.2731 11.0875 17.0936C11.908 17.9141 13.0208 18.375 14.1811 18.375Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                        <span class="bg-white bg-opacity-10 p-2 rounded-[10px]"><svg width="28" height="28"
+                                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.2498 4.375C19.7139 4.375 20.1591 4.55937 20.4872 4.88756C20.8154 5.21575 20.9998 5.66087 20.9998 6.125V21.875C20.9998 22.3391 20.8154 22.7842 20.4872 23.1124C20.1591 23.4406 19.7139 23.625 19.2498 23.625H12.2498C11.7857 23.625 11.3406 23.4406 11.0124 23.1124C10.6842 22.7842 10.4998 22.3391 10.4998 21.875V17.5C10.4998 17.2679 10.4076 17.0454 10.2435 16.8813C10.0794 16.7172 9.85687 16.625 9.62481 16.625C9.39275 16.625 9.17019 16.7172 9.00609 16.8813C8.842 17.0454 8.74981 17.2679 8.74981 17.5V21.875C8.74981 22.8033 9.11856 23.6935 9.77494 24.3499C10.4313 25.0063 11.3216 25.375 12.2498 25.375H19.2498C20.1781 25.375 21.0683 25.0063 21.7247 24.3499C22.3811 23.6935 22.7498 22.8033 22.7498 21.875V6.125C22.7498 5.19674 22.3811 4.3065 21.7247 3.65013C21.0683 2.99375 20.1781 2.625 19.2498 2.625H12.2498C11.3216 2.625 10.4313 2.99375 9.77494 3.65013C9.11856 4.3065 8.74981 5.19674 8.74981 6.125V10.5C8.74981 10.7321 8.842 10.9546 9.00609 11.1187C9.17019 11.2828 9.39275 11.375 9.62481 11.375C9.85687 11.375 10.0794 11.2828 10.2435 11.1187C10.4076 10.9546 10.4998 10.7321 10.4998 10.5V6.125C10.4998 5.66087 10.6842 5.21575 11.0124 4.88756C11.3406 4.55937 11.7857 4.375 12.2498 4.375H19.2498ZM6.74314 9.88167C6.57908 9.71781 6.35669 9.62577 6.12481 9.62577C5.89293 9.62577 5.67054 9.71781 5.50648 9.88167L2.00648 13.3817C1.84262 13.5457 1.75058 13.7681 1.75058 14C1.75058 14.2319 1.84262 14.4543 2.00648 14.6183L5.50648 18.1183C5.67235 18.2729 5.89173 18.357 6.11842 18.353C6.3451 18.349 6.56139 18.2572 6.7217 18.0969C6.88202 17.9366 6.97385 17.7203 6.97785 17.4936C6.98185 17.2669 6.8977 17.0475 6.74314 16.8817L4.73648 14.875H17.4998C17.7319 14.875 17.9544 14.7828 18.1185 14.6187C18.2826 14.4546 18.3748 14.2321 18.3748 14C18.3748 13.7679 18.2826 13.5454 18.1185 13.3813C17.9544 13.2172 17.7319 13.125 17.4998 13.125H4.73648L6.74314 11.1183C6.907 10.9543 6.99904 10.7319 6.99904 10.5C6.99904 10.2681 6.907 10.0457 6.74314 9.88167Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="font-bold text-white text-lg leading-tight tracking-tightestLg">Gomodril Viktorov</div>
+            </div>
+            <!-- Category List -->
+            <nav class="bg-brand-dark-gray rounded-2xl pt-5 pb-6 px-6 mt-2">
+                <div class="font-heading text-[28px] tracking-tightest text-white mb-9 text-start">CATEGORY</div>
+                <ul class="space-y-8">
+                    <li><a href="#" class="text-white text-lg font-bold tracking-tight opacity-100">All Games</a></li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Minecraft</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Valorant</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Grand Theft Auto</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Terraria</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Conter Strike</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Stellar Blade</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Dune</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Elden Ring</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Rematch</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">FNAF</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white text-lg tracking-tight opacity-50 hover:text-white hover:opacity-100 transition">Helldiver</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Section -->
+        <div class="flex-1 min-w-0">
+
+            <!-- Single Article Section -->
+            <section id="steam-accounts-header">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-red">
+                                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs />
+                                    <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C"
+                                        fill-opacity="1.000000" fill-rule="evenodd" />
+                                </svg>
+                            </span>
+
+                            <h1 class="font-furore text-3.5xl font-normal leading-[37px] tracking-tightest text-white">Free steam accounts</h1>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="flex items-center gap-4 mb-[29px]">
+                        <form class="relative flex items-center font-primary text-base font-normal tracking-tightest text-white opacity-100 h-12 w-full">
+                            <input type="text" placeholder="Search Games" class="form-input w-full h-12 bg-brand-gray text-white placeholder:text-white/60 rounded-[11px] focus:ring-2 focus:ring-brand-red pr-12">
+                            <span class="absolute right-5 inset-y-0 flex items-center h-full text-white/60">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.6">
+                                        <path d="M17.4998 17.5L13.169 13.1692M13.169 13.1692C14.3411 11.9971 14.9996 10.4073 14.9996 8.74962C14.9996 7.09196 14.3411 5.50219 13.169 4.33004C11.9968 3.15789 10.4071 2.49939 8.74941 2.49939C7.09175 2.49939 5.50197 3.15789 4.32983 4.33004C3.15768 5.50219 2.49918 7.09196 2.49918 8.74962C2.49918 10.4073 3.15768 11.9971 4.32983 13.1692C5.50197 14.3414 7.09175 14.9999 8.74941 14.9999C10.4071 14.9999 11.9968 14.3414 13.169 13.1692Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </form> 
+                        <button
+                            class="flex text-nowrap items-center btn-outline  min-h-12 text-center py-2 px-4 border-brand-red border-opacity-30 text-brand-red hover:bg-brand-red hover:text-white text-lg tracking-tightest font-normal rounded-[11px] font-primary transition gap-2 leading-[22px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.96985 2.47007C7.11047 2.32962 7.3011 2.25073 7.49985 2.25073C7.6986 2.25073 7.88922 2.32962 8.02985 2.47007L12.5298 6.97007C12.6623 7.11225 12.7345 7.30029 12.731 7.4946C12.7276 7.6889 12.6489 7.87428 12.5115 8.01169C12.3741 8.14911 12.1887 8.22782 11.9944 8.23125C11.8001 8.23468 11.612 8.16255 11.4698 8.03007L8.24985 4.81007V16.5001C8.24985 16.699 8.17083 16.8898 8.03018 17.0304C7.88952 17.1711 7.69876 17.2501 7.49985 17.2501C7.30093 17.2501 7.11017 17.1711 6.96952 17.0304C6.82886 16.8898 6.74985 16.699 6.74985 16.5001V4.81007L3.52985 8.03007C3.38767 8.16255 3.19963 8.23468 3.00532 8.23125C2.81102 8.22782 2.62564 8.14911 2.48822 8.01169C2.35081 7.87428 2.2721 7.6889 2.26867 7.4946C2.26524 7.30029 2.33737 7.11225 2.46985 6.97007L6.96985 2.47007ZM16.4998 6.75007C16.6988 6.75007 16.8895 6.82909 17.0302 6.96974C17.1708 7.11039 17.2498 7.30116 17.2498 7.50007V19.1901L20.4698 15.9701C20.5385 15.8964 20.6213 15.8373 20.7133 15.7963C20.8053 15.7553 20.9046 15.7333 21.0053 15.7315C21.106 15.7297 21.2061 15.7482 21.2994 15.7859C21.3928 15.8237 21.4777 15.8798 21.5489 15.951C21.6201 16.0223 21.6762 16.1071 21.714 16.2005C21.7517 16.2939 21.7702 16.3939 21.7684 16.4946C21.7667 16.5953 21.7446 16.6946 21.7036 16.7866C21.6626 16.8786 21.6035 16.9614 21.5298 17.0301L17.0298 21.5301C16.8892 21.6705 16.6986 21.7494 16.4998 21.7494C16.3011 21.7494 16.1105 21.6705 15.9698 21.5301L11.4698 17.0301C11.3962 16.9614 11.3371 16.8786 11.2961 16.7866C11.2551 16.6946 11.233 16.5953 11.2313 16.4946C11.2295 16.3939 11.248 16.2939 11.2857 16.2005C11.3234 16.1071 11.3796 16.0223 11.4508 15.951C11.522 15.8798 11.6069 15.8237 11.7002 15.7859C11.7936 15.7482 11.8937 15.7297 11.9944 15.7315C12.0951 15.7333 12.1944 15.7553 12.2864 15.7963C12.3784 15.8373 12.4612 15.8964 12.5298 15.9701L15.7498 19.1901V7.50007C15.7498 7.30116 15.8289 7.11039 15.9695 6.96974C16.1102 6.82909 16.3009 6.75007 16.4998 6.75007Z"
+                                    fill="currentColor" />
+                            </svg>
+                            By Rating
+                        </button>
+                    </div>
+                    
+            </section>
+
+            <section id="steam-accounts" class="mb-[86px]">
+
+                <div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-7 gap-y-12 pl-[7px]">
+                        <!-- Slot Card 1 -->
+                        <div class="flex flex-col items-center w-full mx-auto">
+                            <img src="../assets/images/steam-account-card1.png" alt="slot"
+                                class="w-full h-[236px] object-cover rounded-[12px] mb-3">
+                            <div class="flex items-center w-full justify-between mb-2.5">
+                                <span
+                                    class="bg-tag-new/20 text-tag-new text-sm py-[3px] px-2 leading-[17px] tracking-tight rounded-full font-medium">NEW</span>
+                                <span
+                                    class="flex items-center gap-1 text-brand-yellow text-sm tracking-tight font-semibold leading-[17px]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_271_1211)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.9901 2.92508C11.3634 2.02758 12.6368 2.02758 13.0101 2.92508L14.7451 7.09675L19.2484 7.45841C20.2184 7.53591 20.6118 8.74591 19.8726 9.37924L16.4418 12.3184L17.4893 16.7126C17.7151 17.6592 16.6859 18.4067 15.8559 17.9001L12.0001 15.5451L8.14425 17.9001C7.31425 18.4067 6.28508 17.6584 6.51092 16.7126L7.55842 12.3184L4.12758 9.37924C3.38842 8.74591 3.78175 7.53591 4.75175 7.45841L9.25508 7.09675L10.9901 2.92508Z"
+                                                fill="#FFC107" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_271_1211" x="-1.33333" y="0.25" width="26.6667"
+                                                height="26.6667" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="3.33333" />
+                                                <feGaussianBlur stdDeviation="1.66667" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_271_1211" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_271_1211" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    4.9/5 <span class="text-white/50 text-sm font-normal leading-[17px]">(838
+                                        vote)</span>
+                                </span>
+                            </div>
+                            <div
+                                class="w-full text-white font-bold text-xl truncate tracking-tight mb-[22px]">
+                                Minecraft Free Account</div>
+                            <a href="#" class="w-full mt-auto">
+                                <button
+                                    class="w-full py-[13px] px-[68px] rounded-[12px] border border-brand-red text-brand-red text-lg font-medium tracking-tighter leading-[22px] max-h-12 transition hover:bg-brand-red hover:text-white">Get account</button>
+                            </a>
+                        </div>
+                        <!-- Slot Card 2 -->
+                        <div class="flex flex-col items-center w-full mx-auto">
+                            <img src="../assets/images/steam-account-card1.png" alt="slot"
+                                class="w-full h-[236px] object-cover rounded-[12px] mb-3">
+                            <div class="flex items-center w-full justify-between mb-2.5">
+                                <span
+                                    class="bg-tag-new/20 text-tag-new text-sm py-[3px] px-2 leading-[17px] tracking-tight rounded-full font-medium">NEW</span>
+                                <span
+                                    class="flex items-center gap-1 text-brand-yellow text-sm tracking-tight font-semibold leading-[17px]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_271_1211)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.9901 2.92508C11.3634 2.02758 12.6368 2.02758 13.0101 2.92508L14.7451 7.09675L19.2484 7.45841C20.2184 7.53591 20.6118 8.74591 19.8726 9.37924L16.4418 12.3184L17.4893 16.7126C17.7151 17.6592 16.6859 18.4067 15.8559 17.9001L12.0001 15.5451L8.14425 17.9001C7.31425 18.4067 6.28508 17.6584 6.51092 16.7126L7.55842 12.3184L4.12758 9.37924C3.38842 8.74591 3.78175 7.53591 4.75175 7.45841L9.25508 7.09675L10.9901 2.92508Z"
+                                                fill="#FFC107" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_271_1211" x="-1.33333" y="0.25" width="26.6667"
+                                                height="26.6667" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="3.33333" />
+                                                <feGaussianBlur stdDeviation="1.66667" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_271_1211" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_271_1211" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    4.9/5 <span class="text-white/50 text-sm font-normal leading-[17px]">(838
+                                        vote)</span>
+                                </span>
+                            </div>
+                            <div
+                                class="w-full text-white font-bold text-xl truncate tracking-tight mb-[22px]">
+                                Minecraft Free Account</div>
+                            <a href="#" class="w-full mt-auto">
+                                <button
+                                    class="w-full py-[13px] px-[68px] rounded-[12px] border border-brand-red text-brand-red text-lg font-medium tracking-tighter leading-[22px] max-h-12 transition hover:bg-brand-red hover:text-white">Get account</button>
+                            </a>
+                        </div>
+                        <!-- Slot Card 3 -->
+                        <div class="flex flex-col items-center w-full mx-auto">
+                            <img src="../assets/images/steam-account-card1.png" alt="slot"
+                                class="w-full h-[236px] object-cover rounded-[12px] mb-3">
+                            <div class="flex items-center w-full justify-between mb-2.5">
+                                <span
+                                    class="bg-tag-new/20 text-tag-new text-sm py-[3px] px-2 leading-[17px] tracking-tight rounded-full font-medium">NEW</span>
+                                <span
+                                    class="flex items-center gap-1 text-brand-yellow text-sm tracking-tight font-semibold leading-[17px]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_271_1211)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.9901 2.92508C11.3634 2.02758 12.6368 2.02758 13.0101 2.92508L14.7451 7.09675L19.2484 7.45841C20.2184 7.53591 20.6118 8.74591 19.8726 9.37924L16.4418 12.3184L17.4893 16.7126C17.7151 17.6592 16.6859 18.4067 15.8559 17.9001L12.0001 15.5451L8.14425 17.9001C7.31425 18.4067 6.28508 17.6584 6.51092 16.7126L7.55842 12.3184L4.12758 9.37924C3.38842 8.74591 3.78175 7.53591 4.75175 7.45841L9.25508 7.09675L10.9901 2.92508Z"
+                                                fill="#FFC107" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_271_1211" x="-1.33333" y="0.25" width="26.6667"
+                                                height="26.6667" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="3.33333" />
+                                                <feGaussianBlur stdDeviation="1.66667" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_271_1211" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_271_1211" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    4.9/5 <span class="text-white/50 text-sm font-normal leading-[17px]">(838
+                                        vote)</span>
+                                </span>
+                            </div>
+                            <div
+                                class="w-full text-white font-bold text-xl truncate tracking-tight mb-[22px]">
+                                Minecraft Free Account</div>
+                            <a href="#" class="w-full mt-auto">
+                                <button
+                                    class="w-full py-[13px] px-[68px] rounded-[12px] border border-brand-red text-brand-red text-lg font-medium tracking-tighter leading-[22px] max-h-12 transition hover:bg-brand-red hover:text-white">Get account</button>
+                            </a>
+                        </div>
+                        <!-- Slot Card 4 -->
+                        <div class="flex flex-col items-center w-full mx-auto">
+                            <img src="../assets/images/steam-account-card1.png" alt="slot"
+                                class="w-full h-[236px] object-cover rounded-[12px] mb-3">
+                            <div class="flex items-center w-full justify-between mb-2.5">
+                                <span
+                                    class="bg-tag-new/20 text-tag-new text-sm py-[3px] px-2 leading-[17px] tracking-tight rounded-full font-medium">NEW</span>
+                                <span
+                                    class="flex items-center gap-1 text-brand-yellow text-sm tracking-tight font-semibold leading-[17px]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_271_1211)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.9901 2.92508C11.3634 2.02758 12.6368 2.02758 13.0101 2.92508L14.7451 7.09675L19.2484 7.45841C20.2184 7.53591 20.6118 8.74591 19.8726 9.37924L16.4418 12.3184L17.4893 16.7126C17.7151 17.6592 16.6859 18.4067 15.8559 17.9001L12.0001 15.5451L8.14425 17.9001C7.31425 18.4067 6.28508 17.6584 6.51092 16.7126L7.55842 12.3184L4.12758 9.37924C3.38842 8.74591 3.78175 7.53591 4.75175 7.45841L9.25508 7.09675L10.9901 2.92508Z"
+                                                fill="#FFC107" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_271_1211" x="-1.33333" y="0.25" width="26.6667"
+                                                height="26.6667" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="3.33333" />
+                                                <feGaussianBlur stdDeviation="1.66667" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_271_1211" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_271_1211" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    4.9/5 <span class="text-white/50 text-sm font-normal leading-[17px]">(838
+                                        vote)</span>
+                                </span>
+                            </div>
+                            <div
+                                class="w-full text-white font-bold text-xl truncate tracking-tight mb-[22px]">
+                                Minecraft Free Account</div>
+                            <a href="#" class="w-full mt-auto">
+                                <button
+                                    class="w-full py-[13px] px-[68px] rounded-[12px] border border-brand-red text-brand-red text-lg font-medium tracking-tighter leading-[22px] max-h-12 transition hover:bg-brand-red hover:text-white">Get account</button>
+                            </a>
+                        </div>
+                        <!-- Slot Card 5 -->
+                        <div class="flex flex-col items-center w-full mx-auto">
+                            <img src="../assets/images/steam-account-card1.png" alt="slot"
+                                class="w-full h-[236px] object-cover rounded-[12px] mb-3">
+                            <div class="flex items-center w-full justify-between mb-2.5">
+                                <span
+                                    class="bg-tag-new/20 text-tag-new text-sm py-[3px] px-2 leading-[17px] tracking-tight rounded-full font-medium">NEW</span>
+                                <span
+                                    class="flex items-center gap-1 text-brand-yellow text-sm tracking-tight font-semibold leading-[17px]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_271_1211)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.9901 2.92508C11.3634 2.02758 12.6368 2.02758 13.0101 2.92508L14.7451 7.09675L19.2484 7.45841C20.2184 7.53591 20.6118 8.74591 19.8726 9.37924L16.4418 12.3184L17.4893 16.7126C17.7151 17.6592 16.6859 18.4067 15.8559 17.9001L12.0001 15.5451L8.14425 17.9001C7.31425 18.4067 6.28508 17.6584 6.51092 16.7126L7.55842 12.3184L4.12758 9.37924C3.38842 8.74591 3.78175 7.53591 4.75175 7.45841L9.25508 7.09675L10.9901 2.92508Z"
+                                                fill="#FFC107" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_271_1211" x="-1.33333" y="0.25" width="26.6667"
+                                                height="26.6667" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="3.33333" />
+                                                <feGaussianBlur stdDeviation="1.66667" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_271_1211" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_271_1211" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    4.9/5 <span class="text-white/50 text-sm font-normal leading-[17px]">(838
+                                        vote)</span>
+                                </span>
+                            </div>
+                            <div
+                                class="w-full text-white font-bold text-xl truncate tracking-tight mb-[22px]">
+                                Minecraft Free Account</div>
+                            <a href="#" class="w-full mt-auto">
+                                <button
+                                    class="w-full py-[13px] px-[68px] rounded-[12px] border border-brand-red text-brand-red text-lg font-medium tracking-tighter leading-[22px] max-h-12 transition hover:bg-brand-red hover:text-white">Get account</button>
+                            </a>
+                        </div>
+                        <!-- Slot Card 6 -->
+                        <div class="flex flex-col items-center w-full mx-auto">
+                            <img src="../assets/images/steam-account-card1.png" alt="slot"
+                                class="w-full h-[236px] object-cover rounded-[12px] mb-3">
+                            <div class="flex items-center w-full justify-between mb-2.5">
+                                <span
+                                    class="bg-tag-new/20 text-tag-new text-sm py-[3px] px-2 leading-[17px] tracking-tight rounded-full font-medium">NEW</span>
+                                <span
+                                    class="flex items-center gap-1 text-brand-yellow text-sm tracking-tight font-semibold leading-[17px]">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_271_1211)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.9901 2.92508C11.3634 2.02758 12.6368 2.02758 13.0101 2.92508L14.7451 7.09675L19.2484 7.45841C20.2184 7.53591 20.6118 8.74591 19.8726 9.37924L16.4418 12.3184L17.4893 16.7126C17.7151 17.6592 16.6859 18.4067 15.8559 17.9001L12.0001 15.5451L8.14425 17.9001C7.31425 18.4067 6.28508 17.6584 6.51092 16.7126L7.55842 12.3184L4.12758 9.37924C3.38842 8.74591 3.78175 7.53591 4.75175 7.45841L9.25508 7.09675L10.9901 2.92508Z"
+                                                fill="#FFC107" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_271_1211" x="-1.33333" y="0.25" width="26.6667"
+                                                height="26.6667" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="3.33333" />
+                                                <feGaussianBlur stdDeviation="1.66667" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_271_1211" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_271_1211" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    4.9/5 <span class="text-white/50 text-sm font-normal leading-[17px]">(838
+                                        vote)</span>
+                                </span>
+                            </div>
+                            <div
+                                class="w-full text-white font-bold text-xl truncate tracking-tight mb-[22px]">
+                                Minecraft Free Account</div>
+                            <a href="#" class="w-full mt-auto">
+                                <button
+                                    class="w-full py-[13px] px-[68px] rounded-[12px] border border-brand-red text-brand-red text-lg font-medium tracking-tighter leading-[22px] max-h-12 transition hover:bg-brand-red hover:text-white">Get account</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="choose-game" class="mb-12">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-red">
+                                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+
+                            <h1 class="font-furore text-3.5xl leading-[37px] font-normal tracking-tightest text-white">Choose your game</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="relative flex-1 min-w-0">
+                        <div class="absolute left-0 top-0 w-[120px] h-full z-10 pointer-events-none"
+                            style="background: linear-gradient(90deg, #0E0E10 0%, rgba(14, 14, 16, 0.00) 100%);">
+                        </div>
+                        <div class="absolute right-0 top-0 w-[120px] h-full z-10 pointer-events-none"
+                            style="background: linear-gradient(270deg, #0E0E10 0%, rgba(14, 14, 16, 0.00) 100%);;">
+                        </div>
+
+                        <div class="flex gap-2 overflow-x-auto scrollbar-thin scrollbar-hide scroll-drag relative">
+                            <button class="slots-btn flex-shrink-0">Terraria</button>
+                            <button class="slots-btn flex-shrink-0">Terraria</button>
+                            <button class="slots-btn flex-shrink-0">Grand Theft Auto</button>
+                            <button class="slots-btn flex-shrink-0">Minecraft</button>
+                            <button class="slots-btn flex-shrink-0">Minecraft</button>
+                            <button class="slots-btn flex-shrink-0">Grand Theft Auto</button>
+                            <button class="slots-btn flex-shrink-0">Minecraft</button>
+                        </div>
+                    </div>
+                </div>
+
+                </section>
+        </div>
+
+        <!-- Sidebar Right -->
+        <aside class="w-[328px] hidden xl:block flex-shrink-0 space-y-4 mt-[61px]">
+            <!-- Games filter -->
+            <div class="bg-brand-dark-gray rounded-2xl p-5 mb-2">
+                <!-- Header with count -->
+                <div class="flex items-center mb-4 gap-2">
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-brand-red">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.79198 2.938C6.50386 2.47904 9.24953 2.24889 12 2.25C14.797 2.25 17.54 2.486 20.209 2.938C20.6413 3.01266 21.0333 3.238 21.3154 3.57408C21.5974 3.91015 21.7514 4.33525 21.75 4.774V5.818C21.7498 6.61359 21.4336 7.37653 20.871 7.939L14.689 14.121C14.5497 14.2604 14.4393 14.4258 14.3639 14.6078C14.2886 14.7899 14.2499 14.985 14.25 15.182V18.109C14.2501 18.6662 14.0951 19.2125 13.8023 19.6865C13.5094 20.1606 13.0903 20.5437 12.592 20.793L10.835 21.671C10.7206 21.7281 10.5936 21.755 10.4659 21.7492C10.3383 21.7434 10.2142 21.7051 10.1055 21.6379C9.9968 21.5706 9.90708 21.4768 9.84486 21.3651C9.78264 21.2535 9.74998 21.1278 9.74998 21V15.182C9.74963 14.7843 9.59136 14.403 9.30998 14.122L3.12998 7.938C2.56733 7.37553 2.25115 6.61259 2.25098 5.817V4.774C2.25098 3.877 2.88998 3.091 3.79198 2.938Z" fill="#FF2C2C"/>
+                            </svg>
+                        </span>
+                        <span class="font-heading text-2xl leading-[28px] font-normal tracking-tightest text-white">GAMES FILTER</span>
+                    </div>
+                    <div class="bg-brand-red rounded-[10px] flex items-center justify-center px-2 py-1.5">
+                        <span class="text-brand-dark-gray text-base leading-[100%] font-semibold tracking-tightest">2</span>
+                    </div>
+                </div>
+                
+                <!-- Games by genre section -->
+                <div class="filter-section filter-section-active" data-section="genre">
+                    <div class="flex items-center justify-between  filter-header" data-toggle="genre">
+                        <h3 class="text-white font-primary text-xl font-medium">Games by genre</h3>
+                        <span class="block p-1 bg-white/20 rounded-lg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white transform rotate-180 filter-arrow">
+                                <path opacity="0.8" d="M3.33203 6L7.9987 10.6667L12.6654 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                               
+                        </span>
+                    </div>
+                    <div class="space-y-5 filter-content" data-content="genre">
+                        <!-- Action -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-action" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Action</span>
+                        </label>
+                        <!-- Strategy -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-strategy" data-filter="genre" checked>
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Strategy</span>
+                        </label>
+                        <!-- Casual -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-casual" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Casual</span>
+                        </label>
+                        <!-- Racing -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-racing" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Racing</span>
+                        </label>
+                        <!-- RPG -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-rpg" data-filter="genre" checked>
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">RPG</span>
+                        </label>
+                        <!-- Sports -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-sports" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Sports</span>
+                        </label>
+                        <!-- Indie -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-indie" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Indie</span>
+                        </label>
+                        <!-- Adventure -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-adventure" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Adventure</span>
+                        </label>
+                        <!-- Simulation -->
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-simulation" data-filter="genre">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Simulation</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Games by year section -->
+                <div class="filter-section mt-1" data-section="year">
+                    <div class="flex items-center justify-between filter-header" data-toggle="year">
+                       <h3 class="text-white font-primary text-xl font-medium">Games by year</h3>
+                        <span class="block p-1 bg-white/20 rounded-lg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white transform filter-arrow">
+                                <path opacity="0.8" d="M3.33203 6L7.9987 10.6667L12.6654 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                               
+                        </span>
+                    </div>
+                    <div class="space-y-5 filter-content" data-content="year" style="display: none;">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-2024" data-filter="year">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">2024</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-2023" data-filter="year">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">2023</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-2022" data-filter="year">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">2022</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-2021" data-filter="year">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">2021</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-2020" data-filter="year">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">2020</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Other section -->
+                <div class="filter-section mt-1" data-section="other">
+                    <div class="flex items-center justify-between filter-header" data-toggle="other">
+                        <h3 class="text-white font-primary text-xl font-medium">Other</h3>
+                        <span class="block p-1 bg-white/20 rounded-lg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white transform filter-arrow">
+                                <path opacity="0.8" d="M3.33203 6L7.9987 10.6667L12.6654 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                               
+                        </span>
+                    </div>
+                    <div class="space-y-5 filter-content" data-content="other" style="display: none;">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-free" data-filter="other">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Free to Play</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-multiplayer" data-filter="other">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Multiplayer</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-single" data-filter="other">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Single Player</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" class="game-filter-checkbox" id="filter-coop" data-filter="other">
+                            <span class="text-white text-lg leading-[22px] tracking-tightest font-normal">Co-op</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter buttons -->
+                <div class="space-y-2 mt-4">
+                    <button id="reset-filter-btn" class="w-full btn-outline text-center min-h-11 py-[14.5px] px-4 border-brand-red border-opacity-30 text-brand-red hover:bg-brand-red hover:text-white text-base tracking-tightest font-normal rounded-[11px] font-primary transition">
+                        Reset filter
+                    </button>
+                    <button id="save-filter-btn" class="w-full btn-primary min-w-[77px] min-h-12 py-[14.5px] px-4 rounded-[11px]  font-medium text-base tracking-tightest font-primary">
+                        Save Filter
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- /Main Content -->
+
+
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark rounded-3xl m-10 p-10">
+        <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
+            <div
+                class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest">
+                <div class="flex gap-[88px]">
+                    <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">PRIVACY
+                            POLICY</a>
+                        <a href="#"
+                            class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACTS</a>
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">ESPORTS
+                            BETTING</a>
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">BC GAME</a>
+                    </div>
+                    <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">GGBET</a>
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">STAKE</a>
+                        <a href="#"
+                            class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">THUNDERPICK</a>
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">MYSTAKE</a>
+                    </div>
+                    <div class="flex flex-col gap-10 min-w-[140px] min-h-[212px] justify-between">
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">TERMS OF
+                            USE</a>
+                        <a href="#"
+                            class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">DISCLAIMER</a>
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">COPYRIGHT
+                            HOLDER</a>
+                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACT</a>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <span
+                        class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal">©VPESPORTS
+                        All Rights Reserved. v0.7.51</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0">
+                <img src="../../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px]">
+                <div class="flex gap-6">
+                    <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg width="48" height="48"
+                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="13.1507" fill="white" />
+                            <path
+                                d="M23.9732 37.4259C22.1582 37.4259 20.3961 37.0699 18.7359 36.3678C17.1336 35.6902 15.6953 34.7205 14.4606 33.4858C13.2259 32.2511 12.2562 30.8128 11.5786 29.2105C10.8765 27.5506 10.5205 25.7886 10.5205 23.9732C10.5205 22.1578 10.8765 20.3961 11.5786 18.7359C12.2562 17.1336 13.2259 15.6953 14.4606 14.4606C15.6953 13.2259 17.1336 12.2562 18.7359 11.5786C20.3958 10.8765 22.1578 10.5205 23.9732 10.5205C25.7886 10.5205 27.5503 10.8765 29.2105 11.5786C30.8128 12.2562 32.2511 13.2259 33.4858 14.4606C34.7205 15.6953 35.6902 17.1336 36.3678 18.7359C37.0699 20.3958 37.4259 22.1578 37.4259 23.9732C37.4259 25.7886 37.0699 27.5503 36.3678 29.2105C35.6902 30.8128 34.7205 32.2511 33.4858 33.4858C32.2511 34.7205 30.8128 35.6902 29.2105 36.3678C27.5506 37.0699 25.7886 37.4259 23.9732 37.4259ZM23.9732 15.0978C19.0793 15.0978 15.0978 19.0793 15.0978 23.9732C15.0978 28.8671 19.0793 32.8486 23.9732 32.8486C28.8671 32.8486 32.8486 28.8671 32.8486 23.9732C32.8486 19.0793 28.8671 15.0978 23.9732 15.0978Z"
+                                fill="#171719" />
+                            <path
+                                d="M38.8066 12.8818C40.5482 12.8818 41.96 11.47 41.96 9.72852C41.96 7.98698 40.5482 6.5752 38.8066 6.5752C37.0651 6.5752 35.6533 7.98698 35.6533 9.72852C35.6533 11.47 37.0651 12.8818 38.8066 12.8818Z"
+                                fill="#171719" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg width="48" height="48"
+                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M46.9996 7.4946C46.4498 4.54902 44.8233 2.2256 42.754 1.42923C39.0124 0 24 0 24 0C24 0 8.99529 0 5.24599 1.42923C3.18437 2.21461 1.55785 4.53831 1.00042 7.4946C-9.40902e-08 12.84 0 23.9999 0 23.9999C0 23.9999 -9.40902e-08 35.16 1.00042 40.5054C1.55016 43.451 3.17668 45.7744 5.24599 46.5708C8.99529 48 24 48 24 48C24 48 39.0124 48 42.754 46.5708C44.8158 45.7854 46.4421 43.4617 46.9996 40.5054C48 35.16 48 24.0001 48 24.0001C48 24.0001 48 12.84 46.9996 7.4946Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17 31.11C17 32.6497 18.6668 33.6119 20.0002 32.842L31.8152 26.0191C33.1483 25.2492 33.1483 23.325 31.8152 22.5552L20.0001 15.7325C18.6668 14.9625 17 15.9248 17 17.4644V31.11Z"
+                                fill="#171719" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg width="48" height="48"
+                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2030_411)">
+                                <path
+                                    d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10.864 23.7469L24.8604 17.7181C31.5254 14.9458 32.9103 14.4643 33.813 14.4484C34.0116 14.4449 34.4555 14.4941 34.743 14.7274C34.9859 14.9244 35.0526 15.1906 35.0846 15.3774C35.1167 15.5641 35.1564 15.9897 35.1248 16.3222C34.7636 20.1171 33.2007 29.3265 32.4057 33.5769C32.0692 35.3755 31.4073 35.9785 30.7655 36.0375C29.3718 36.1658 28.3134 35.1164 26.9635 34.2316L21.6075 30.6338C19.2379 29.0724 20.774 28.2141 22.1245 26.8116C22.4778 26.4444 28.6186 20.8589 28.7374 20.3522C28.7518 20.2889 28.7661 20.0527 28.6258 19.9279C28.4855 19.8031 28.2782 19.8463 28.1288 19.8798C27.917 19.9279 24.5426 22.1582 18.0055 26.571C17.0477 27.2287 16.1801 27.5492 15.4028 27.5324C14.5459 27.5139 12.8975 27.0479 11.6721 26.6495C10.1691 26.161 8.97452 25.9027 9.07859 25.0729C9.13273 24.6408 9.72788 24.1988 10.864 23.747L10.864 23.7469Z"
+                                    fill="#171719" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2030_411">
+                                    <rect width="48" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg width="48" height="48"
+                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2030_415)">
+                                <path
+                                    d="M24.0001 48C37.2549 48 48.0001 37.2548 48.0001 24C48.0001 10.7452 37.2549 0 24.0001 0C10.7452 0 6.10352e-05 10.7452 6.10352e-05 24C6.10352e-05 37.2548 10.7452 48 24.0001 48Z"
+                                    fill="white" />
+                                <path
+                                    d="M31.8037 7.36719H26.4871C23.3321 7.36719 19.8228 8.69415 19.8228 13.2675C19.8382 14.8611 19.8228 16.3872 19.8228 18.1048H16.1729V23.9129H19.9358V40.6336H26.8503V23.8026H31.4141L31.827 18.0885H26.7311C26.7311 18.0885 26.7425 15.5466 26.7311 14.8084C26.7311 13.0011 28.6117 13.1046 28.7248 13.1046C29.6197 13.1046 31.3597 13.1072 31.8063 13.1046V7.36719H31.8037Z"
+                                    fill="#171719" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2030_415">
+                                    <rect width="48" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg width="53" height="48"
+                            viewBox="0 0 53 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2030_418)">
+                                <path
+                                    d="M41.7406 0.00195312H49.8676L32.1125 20.3322L53 47.9971H36.6453L23.8356 31.2184L9.17854 47.9971H1.04654L20.0375 26.2516L0 0.00195312H16.7698L28.3486 15.3383L41.7406 0.00195312ZM38.8883 43.1237H43.3915L14.323 4.6193H9.4905L38.8883 43.1237Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2030_418">
+                                    <rect width="53" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Scripts -->
+<script src="../../assets/js/dragscroll.js"></script>
+<script src="../../assets/js/single-slider.js"></script>
+<script src="../../assets/js/filter.js"></script>
+
+
+
+</body>
+
+</html>

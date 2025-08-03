@@ -10,7 +10,12 @@
   "devDependencies": {
     "tailwindcss": "^3.3.0"
   },
-  "keywords": ["esports", "website", "tailwind", "wordpress"],
+  "keywords": [
+    "esports",
+    "website",
+    "tailwind",
+    "wordpress"
+  ],
   "author": "",
   "license": "ISC"
-} 
+}
