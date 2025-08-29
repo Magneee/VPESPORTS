@@ -102,24 +102,23 @@
     @apply bg-brand-red hover:bg-brand-accent text-white text-base tracking-tightest px-6 py-3 rounded-[12px] font-medium transition-all duration-300 hover:shadow-glow;
   }
   .btn-secondary-small {
-    @apply bg-brand-red hover:bg-brand-accent text-white tracking-tightest px-5 py-[14.5px] rounded-[12px] leading-[19px] font-medium transition-all duration-300 hover:shadow-glow;
+    @apply bg-brand-red hover:bg-brand-accent text-white tracking-tightest px-5 py-[14.5px] rounded-[12px] leading-[19px] font-medium transition-all duration-300 hover:shadow-glow max-md:text-mobile-base max-md:py-2 max-md:px-5 max-md:h-11;
   }
 
   .btn-secondary {
-    @apply bg-brand-gray hover:bg-brand-light-gray text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    @apply bg-brand-gray hover:bg-brand-light-gray text-white px-6 py-3 rounded-lg font-medium transition-all duration-300  ;
   }
   
   .btn-outline {
-    @apply border border-brand-red text-brand-red hover:bg-brand-red hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    @apply border border-brand-red text-brand-red hover:bg-brand-red hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 ;
   }
-  
   /* Карточки */
   .card {
     @apply  p-6 transition-all duration-300;
   }
   
   .slots-btn{
-    @apply h-11 bg-transparent border border-white/30 text-white leading-[22px] px-4 py-[11px] rounded-full text-lg font-normal tracking-tightest whitespace-nowrap flex-shrink-0;
+    @apply h-11 bg-transparent border border-white/30 text-white leading-[22px] px-4 py-[11px] rounded-full text-lg font-normal tracking-tightest whitespace-nowrap flex-shrink-0 max-md:text-mobile-base max-md:px-3 max-md:py-2 max-md:h-9;
   }
   .slots-btn-active{
     @apply bg-white text-brand-darker;
@@ -137,13 +136,14 @@
     @apply text-brand-red opacity-100;
   }
   .games-item-wrapper {
-    @apply w-20 h-20 rounded-full border border-brand-border-dark/50 p-1 flex items-center justify-center;
+    @apply w-20 h-20 rounded-full border border-brand-border-dark/50 p-1 flex items-center justify-center max-md:h-[56px] max-md:w-[56px];
   }
+
   .games-item {
     @apply w-auto h-auto;
   }
   .cas-item {
-    @apply text-white text-base font-normal leading-[100%] tracking-tightest py-[9px] px-[12px] rounded-full border border-white/30 w-fit;
+    @apply text-white text-base font-normal leading-[100%] tracking-tightest py-[9px] px-[12px] rounded-full border border-white/30 w-fit max-md:text-mobile-base max-md:py-[8.5px] max-md:px-3 max-md:h-8 max-md:flex max-md:items-center max-md:justify-center;
   }
 
   /* Градиенты */
@@ -288,6 +288,7 @@
     position: relative;
     cursor: pointer;
     transition: all 0.2s ease;
+    @apply max-md:w-[16px] max-md:h-[16px] max-md:rounded-[6px];
   }
 
   .game-filter-checkbox:checked {
@@ -304,6 +305,7 @@
     height: 16px;
     background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8.5L7 12.5L13 3.5" stroke="%23171719" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
     background-size: contain;
+    @apply max-md:w-[12px] max-md:h-[12px];
   }
 
   .game-filter-checkbox:not(:checked) {

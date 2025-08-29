@@ -10,7 +10,11 @@
     overflow: hidden;
     height: 712px;
 }
-
+@media (max-width: 768px) {
+    .slot-game-container {
+        height: 427px;
+    }
+}
 /* Game Theme and Overview sections now inside flex-1 container */
 .slot-wrapper .flex-1 {
     display: flex;
@@ -43,7 +47,11 @@
 .game-info-block{
     padding: 1.25rem;
 }
-
+@media (max-width: 768px) {
+    .game-info-block{
+        padding: 16px;
+    }
+}
 
 .related-news-item:last-child {
     border-bottom: none;
@@ -74,8 +82,7 @@
         flex-direction: column;
     }
     
-    .game-theme-section,
-    .slot-overview-section {
+    .game-theme-section {
         width: 100%;
         margin-top: 2rem;
     }
@@ -91,8 +98,8 @@
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0.5rem;
-    right: 0.5rem;
+    left: 0;
+    right: 0;
     height: 1.5px;
     background-color: rgba(255, 255, 255, 0.15);
 }
@@ -109,10 +116,6 @@
 }
 
 /* Game Theme Section Styles */
-.game-theme-section .grid {
-    gap: 1rem;
-}
-
 
 .slot-overview-section strong {
     color: white;

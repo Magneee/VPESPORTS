@@ -37,6 +37,7 @@ const VPEsportsConfig = {
     
     // Размеры шрифтов
     fontSize: {
+      mobile: '',
       xs: '0.75rem',
       sm: '0.875rem',
       base: '1rem',

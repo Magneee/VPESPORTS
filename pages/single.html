@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile вЂ” VPEsports</title>
+  <title>Profile VPEsports</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/slider.css">
   <link rel="stylesheet" href="../assets/css/nav-widget.css">
-    <link rel="stylesheet" href="../assets/css/nav-widget.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+
   <script src="../assets/js/config.js"></script>
   <style>
   </style>
@@ -28,7 +29,15 @@
     margin-left: 3.25rem;
     /* 52px */
   }
-
+  @media (max-width: 768px) {
+    .ml-13{
+      margin-left: 2.75rem !important;
+    }
+    .ml-26{
+      margin-left: 2.75rem !important;
+    }
+  }
+ 
   .ml-26 {
     margin-left: 6.5rem;
     /* 104px */
@@ -79,6 +88,15 @@
     border-bottom-left-radius: 8px;
     z-index: 0;
   }
+  @media (max-width: 768px) {
+    .reply-thread::before{
+      left: 14px ;
+      height: calc(100% - -27px) !important;
+    }
+    .reply-thread:nth-child(4)::before{
+      display: none;
+    }
+  }
 
   .reply-thread:nth-child(4)::before {
     left: 72px;
@@ -101,6 +119,13 @@
     position: relative;
   }
 
+  @media (max-width: 768px) {
+    .comment-select {
+      font-size: 12px;
+      line-height: 15px;
+      padding-right: 14px;
+    }
+  }
   .comment-select:focus {
     color: rgba(255, 255, 255, 0.9);
   }
@@ -178,7 +203,6 @@
           class="relative nav-link font-furore text-lg tracking-tightest nav-link-active text-brand-red font-normal flex items-center gap-1">
           HOME
           <span class="ml-1 text-brand-red text-lg">
-            <!-- Р РѕРјР±РёРє -->
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 0L12 6L6 12L0 6L6 0Z" fill="#FF2C2C" />
             </svg>
@@ -224,11 +248,11 @@
           </form>
           <!-- Theme button -->
           <button
-            class="bg-brand-red bg-opacity-30 hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center">
+            class="bg-brand-red bg-opacity-30 text-brand-red hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center" data-theme-toggle>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14 2.625C14.2321 2.625 14.4546 2.71719 14.6187 2.88128C14.7828 3.04538 14.875 3.26794 14.875 3.5V6.125C14.875 6.35706 14.7828 6.57962 14.6187 6.74372C14.4546 6.90781 14.2321 7 14 7C13.7679 7 13.5454 6.90781 13.3813 6.74372C13.2172 6.57962 13.125 6.35706 13.125 6.125V3.5C13.125 3.26794 13.2172 3.04538 13.3813 2.88128C13.5454 2.71719 13.7679 2.625 14 2.625ZM8.75 14C8.75 12.6076 9.30312 11.2723 10.2877 10.2877C11.2723 9.30312 12.6076 8.75 14 8.75C15.3924 8.75 16.7277 9.30312 17.7123 10.2877C18.6969 11.2723 19.25 12.6076 19.25 14C19.25 15.3924 18.6969 16.7277 17.7123 17.7123C16.7277 18.6969 15.3924 19.25 14 19.25C12.6076 19.25 11.2723 18.6969 10.2877 17.7123C9.30312 16.7277 8.75 15.3924 8.75 14ZM22.043 7.19367C22.1976 7.0278 22.2817 6.80841 22.2777 6.58172C22.2737 6.35504 22.1819 6.13876 22.0216 5.97844C21.8612 5.81813 21.645 5.7263 21.4183 5.7223C21.1916 5.7183 20.9722 5.80244 20.8063 5.957L18.9502 7.812C18.8666 7.89268 18.7999 7.9892 18.7539 8.09593C18.708 8.20266 18.6838 8.31747 18.6828 8.43365C18.6817 8.54983 18.7038 8.66506 18.7477 8.77261C18.7917 8.88017 18.8566 8.97789 18.9387 9.06009C19.0209 9.14228 19.1185 9.2073 19.226 9.25134C19.3335 9.29539 19.4488 9.31758 19.5649 9.31663C19.6811 9.31568 19.7959 9.29159 19.9027 9.24579C20.0095 9.19998 20.1061 9.13337 20.1868 9.04983L22.043 7.19367ZM25.375 14C25.375 14.2321 25.2828 14.4546 25.1187 14.6187C24.9546 14.7828 24.7321 14.875 24.5 14.875H21.875C21.6429 14.875 21.4204 14.7828 21.2563 14.6187C21.0922 14.4546 21 14.2321 21 14C21 13.7679 21.0922 13.5454 21.2563 13.3813C21.4204 13.2172 21.6429 13.125 21.875 13.125H24.5C24.7321 13.125 24.9546 13.2172 25.1187 13.3813C25.2828 13.5454 25.375 13.7679 25.375 14ZM20.8063 22.043C20.9722 22.1976 21.1916 22.2817 21.4183 22.2777C21.645 22.2737 21.8612 22.1819 22.0216 22.0216C22.1819 21.8612 22.2737 21.645 22.2777 21.4183C22.2817 21.1916 22.1976 20.9722 22.043 20.8063L20.188 18.9502C20.1073 18.8666 20.0108 18.7999 19.9041 18.7539C19.7973 18.708 19.6825 18.6838 19.5664 18.6828C19.4502 18.6817 19.3349 18.7038 19.2274 18.7477C19.1198 18.7917 19.0221 18.8566 18.9399 18.9387C18.8577 19.0209 18.7927 19.1185 18.7487 19.226C18.7046 19.3335 18.6824 19.4488 18.6834 19.5649C18.6843 19.6811 18.7084 19.7959 18.7542 19.9027C18.8 20.0095 18.8666 20.1061 18.9502 20.1868L20.8063 22.043ZM14 21C14.2321 21 14.4546 21.0922 14.6187 21.2563C14.7828 21.4204 14.875 21.6429 14.875 21.875V24.5C14.875 24.7321 14.7828 24.9546 14.6187 25.1187C14.4546 25.2828 14.2321 25.375 14 25.375C13.7679 25.375 13.5454 25.2828 13.3813 25.1187C13.2172 24.9546 13.125 24.7321 13.125 24.5V21.875C13.125 21.6429 13.2172 21.4204 13.3813 21.2563C13.5454 21.0922 13.7679 21 14 21ZM9.051 20.1868C9.21031 20.0217 9.2984 19.8007 9.2963 19.5712C9.2942 19.3418 9.20208 19.1224 9.03977 18.9602C8.87746 18.7981 8.65795 18.7062 8.42853 18.7043C8.1991 18.7024 7.97812 18.7907 7.81317 18.9502L5.957 20.8052C5.79753 20.9701 5.70923 21.1911 5.71112 21.4205C5.713 21.65 5.80492 21.8695 5.96708 22.0318C6.12923 22.1941 6.34865 22.2862 6.57807 22.2883C6.8075 22.2904 7.02856 22.2023 7.19367 22.043L9.04983 20.188L9.051 20.1868ZM7 14C7 14.2321 6.90781 14.4546 6.74372 14.6187C6.57962 14.7828 6.35706 14.875 6.125 14.875H3.5C3.26794 14.875 3.04538 14.7828 2.88128 14.6187C2.71719 14.4546 2.625 14.2321 2.625 14C2.625 13.7679 2.71719 13.5454 2.88128 13.3813C3.04538 13.2172 3.26794 13.125 3.5 13.125H6.125C6.35706 13.125 6.57962 13.2172 6.74372 13.3813C6.90781 13.5454 7 13.7679 7 14ZM7.81317 9.04983C7.97904 9.20439 8.19842 9.28854 8.42511 9.28454C8.65179 9.28054 8.86808 9.18871 9.02839 9.02839C9.18871 8.86808 9.28054 8.65179 9.28454 8.42511C9.28854 8.19842 9.20439 7.97904 9.04983 7.81317L7.19483 5.957C7.02988 5.79753 6.8089 5.70923 6.57947 5.71112C6.35005 5.713 6.13054 5.80492 5.96823 5.96708C5.80592 6.12923 5.7138 6.34865 5.7117 6.57807C5.7096 6.8075 5.79769 7.02856 5.957 7.19367L7.81317 9.04983Z"
-                fill="#FF2C2C" />
+                fill="currentColor" />
             </svg>
           </button>
         </div>
@@ -248,7 +272,7 @@
   <!-- /Header -->
 
   <!-- Main Content -->
-  <main class="flex gap-6 max-w-8xl mx-auto mt-[33px]">
+  <main class="flex gap-6 max-w-8xl mx-auto mt-[33px] max-md:block max-md:px-5">
     <!-- Sidebar Left -->
     <aside class="w-[213px] hidden lg:block">
       <!-- User Card -->
@@ -323,7 +347,7 @@
     <div class="flex-1 min-w-0">
 
       <!-- Breadcrumbs -->
-      <nav class="flex items-center gap-2 mb-6 text-white text-base">
+      <nav class="flex items-center gap-2 mb-6 text-white text-base max-md:hidden">
         <a href="#" class="opacity-50 hover:opacity-100 transition max-w-[158px] truncate">VPEsports</a>
         <span class="opacity-80">/</span>
         <a href="#" class="opacity-50 hover:opacity-100 transition max-w-[158px] truncate">Games</a>
@@ -336,50 +360,97 @@
 
       <!-- Single Article Section -->
       <section id="single">
-        <!-- Article Header (РЅР°Рґ СЃР»Р°Р№РґРµСЂРѕРј) -->
-        <div class="mb-8">
-          <h1 class="text-3.5xl font-primary font-bold tracking-tight text-white">
+        <div class="mb-8 max-md:mb-2">
+          <h1 class="text-3.5xl font-primary font-bold tracking-tight text-white max-md:text-mobile-2.5xs">
             Dota 2 Team Draws Controversy for using Nazi Logo at MESA Invitation 2024
           </h1>
         </div>
 
+        <div class="justify-between items-center hidden max-md:flex mb-6">
+          <span class="flex items-center gap-1 text-white/50 text-mini tracking-tight font-medium">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.5">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10 1.875C5.5125 1.875 1.875 5.5125 1.875 10C1.875 14.4875 5.5125 18.125 10 18.125C14.4875 18.125 18.125 14.4875 18.125 10C18.125 5.5125 14.4875 1.875 10 1.875ZM10.625 5C10.625 4.83424 10.5592 4.67527 10.4419 4.55806C10.3247 4.44085 10.1658 4.375 10 4.375C9.83424 4.375 9.67527 4.44085 9.55806 4.55806C9.44085 4.67527 9.375 4.83424 9.375 5V10C9.375 10.345 9.655 10.625 10 10.625H13.75C13.9158 10.625 14.0747 10.5592 14.1919 10.4419C14.3092 10.3247 14.375 10.1658 14.375 10C14.375 9.83424 14.3092 9.67527 14.1919 9.55806C14.0747 9.44085 13.9158 9.375 13.75 9.375H10.625V5Z"
+                  fill="white" />
+              </g>
+            </svg>
+            56 min ago
+          </span>
+          <span class="text-white/50 text-mini tracking-tight font-medium">Andrey Kapusta</span>
+        </div>
+
         <!-- Article Image Slider -->
-        <div class="slider-container relative rounded-2xl overflow-hidden mb-8">
+        <div class="slider-container relative rounded-2xl overflow-hidden mb-8 max-md:rounded-xl max-md:mb-6">
+          <!-- Mobile Meta-->
+          <div class="absolute bottom-0 left-0 right-0 md:hidden z-10 pointer-events-none">
+            <div class="absolute left-4 right-4 bottom-4 px-5 pb-4 pt-4 flex items-center justify-between gap-4 rounded-[24px] pointer-events-auto max-md:pl-3 max-md:pr-4 max-md:py-3">
+              <div class="absolute rounded-[24px] pointer-events-none z-0" style="background: url('../assets/images/single-bg.png') center/100% 100% no-repeat;
+                width: 100%; height: 64px; left: 0; right: 0;
+                backdrop-filter: blur(16px);
+                -webkit-mask: url('../assets/images/single-bg.png') center/100% 100% no-repeat;
+                mask: url('../assets/images/single-bg.png') center/100% 100% no-repeat;
+                opacity: 0.6;">
+              </div>
+              <div class="absolute rounded-[24px] pointer-events-none z-0" style="background: url('../assets/images/single-bg.png') center/100% 100% no-repeat;
+                width: 100%; height: 64px; left: 0; right: 0; opacity: 0.4;">
+              </div>
+              <div class="relative z-10 flex items-center justify-between w-full">
+                <span class="bg-brand-red/20 text-brand-red text-mini rounded-full font-medium tracking-tight max-md:px-2 max-md:py-[5.5px] max-md:h-6 max-md:flex max-md:items-center max-md:leading-[13px]">Dota 2</span>
+                <div class="flex items-center gap-6 text-white max-md:text-mobile-mini tracking-tight font-semibold max-md:gap-6">
+                  <span class="flex items-center gap-1"><svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.5" d="M12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15Z" fill="white"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3221 11.447C2.8101 6.976 7.0271 3.75 12.0001 3.75C16.9701 3.75 21.1851 6.973 22.6751 11.44C22.7951 11.802 22.7951 12.192 22.6751 12.553C21.1881 17.024 16.9701 20.25 11.9981 20.25C7.0281 20.25 2.8121 17.027 1.3231 12.56C1.20285 12.1987 1.20285 11.8083 1.3231 11.447H1.3221ZM17.2491 12C17.2491 13.3924 16.696 14.7277 15.7114 15.7123C14.7268 16.6969 13.3915 17.25 11.9991 17.25C10.6067 17.25 9.27136 16.6969 8.28679 15.7123C7.30222 14.7277 6.7491 13.3924 6.7491 12C6.7491 10.6076 7.30222 9.27225 8.28679 8.28769C9.27136 7.30312 10.6067 6.75 11.9991 6.75C13.3915 6.75 14.7268 7.30312 15.7114 8.28769C16.696 9.27225 17.2491 10.6076 17.2491 12Z" fill="white"></path>
+                    </svg>
+                    1.5m</span>
+                  <span class="flex items-center gap-1"><svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.337 21.718C5.15841 21.7005 4.98061 21.6758 4.804 21.644C4.67429 21.6208 4.553 21.5638 4.45233 21.4787C4.35167 21.3937 4.27518 21.2836 4.23057 21.1597C4.18596 21.0357 4.17481 20.9021 4.19823 20.7724C4.22165 20.6428 4.27883 20.5215 4.364 20.421C4.77426 19.9373 5.05442 19.3571 5.178 18.735C5.201 18.62 5.156 18.418 4.924 18.192C3.274 16.587 2.25 14.41 2.25 12C2.25 6.97 6.678 3 12 3C17.322 3 21.75 6.97 21.75 12C21.75 17.03 17.322 21 12 21C11.167 21 10.357 20.903 9.583 20.721C8.31785 21.5161 6.82381 21.8669 5.337 21.718Z" fill="white"></path>
+                    </svg>
+                    324K</span>
+                  <span class="flex items-center gap-1"><svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7502 4.50001C15.7502 3.80263 15.9931 3.12702 16.4372 2.58933C16.8813 2.05163 17.4988 1.68546 18.1836 1.55375C18.8685 1.42204 19.5778 1.53303 20.1897 1.86764C20.8015 2.20225 21.2777 2.73957 21.5363 3.38722C21.7949 4.03487 21.8198 4.75238 21.6068 5.41641C21.3937 6.08044 20.9559 6.64949 20.3687 7.02572C19.7815 7.40195 19.0816 7.56187 18.3893 7.47797C17.697 7.39407 17.0556 7.07161 16.5752 6.56601L8.15423 11.245C8.28289 11.7401 8.28289 12.2599 8.15423 12.755L16.5752 17.434C17.0785 16.9049 17.7574 16.5775 18.4848 16.5132C19.2122 16.4489 19.9381 16.6521 20.5263 17.0847C21.1146 17.5173 21.5249 18.1496 21.6803 18.8631C21.8357 19.5766 21.7255 20.3223 21.3704 20.9603C21.0154 21.5984 20.4398 22.0851 19.7515 22.3291C19.0633 22.5731 18.3097 22.5577 17.632 22.2858C16.9543 22.0139 16.399 21.5042 16.0702 20.8521C15.7415 20.2001 15.6618 19.4506 15.8462 18.744L7.42523 14.066C7.01209 14.501 6.47801 14.8021 5.89198 14.9305C5.30595 15.0589 4.6949 15.0086 4.13773 14.7862C3.58056 14.5638 3.10288 14.1794 2.76637 13.6827C2.42987 13.1861 2.25 12.5999 2.25 12C2.25 11.4001 2.42987 10.8139 2.76637 10.3173C3.10288 9.82061 3.58056 9.43624 4.13773 9.21382C4.6949 8.99139 5.30595 8.94112 5.89198 9.0695C6.47801 9.19788 7.01209 9.49902 7.42523 9.93401L15.8462 5.25501C15.7823 5.00844 15.7501 4.75473 15.7502 4.50001Z" fill="white"></path>
+                    </svg>
+                    25k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Slider Track -->
           <div class="slider-track flex transition-transform duration-500 ease-in-out">
             <!-- Slide 1 -->
             <div class="slider-slide w-full flex-shrink-0 relative">
               <img src="../assets/images/single-slider.png" alt="Article Image 1"
-                class="w-full max-h-[370px] object-cover select-none pointer-events-none">
+                class="w-full max-h-[370px] object-cover select-none pointer-events-none max-md:h-[370px]">
             </div>
 
             <!-- Slide 2 -->
             <div class="slider-slide w-full flex-shrink-0 relative">
               <img src="../assets/images/single-slider.png" alt="Article Image 2"
-                class="w-full max-h-[370px] object-cover select-none pointer-events-none">
+                class="w-full max-h-[370px] object-cover select-none pointer-events-none max-md:h-[370px]">
             </div>
 
             <!-- Slide 3 -->
             <div class="slider-slide w-full flex-shrink-0 relative">
               <img src="../assets/images/single-slider.png" alt="Article Image 3"
-                class="w-full max-h-[370px] object-cover select-none pointer-events-none">
+                class="w-full max-h-[370px] object-cover select-none pointer-events-none max-md:h-[370px]">
             </div>
 
             <!-- Slide 4 -->
             <div class="slider-slide w-full flex-shrink-0 relative">
               <img src="../assets/images/single-slider.png" alt="Article Image 4"
-                class="w-full max-h-[370px] object-cover select-none pointer-events-none">
+                class="w-full max-h-[370px] object-cover select-none pointer-events-none max-md:h-[370px]">
             </div>
 
             <!-- Slide 5 -->
             <div class="slider-slide w-full flex-shrink-0 relative">
               <img src="../assets/images/single-slider.png" alt="Article Image 5"
-                class="w-full max-h-[370px] object-cover select-none pointer-events-none">
+                class="w-full max-h-[370px] object-cover select-none pointer-events-none max-md:h-[370px]">
             </div>
           </div>
 
           <!-- Slider dots -->
-          <div class="absolute top-4 right-[17px] flex gap-0.5 z-10 backdrop-blur-md bg-white/20 rounded-full p-1">
+          <div class="absolute top-4 right-[17px] flex gap-0.5 z-10 backdrop-blur-md bg-white/20 rounded-full p-1 max-md:hidden">
             <span class="slider-dot active w-4 h-4 rounded-full bg-white cursor-pointer transition-colors"
               data-slide="0"></span>
             <span class="slider-dot w-4 h-4 rounded-full bg-white/50 cursor-pointer transition-colors"
@@ -393,23 +464,24 @@
           </div>
         </div>
 
-        <!-- Article Meta Data (РїРѕРґ СЃР»Р°Р№РґРµСЂРѕРј) -->
         <div class="mb-8 flex flex-col gap-6">
 
-          <div class="article-meta flex justify-between items-center rounded-2xl px-5 py-4 relative overflow-hidden"
+          <!-- Desktop Meta -->
+          <div class="article-meta meta-single-slider flex justify-between items-center rounded-2xl px-5 py-4 relative overflow-hidden hidden md:flex"
             style="
-          width: 100%; 
-          height: 64px; 
-          left: 0; 
-          right: 0; 
+          width: 100%;
+          height: 64px;
+          left: 0;
+          right: 0;
           backdrop-filter: blur(8px);">
             <div class="absolute inset-0 w-full h-full" style="
           background-image: url(../assets/images/single-bg.png);
-          background-size: cover; 
+          background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
           z-index: 1;">
             </div>
+
 
             <div class="relative z-10 flex items-center justify-between w-full">
               <div class="flex items-center">
@@ -449,8 +521,11 @@
               </div>
             </div>
           </div>
+
+
+
           <div class="flex items-center justify-between text-white/50 text-base tracking-tight font-normal">
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-6 max-md:hidden">
               <span class="flex items-center gap-1 ">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.5">
@@ -464,28 +539,27 @@
               <span class="w-0.5 h-5 bg-brand-red opacity-30"></span>
               <span>Andrey Kapusta</span>
             </div>
-            <button class="btn-secondary-small px-4 py-2 h-11">
-              <span class="flex items-center gap-1">
-                <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="btn-secondary-small px-4 py-2 h-11 max-md:w-full max-md:text-center max-md:flex max-md:justify-center max-md:rounded-[11px]">
+              <span class="flex items-center gap-1 max-md:gap-2">
+                <span><svg class="mobile-svg-icon-header" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M15.7502 4.50001C15.7502 3.80263 15.9931 3.12702 16.4372 2.58933C16.8813 2.05163 17.4988 1.68546 18.1836 1.55375C18.8685 1.42204 19.5778 1.53303 20.1897 1.86764C20.8015 2.20225 21.2777 2.73957 21.5363 3.38722C21.7949 4.03487 21.8198 4.75238 21.6068 5.41641C21.3937 6.08044 20.9559 6.64949 20.3687 7.02572C19.7815 7.40195 19.0816 7.56187 18.3893 7.47797C17.697 7.39407 17.0556 7.07161 16.5752 6.56601L8.15423 11.245C8.28289 11.7401 8.28289 12.2599 8.15423 12.755L16.5752 17.434C17.0785 16.9049 17.7574 16.5775 18.4848 16.5132C19.2122 16.4489 19.9381 16.6521 20.5263 17.0847C21.1146 17.5173 21.5249 18.1496 21.6803 18.8631C21.8357 19.5766 21.7255 20.3223 21.3704 20.9603C21.0154 21.5984 20.4398 22.0851 19.7515 22.3291C19.0633 22.5731 18.3097 22.5577 17.632 22.2858C16.9543 22.0139 16.399 21.5042 16.0702 20.8521C15.7415 20.2001 15.6618 19.4506 15.8462 18.744L7.42523 14.066C7.01209 14.501 6.47801 14.8021 5.89198 14.9305C5.30595 15.0589 4.6949 15.0086 4.13773 14.7862C3.58056 14.5638 3.10288 14.1794 2.76637 13.6827C2.42987 13.1861 2.25 12.5999 2.25 12C2.25 11.4001 2.42987 10.8139 2.76637 10.3173C3.10288 9.82061 3.58056 9.43624 4.13773 9.21382C4.6949 8.99139 5.30595 8.94112 5.89198 9.0695C6.47801 9.19788 7.01209 9.49902 7.42523 9.93401L15.8462 5.25501C15.7823 5.00844 15.7501 4.75473 15.7502 4.50001Z"
                       fill="white" />
                   </svg>
                 </span>
-                <span class="text-base tracking-tightest font-semibold text-white ">Share On Media</span>
+                <span class="text-base tracking-tightest font-semibold text-white max-md:text-mobile-sm">Share On Media</span>
               </span>
             </button>
           </div>
         </div>
 
-        <!-- Article Content (РЅР°С‡РёРЅР°РµС‚СЃСЏ РѕРїРёСЃР°РЅРёРµ СЃС‚Р°С‚СЊРё) -->
         <div class="article-content text-white">
-          <h2 class="text-3.5xl mb-6 font-bold tracking-tight font-primary">
+          <h2 class="text-3.5xl mb-6 font-bold tracking-tight font-primary max-md:text-mobile-2xs max-md:mb-2">
             BOOM Esports will be Southeast Asia's second representative in The International 2025
           </h2>
 
           <p
-            class="self-stretch justify-start text-white/80 font-normal font-primary test-base leading-[180%] tracking-tight">
+            class="self-stretch justify-start text-white/80 font-normal font-primary test-base leading-[180%] tracking-tight max-md:text-mobile-base max-md:leading-[180%]">
             Qualifier
             favourites Talon Esports fell in back-to-back upsets to Team Nemesis and BOOM Esports to get denied a spot
             in TI 2025.<br /><a href="#" class="underline">BOOM Esports</a> will be Southeast Asia's
@@ -499,12 +573,12 @@
             this year's <a href="#" class="underline">Dota 2</a> world championship
             tournament.</p>
 
-          <h3 class="text-2xl font-semibold tracking-tight font-primary leading-[140%] mt-8 mb-4">
+          <h3 class="text-2xl font-semibold tracking-tight font-primary leading-[140%] mt-8 mb-4 max-md:text-mobile-2xs max-md:mb-2 max-md:mt-6">
             BOOM Esports will be Southeast Asia's second representative in The International 2025
           </h3>
 
           <p
-            class="self-stretch justify-start text-white/80 font-normal font-primary test-base leading-[180%] tracking-tight">
+            class="self-stretch justify-start text-white/80 font-normal font-primary test-base leading-[180%] tracking-tight  max-md:text-mobile-base max-md:leading-[180%]">
             After an unsuccessful stint in South America from November 2023 to August 2024, the BOOM organisation
             returned to its home region last September to try and dominate the Southeast Asian scene once more. However,
             BOOM found themselves sitting squarely behind Talon in the region's pecking order all year long. <br />
@@ -560,24 +634,24 @@
       </section>
 
       <!-- Comments Section -->
-      <section id="single-comments" class="mt-[29px]">
+      <section id="single-comments" class="mt-[29px] max-md:mt-10">
         <!-- Comment Form -->
-        <div class="bg-brand-dark-gray rounded-2xl p-8 mb-12">
-          <form id="comment-form" class="space-y-4">
+        <div class="bg-brand-dark-gray rounded-2xl p-8 mb-12 max-md:p-5 max-md:mb-8">
+          <form id="comment-form" class="space-y-4 max-md:space-y-0">
             <!-- Comment Textarea -->
             <div class="relative">
               <textarea id="comment-text" name="comment" placeholder="Add comment..." rows="4"
-                class="w-full bg-transparent border-none outline-none resize-none text-white placeholder-white/50 text-lg font-normal tracking-tight p-0"
+                class="w-full bg-transparent border-none outline-none resize-none text-white placeholder-white/50 text-lg font-normal tracking-tight p-0 max-md:text-mobile-base max-md:max-h-[64px]"
                 required></textarea>
     </div>
 
             <!-- Comment Form Actions -->
-            <div class="flex items-center justify-between pt-4">
+            <div class="flex items-center justify-between pt-4 max-md:items-end max-md:pt-0">
               <!-- Formatting Tools -->
-              <div class="flex items-center gap-6">
+              <div class="flex items-center gap-6 max-md:gap-[18.66px]">
                 <button type="button" class="text-white/50 hover:text-white transition-colors" title="Underline"
                   data-format="underline">
-                  <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="max-md:w-[13.758px] max-md:h-[15.024px]" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M3.78769 13.791C4.11808 15.3721 4.70806 16.4931 5.55764 17.1539C6.43081 17.7911 7.66978 18.1096 9.27453 18.1096C10.0533 18.1096 10.7259 18.0153 11.2923 17.8265C11.8587 17.6377 12.3188 17.3899 12.6728 17.0831C13.0504 16.7527 13.3336 16.3869 13.5224 15.9857C13.7112 15.5845 13.8056 15.1597 13.8056 14.7113C13.8056 13.8146 13.5106 13.1538 12.9206 12.729C12.3542 12.2806 11.6345 11.9384 10.7613 11.7024C9.88811 11.4428 8.94414 11.2305 7.92937 11.0653C6.9146 10.8765 5.97063 10.6051 5.09745 10.2511C4.22428 9.89709 3.4927 9.3897 2.90272 8.72892C2.33633 8.06814 2.05314 7.13597 2.05314 5.93241C2.05314 4.39845 2.60772 3.14769 3.71689 2.18012C4.84966 1.18894 6.44261 0.693359 8.49575 0.693359C10.4781 0.693359 12.0828 1.14175 13.31 2.03852C14.5608 2.91169 15.316 4.38665 15.5755 6.46339H13.4162C13.2274 5.04743 12.6846 4.05626 11.7879 3.48988C10.9147 2.89989 9.80551 2.6049 8.46035 2.6049C7.11519 2.6049 6.08862 2.89989 5.38064 3.48988C4.67266 4.05626 4.31867 4.81144 4.31867 5.75541C4.31867 6.58139 4.60187 7.21857 5.16825 7.66695C5.75823 8.09174 6.48981 8.44573 7.36298 8.72892C8.23616 8.98852 9.18013 9.22451 10.1949 9.4369C11.2097 9.6493 12.1536 9.95609 13.0268 10.3573C13.9 10.7349 14.6198 11.2541 15.1862 11.9148C15.7761 12.5756 16.0711 13.496 16.0711 14.676C16.0711 15.5491 15.8823 16.3279 15.5047 17.0123C15.1272 17.6731 14.608 18.2276 13.9472 18.676C13.2864 19.1244 12.4958 19.4548 11.5755 19.6672C10.6787 19.9032 9.68752 20.0212 8.60195 20.0212C7.51638 20.0212 6.54881 19.856 5.69923 19.5256C4.87326 19.2188 4.16528 18.7822 3.5753 18.2158C2.98531 17.6495 2.52513 16.9887 2.19474 16.2335C1.86435 15.4783 1.67555 14.6642 1.62835 13.791H3.78769Z"
                       fill="white" fill-opacity="0.5" />
@@ -587,7 +661,7 @@
 
                 <button type="button" class="text-white/50 hover:text-white transition-colors" title="Italic"
                   data-format="italic">
-                  <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="max-md:w-[10.411px] max-md:h-[15.616px]" width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M9.12919 19.854L8.96622 20.4022H0.699219L0.906635 19.854C1.7363 19.8343 2.28447 19.7651 2.55115 19.6466C2.98573 19.4787 3.30673 19.2466 3.51415 18.9503C3.84009 18.4861 4.1759 17.6564 4.5216 16.4613L8.01803 4.34229C8.31434 3.33484 8.4625 2.57432 8.4625 2.06072C8.4625 1.80392 8.3983 1.58663 8.2699 1.40884C8.1415 1.23106 7.94396 1.09772 7.67728 1.00882C7.42048 0.910055 6.91182 0.86067 6.15129 0.86067L6.32908 0.3125H14.0924L13.9294 0.86067C13.2973 0.850793 12.8281 0.919932 12.5219 1.06809C12.0775 1.26562 11.7367 1.54712 11.4997 1.91256C11.2725 2.27801 10.9762 3.08792 10.6107 4.34229L7.12911 16.4613C6.81305 17.5774 6.65502 18.2885 6.65502 18.5947C6.65502 18.8416 6.71428 19.054 6.8328 19.2318C6.9612 19.3997 7.15874 19.533 7.42542 19.6318C7.70197 19.7207 8.2699 19.7948 9.12919 19.854Z"
                       fill="white" fill-opacity="0.5" />
@@ -596,7 +670,7 @@
 
                 <button type="button" class="text-white/50 hover:text-white transition-colors" title="Bold"
                   data-format="bold">
-                  <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="max-md:w-[12.777px] max-md:h-[15.437px]" width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M3.56946 8.74396H9.24341C10.0778 8.74396 10.7731 8.51218 11.3294 8.04863C11.8857 7.56653 12.1638 6.88046 12.1638 5.99043C12.1638 4.98914 11.9135 4.28454 11.4129 3.87661C10.9122 3.46867 10.1891 3.26471 9.24341 3.26471H3.56946V8.74396ZM0.0927734 0.427734H9.74405C11.5241 0.427734 12.9519 0.835666 14.0273 1.65153C15.1028 2.46739 15.6405 3.70045 15.6405 5.35072C15.6405 6.35201 15.3902 7.21422 14.8895 7.93737C14.4074 8.64198 13.7121 9.18898 12.8035 9.57837V9.634C14.0273 9.89359 14.9544 10.4777 15.5849 11.3862C16.2153 12.2763 16.5305 13.3981 16.5305 14.7517C16.5305 15.5305 16.3915 16.2629 16.1133 16.9489C15.8352 17.6165 15.3995 18.2005 14.8061 18.7012C14.2127 19.1833 13.4525 19.5727 12.5254 19.8694C11.5983 20.1475 10.495 20.2866 9.21559 20.2866H0.0927734V0.427734ZM3.56946 17.4496H9.71624C10.7731 17.4496 11.589 17.1807 12.1638 16.643C12.7572 16.0867 13.0539 15.3079 13.0539 14.3067C13.0539 13.3239 12.7572 12.573 12.1638 12.0538C11.589 11.516 10.7731 11.2472 9.71624 11.2472H3.56946V17.4496Z"
                       fill="white" fill-opacity="0.5" />
@@ -607,7 +681,7 @@
                 <div class="w-px self-stretch opacity-20 bg-white/50"></div>
 
                 <button type="button" class="text-white/50 hover:text-white transition-colors" title="Attach">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="max-md:w-[19.654px] max-md:h-[19.654px]" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_316_2518)">
                       <path
                         d="M20 13.9072L11.9628 22.3791C10.9782 23.4169 9.64274 24 8.25028 24C6.85782 24 5.52239 23.4169 4.53777 22.3791C3.55315 21.3412 3 19.9335 3 18.4658C3 16.998 3.55315 15.5904 4.53777 14.5525L12.575 6.08062C13.2314 5.38871 14.1217 5 15.05 5C15.9783 5 16.8686 5.38871 17.525 6.08062C18.1814 6.77254 18.5502 7.71097 18.5502 8.68948C18.5502 9.66799 18.1814 10.6064 17.525 11.2983L9.47904 19.7702C9.15083 20.1162 8.70569 20.3105 8.24153 20.3105C7.77738 20.3105 7.33224 20.1162 7.00403 19.7702C6.67583 19.4243 6.49144 18.955 6.49144 18.4658C6.49144 17.9765 6.67583 17.5073 7.00403 17.1614L14.429 9.344"
@@ -625,7 +699,7 @@
 
               <!-- Submit Button -->
               <button type="submit"
-                class="btn-secondary-small px-4 py-2 font-semibold text-base tracking-tightest rounded-[11px]">
+                class="btn-secondary-small px-4 py-2 font-semibold text-base tracking-tightest rounded-[11px] max-md:text-mobile-sm max-md:h-10">
                 Submit
               </button>
             </div>
@@ -635,15 +709,15 @@
         <!-- Comments List -->
         <div class="comments-wrapper">
           <!-- Comments Header -->
-          <div class="flex items-center gap-2 mb-8">
-            <h3 class="font-primary text-white text-2xl font-bold tracking-tight">Comments</h3>
+          <div class="flex items-center gap-2 mb-8 max-md:mb-6">
+            <h3 class="font-primary text-white text-2xl font-bold tracking-tight max-md:text-mobile-2.5xs">Comments</h3>
             <span
-              class="bg-brand-red/20 text-brand-red text-base font-medium px-4 py-[6.5px] rounded-full text-center">243</span>
+              class="bg-brand-red/20 text-brand-red text-base font-medium px-4 py-[6.5px] rounded-full text-center max-md:text-mobile-base max-md:p-2 max-md:h-6 max-md:flex max-md:justify-center max-md:items-center">243</span>
 
             <!-- Sort Dropdown -->
             <div class="ml-auto relative">
               <div class="flex items-center gap-1">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span><svg class="mobile-svg-icon-mini" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M5.80837 2.05827C5.92556 1.94123 6.08441 1.87549 6.25003 1.87549C6.41566 1.87549 6.57451 1.94123 6.6917 2.05827L10.4417 5.80827C10.5521 5.92675 10.6122 6.08346 10.6093 6.24537C10.6065 6.40729 10.5409 6.56178 10.4264 6.67629C10.3119 6.7908 10.1574 6.85639 9.99547 6.85925C9.83355 6.86211 9.67685 6.802 9.55837 6.6916L6.87503 4.00827V13.7499C6.87503 13.9157 6.80919 14.0747 6.69198 14.1919C6.57477 14.3091 6.41579 14.3749 6.25003 14.3749C6.08427 14.3749 5.9253 14.3091 5.80809 14.1919C5.69088 14.0747 5.62503 13.9157 5.62503 13.7499V4.00827L2.9417 6.6916C2.82322 6.802 2.66652 6.86211 2.5046 6.85925C2.34268 6.85639 2.18819 6.7908 2.07368 6.67629C1.95917 6.56178 1.89358 6.40729 1.89072 6.24537C1.88787 6.08346 1.94797 5.92675 2.05837 5.80827L5.80837 2.05827ZM13.75 5.62494C13.9158 5.62494 14.0748 5.69079 14.192 5.808C14.3092 5.92521 14.375 6.08418 14.375 6.24994V15.9916L17.0584 13.3083C17.1156 13.2469 17.1846 13.1976 17.2613 13.1635C17.3379 13.1293 17.4207 13.1109 17.5046 13.1094C17.5885 13.108 17.6719 13.1234 17.7497 13.1548C17.8275 13.1863 17.8982 13.2331 17.9576 13.2924C18.0169 13.3518 18.0637 13.4225 18.0951 13.5003C18.1266 13.5781 18.142 13.6615 18.1405 13.7454C18.139 13.8293 18.1207 13.9121 18.0865 13.9887C18.0524 14.0654 18.0031 14.1344 17.9417 14.1916L14.1917 17.9416C14.0745 18.0586 13.9157 18.1244 13.75 18.1244C13.5844 18.1244 13.4256 18.0586 13.3084 17.9416L9.55837 14.1916C9.49696 14.1344 9.44771 14.0654 9.41355 13.9887C9.37939 13.9121 9.36102 13.8293 9.35954 13.7454C9.35806 13.6615 9.3735 13.5781 9.40493 13.5003C9.43637 13.4225 9.48315 13.3518 9.5425 13.2924C9.60185 13.2331 9.67255 13.1863 9.75037 13.1548C9.82819 13.1234 9.91155 13.108 9.99547 13.1094C10.0794 13.1109 10.1622 13.1293 10.2388 13.1635C10.3155 13.1976 10.3845 13.2469 10.4417 13.3083L13.125 15.9916V6.24994C13.125 6.08418 13.1909 5.92521 13.3081 5.808C13.4253 5.69079 13.5843 5.62494 13.75 5.62494Z"
                       fill="white" />
@@ -655,7 +729,7 @@
                     <option value="oldest">Oldest First</option>
                     <option value="popular">Most Popular</option>
                   </select>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8.35356 10.8536C8.25981 10.9472 8.13272 10.9998 8.00022 10.9998C7.86772 10.9998 7.74064 10.9472 7.64689 10.8536L2.64689 5.8536C2.55857 5.75881 2.51049 5.63345 2.51277 5.50392C2.51506 5.37438 2.56753 5.25079 2.65914 5.15918C2.75075 5.06758 2.87434 5.0151 3.00387 5.01282C3.13341 5.01053 3.25877 5.05861 3.35356 5.14693L8.00022 9.7936L12.6469 5.14693C12.6927 5.09781 12.7479 5.05841 12.8092 5.03108C12.8705 5.00375 12.9367 4.98906 13.0039 4.98787C13.071 4.98669 13.1377 4.99904 13.2 5.02418C13.2622 5.04933 13.3188 5.08676 13.3662 5.13424C13.4137 5.18172 13.4512 5.23827 13.4763 5.30053C13.5015 5.36279 13.5138 5.42948 13.5126 5.49661C13.5114 5.56375 13.4967 5.62996 13.4694 5.69129C13.4421 5.75262 13.4027 5.80782 13.3536 5.8536L8.35356 10.8536Z"
@@ -669,7 +743,7 @@
           </div>
 
           <!-- Comments List -->
-          <div class="comments-list space-y-10">
+          <div class="comments-list space-y-10 max-md:space-y-8">
             <!-- Comment Item 1 -->
 
             <!-- Comment Item 2 -->
@@ -678,16 +752,16 @@
                 <!-- Avatar -->
                 <div class="flex-shrink-0">
                   <img src="../assets/images/single-avatar-1.png" alt="Viktor Viktorov"
-                    class="w-10 h-10 rounded-full object-cover">
+                    class="w-10 h-10 rounded-full object-cover max-md:h-8 max-md:w-8 max-md:relative max-md:z-50">
                 </div>
 
                 <!-- Name and Time -->
-                <div class="flex items-center gap-4">
-                  <span class="text-white font-medium text-xl tracking-tight">Viktor Viktorov</span>
+                <div class="flex items-center gap-4 max-md:gap-3">
+                  <span class="text-white font-medium text-xl tracking-tight max-md:text-mobile-sm">Viktor Viktorov</span>
                   <span class="w-px h-4 opacity-20 bg-white/50"></span>
-                  <span class="flex items-center gap-1">
+                  <span class="flex items-center gap-1 max-md:gap-0.5">
                     <span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="max-md:w-3 max-md:h-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.5">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 1.875C5.5125 1.875 1.875 5.5125 1.875 10C1.875 14.4875 5.5125 18.125 10 18.125C14.4875 18.125 18.125 14.4875 18.125 10C18.125 5.5125 14.4875 1.875 10 1.875ZM10.625 5C10.625 4.83424 10.5592 4.67527 10.4419 4.55806C10.3247 4.44085 10.1658 4.375 10 4.375C9.83424 4.375 9.67527 4.44085 9.55806 4.55806C9.44085 4.67527 9.375 4.83424 9.375 5V10C9.375 10.345 9.655 10.625 10 10.625H13.75C13.9158 10.625 14.0747 10.5592 14.1919 10.4419C14.3092 10.3247 14.375 10.1658 14.375 10C14.375 9.83424 14.3092 9.67527 14.1919 9.55806C14.0747 9.44085 13.9158 9.375 13.75 9.375H10.625V5Z"
@@ -695,7 +769,7 @@
                         </g>
                       </svg>
                     </span>
-                    <span class="text-white/50 text-base font-medium tracking-tight">56 min ago</span>
+                    <span class="text-white/50 text-base font-medium tracking-tight max-md:text-mobile-base">56 min ago</span>
                   </span>
                 </div>
               </div>
@@ -703,72 +777,72 @@
               <!-- Comment Content -->
               <div class="comment-content">
                 <!-- Comment Text -->
-                <div class="comment-text mb-4 ml-13">
-                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%]">
+                <div class="comment-text mb-4 ml-13 max-md:mb-2">
+                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                     Theost Asia and Western Europe, which will be hosted from 13 to 17 June, and with two teams from
                     each qualifier advan
                   </p>
                 </div>
 
                 <!-- Comment Actions -->
-                <div class="flex items-center gap-10 ml-13">
+                <div class="flex items-center gap-10 ml-13 max-md:gap-6">
                   <!-- Like Button -->
-                  <div class="gap-6 flex items-center">
+                  <div class="gap-6 flex items-center max-md:gap-4">
                     <button
                       class="comment-like flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors group">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M7.49301 18.5C7.06801 18.5 6.67301 18.264 6.51801 17.868C6.17475 16.9943 5.99902 16.0637 6.00001 15.125C6.00001 13.375 6.59901 11.767 7.60201 10.491C7.75301 10.299 7.97501 10.182 8.20201 10.094C8.67501 9.911 9.09201 9.58 9.41401 9.17C10.1903 8.17964 11.1647 7.36221 12.275 6.77C12.998 6.386 13.625 5.814 13.928 5.055C14.1408 4.52325 14.2501 3.95575 14.25 3.383V2.75C14.25 2.55109 14.329 2.36032 14.4697 2.21967C14.6103 2.07902 14.8011 2 15 2C15.5967 2 16.169 2.23705 16.591 2.65901C17.013 3.08097 17.25 3.65326 17.25 4.25C17.25 5.402 16.99 6.493 16.527 7.468C16.261 8.026 16.634 8.75 17.252 8.75H20.378C21.404 8.75 22.323 9.444 22.432 10.465C22.477 10.887 22.5 11.315 22.5 11.75C22.5041 14.4863 21.5691 17.1412 19.851 19.271C19.463 19.753 18.864 20 18.246 20H14.23C13.747 20 13.266 19.922 12.807 19.77L9.69301 18.73C9.23411 18.5774 8.75362 18.4997 8.27001 18.5H7.49301ZM2.33101 10.727C1.77993 12.1277 1.498 13.6198 1.50001 15.125C1.49875 16.3133 1.67399 17.4952 2.02001 18.632C2.28001 19.482 3.10501 20 3.99401 20H4.90001C5.34501 20 5.62001 19.502 5.42301 19.102C4.81315 17.8651 4.49695 16.5041 4.49901 15.125C4.49901 13.417 4.97501 11.82 5.80101 10.459C6.04601 10.056 5.77301 9.5 5.30101 9.5H4.25001C3.41801 9.5 2.63701 9.953 2.33101 10.727Z"
                           fill="currentColor"></path>
                       </svg>
 
-                      <span class="text-sm font-semibold tracking-tight">561</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">561</span>
                     </button>
 
                     <!-- Dislike Button -->
                     <button
                       class="comment-dislike flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="1">
                           <path
                             d="M7.49301 5.5C7.06801 5.5 6.67301 5.736 6.51801 6.132C6.17475 7.00573 5.99902 7.93626 6.00001 8.875C6.00001 10.625 6.59901 12.233 7.60201 13.509C7.75301 13.701 7.97501 13.818 8.20201 13.906C8.67501 14.089 9.09201 14.42 9.41401 14.83C10.1903 15.8204 11.1647 16.6378 12.275 17.23C12.998 17.614 13.625 18.186 13.928 18.945C14.1408 19.4767 14.2501 20.0442 14.25 20.617V21.25C14.25 21.4489 14.329 21.6397 14.4697 21.7803C14.6103 21.921 14.8011 22 15 22C15.5967 22 16.169 21.7629 16.591 21.341C17.013 20.919 17.25 20.3467 17.25 19.75C17.25 18.598 16.99 17.507 16.527 16.532C16.261 15.974 16.634 15.25 17.252 15.25H20.378C21.404 15.25 22.323 14.556 22.432 13.535C22.477 13.113 22.5 12.685 22.5 12.25C22.5041 9.51365 21.5691 6.85877 19.851 4.729C19.463 4.247 18.864 4 18.246 4H14.23C13.747 4 13.266 4.078 12.807 4.23L9.69301 5.27C9.23411 5.42262 8.75362 5.50028 8.27001 5.5H7.49301ZM2.33101 13.273C1.77993 11.8723 1.498 10.3802 1.50001 8.875C1.49875 7.6867 1.67399 6.50481 2.02001 5.368C2.28001 4.518 3.10501 4 3.99401 4H4.90001C5.34501 4 5.62001 4.498 5.42301 4.898C4.81315 6.13493 4.49695 7.4959 4.49901 8.875C4.49901 10.583 4.97501 12.18 5.80101 13.541C6.04601 13.944 5.77301 14.5 5.30101 14.5H4.25001C3.41801 14.5 2.63701 14.047 2.33101 13.273Z"
                             fill="currentColor"></path>
                         </g>
                       </svg>
-                      <span class="text-sm font-semibold tracking-tight">32</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">32</span>
                     </button>
                   </div>
                   <!-- Reply Button -->
                   <button
                     class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.848 2.771C7.21613 2.4234 9.60649 2.24927 12 2.25C14.43 2.25 16.817 2.428 19.152 2.77C21.13 3.062 22.5 4.794 22.5 6.74V12.76C22.5 14.706 21.13 16.438 19.152 16.73C17.212 17.014 15.236 17.185 13.23 17.235C13.1303 17.2369 13.0351 17.277 12.964 17.347L8.78 21.53C8.67511 21.6348 8.54153 21.7061 8.39614 21.735C8.25074 21.7639 8.10004 21.749 7.96308 21.6923C7.82611 21.6356 7.70903 21.5395 7.62661 21.4163C7.54419 21.2931 7.50013 21.1482 7.5 21V17.045C6.61329 16.9639 5.72895 16.8585 4.848 16.729C2.87 16.439 1.5 14.705 1.5 12.759V6.741C1.5 4.795 2.87 3.061 4.848 2.771Z"
                         fill="currentColor"></path>
                     </svg>
-                    <span class="text-sm font-semibold tracking-tight">Reply</span>
+                    <span class="text-sm font-semibold tracking-tight max-md:text-mini">Reply</span>
                   </button>
                 </div>
               </div>
 
               <!-- Reply Thread with Connection Line -->
-              <div class="reply-thread mt-10 relative">
+              <div class="reply-thread mt-10 relative max-md:mt-8">
                 <!-- Reply Comment -->
-                <div class="comment-item ml-13 relative z-10" data-comment-id="1-1" data-parent-id="1">
+                <div class="comment-item ml-13 relative z-10 max-md:ml-10" data-comment-id="1-1" data-parent-id="1">
                   <div class="flex items-center gap-3 mb-1">
                     <!-- Avatar -->
                     <div class="flex-shrink-0">
                       <img src="../assets/images/single-avatar-1.png" alt="Viktor Viktorov"
-                        class="w-10 h-10 rounded-full object-cover">
+                        class="w-10 h-10 rounded-full object-cover max-md:h-8 max-md:w-8">
                     </div>
 
                     <!-- Name and Time -->
-                    <div class="flex items-center gap-4">
-                      <span class="text-white font-medium text-xl tracking-tight">Viktor Viktorov</span>
+                    <div class="flex items-center gap-4 max-md:gap-3">
+                      <span class="text-white font-medium text-xl tracking-tight max-md:text-mobile-sm">Viktor Viktorov</span>
                       <span class="w-px h-4 opacity-20 bg-white/50"></span>
-                      <span class="flex items-center gap-1">
+                      <span class="flex items-center gap-1 max-md:gap-0.5">
                         <span>
-                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                          <svg class="max-md:w-3 max-md:h-3" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.5">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -777,7 +851,7 @@
                             </g>
                           </svg>
                         </span>
-                        <span class="text-white/50 text-base font-medium tracking-tight">56 min ago</span>
+                        <span class="text-white/50 text-base font-medium tracking-tight max-md:text-mobile-base">56 min ago</span>
                       </span>
                     </div>
                   </div>
@@ -785,33 +859,33 @@
                   <!-- Comment Content -->
                   <div class="comment-content">
                     <!-- Comment Text -->
-                    <div class="comment-text mb-4 ml-13">
-                      <p class="text-white/80 text-base font-normal tracking-tight leading-[180%]">
+                    <div class="comment-text mb-4 ml-13 max-md:mb-2 max-md:ml-10">
+                      <p class="text-white/80 text-base font-normal tracking-tight leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                         Theost Asia and Western Europe, which will be hosted from 13 to 17 June, and with two teams from
                         each qualifier advan
                       </p>
                     </div>
 
                     <!-- Comment Actions -->
-                    <div class="flex items-center gap-10 ml-13">
+                    <div class="flex items-center gap-10 ml-13 max-md:gap-6 max-md:ml-10">
                       <!-- Like Button -->
-                      <div class="gap-6 flex items-center">
+                      <div class="gap-6 flex items-center max-md:gap-4">
                         <button
                           class="comment-like flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors group">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                               d="M7.49301 18.5C7.06801 18.5 6.67301 18.264 6.51801 17.868C6.17475 16.9943 5.99902 16.0637 6.00001 15.125C6.00001 13.375 6.59901 11.767 7.60201 10.491C7.75301 10.299 7.97501 10.182 8.20201 10.094C8.67501 9.911 9.09201 9.58 9.41401 9.17C10.1903 8.17964 11.1647 7.36221 12.275 6.77C12.998 6.386 13.625 5.814 13.928 5.055C14.1408 4.52325 14.2501 3.95575 14.25 3.383V2.75C14.25 2.55109 14.329 2.36032 14.4697 2.21967C14.6103 2.07902 14.8011 2 15 2C15.5967 2 16.169 2.23705 16.591 2.65901C17.013 3.08097 17.25 3.65326 17.25 4.25C17.25 5.402 16.99 6.493 16.527 7.468C16.261 8.026 16.634 8.75 17.252 8.75H20.378C21.404 8.75 22.323 9.444 22.432 10.465C22.477 10.887 22.5 11.315 22.5 11.75C22.5041 14.4863 21.5691 17.1412 19.851 19.271C19.463 19.753 18.864 20 18.246 20H14.23C13.747 20 13.266 19.922 12.807 19.77L9.69301 18.73C9.23411 18.5774 8.75362 18.4997 8.27001 18.5H7.49301ZM2.33101 10.727C1.77993 12.1277 1.498 13.6198 1.50001 15.125C1.49875 16.3133 1.67399 17.4952 2.02001 18.632C2.28001 19.482 3.10501 20 3.99401 20H4.90001C5.34501 20 5.62001 19.502 5.42301 19.102C4.81315 17.8651 4.49695 16.5041 4.49901 15.125C4.49901 13.417 4.97501 11.82 5.80101 10.459C6.04601 10.056 5.77301 9.5 5.30101 9.5H4.25001C3.41801 9.5 2.63701 9.953 2.33101 10.727Z"
                               fill="currentColor"></path>
                           </svg>
 
-                          <span class="text-sm font-semibold tracking-tight">561</span>
+                          <span class="text-sm font-semibold tracking-tight max-md:text-mini">561</span>
                         </button>
 
                         <!-- Dislike Button -->
                         <button
                           class="comment-dislike flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g opacity="1">
                               <path
@@ -819,41 +893,41 @@
                                 fill="currentColor"></path>
                             </g>
                           </svg>
-                          <span class="text-sm font-semibold tracking-tight">32</span>
+                          <span class="text-sm font-semibold tracking-tight max-md:text-mini">32</span>
                         </button>
                       </div>
                       <!-- Reply Button -->
                       <button
                         class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.848 2.771C7.21613 2.4234 9.60649 2.24927 12 2.25C14.43 2.25 16.817 2.428 19.152 2.77C21.13 3.062 22.5 4.794 22.5 6.74V12.76C22.5 14.706 21.13 16.438 19.152 16.73C17.212 17.014 15.236 17.185 13.23 17.235C13.1303 17.2369 13.0351 17.277 12.964 17.347L8.78 21.53C8.67511 21.6348 8.54153 21.7061 8.39614 21.735C8.25074 21.7639 8.10004 21.749 7.96308 21.6923C7.82611 21.6356 7.70903 21.5395 7.62661 21.4163C7.54419 21.2931 7.50013 21.1482 7.5 21V17.045C6.61329 16.9639 5.72895 16.8585 4.848 16.729C2.87 16.439 1.5 14.705 1.5 12.759V6.741C1.5 4.795 2.87 3.061 4.848 2.771Z"
                             fill="currentColor"></path>
                         </svg>
-                        <span class="text-sm font-semibold tracking-tight">Reply</span>
+                        <span class="text-sm font-semibold tracking-tight max-md:text-mini">Reply</span>
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Reply Thread with Connection Line -->
-              <div class="reply-thread mt-10 relative">
+                            <!-- Reply Thread with Connection Line -->
+              <div class="reply-thread mt-10 relative max-md:mt-8">
                 <!-- Reply Comment -->
-                <div class="comment-item ml-26 relative z-10" data-comment-id="1-2" data-parent-id="1">
+                <div class="comment-item ml-26 relative z-10 max-md:ml-10" data-comment-id="1-2" data-parent-id="1">
                   <div class="flex items-center gap-3 mb-1">
                     <!-- Avatar -->
                     <div class="flex-shrink-0">
                       <img src="../assets/images/single-avatar-1.png" alt="Viktor Viktorov"
-                        class="w-10 h-10 rounded-full object-cover">
+                        class="w-10 h-10 rounded-full object-cover max-md:h-8 max-md:w-8">
                     </div>
 
                     <!-- Name and Time -->
-                    <div class="flex items-center gap-4">
-                      <span class="text-white font-medium text-xl tracking-tight">Viktor Viktorov</span>
+                    <div class="flex items-center gap-4 max-md:gap-3">
+                      <span class="text-white font-medium text-xl tracking-tight max-md:text-mobile-sm">Viktor Viktorov</span>
                       <span class="w-px h-4 opacity-20 bg-white/50"></span>
-                      <span class="flex items-center gap-1">
+                      <span class="flex items-center gap-1 max-md:gap-0.5">
                         <span>
-                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                          <svg class="max-md:w-3 max-md:h-3" width="20" height="20" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.5">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -862,7 +936,7 @@
                             </g>
                           </svg>
                         </span>
-                        <span class="text-white/50 text-base font-medium tracking-tight">56 min ago</span>
+                        <span class="text-white/50 text-base font-medium tracking-tight max-md:text-mobile-base">56 min ago</span>
                       </span>
                     </div>
                   </div>
@@ -870,33 +944,33 @@
                   <!-- Comment Content -->
                   <div class="comment-content">
                     <!-- Comment Text -->
-                    <div class="comment-text mb-4 ml-13">
-                      <p class="text-white/80 text-base font-normal tracking-tight leading-[180%]">
+                    <div class="comment-text mb-4 ml-13 max-md:mb-2 max-md:ml-10">
+                      <p class="text-white/80 text-base font-normal tracking-tight leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                         Theost Asia and Western Europe, which will be hosted from 13 to 17 June, and with two teams from
                         each qualifier advan
                       </p>
                     </div>
 
                     <!-- Comment Actions -->
-                    <div class="flex items-center gap-10 ml-13">
+                    <div class="flex items-center gap-10 ml-13 max-md:gap-6 max-md:ml-10">
                       <!-- Like Button -->
-                      <div class="gap-6 flex items-center">
+                      <div class="gap-6 flex items-center max-md:gap-4">
                         <button
                           class="comment-like flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors group">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                               d="M7.49301 18.5C7.06801 18.5 6.67301 18.264 6.51801 17.868C6.17475 16.9943 5.99902 16.0637 6.00001 15.125C6.00001 13.375 6.59901 11.767 7.60201 10.491C7.75301 10.299 7.97501 10.182 8.20201 10.094C8.67501 9.911 9.09201 9.58 9.41401 9.17C10.1903 8.17964 11.1647 7.36221 12.275 6.77C12.998 6.386 13.625 5.814 13.928 5.055C14.1408 4.52325 14.2501 3.95575 14.25 3.383V2.75C14.25 2.55109 14.329 2.36032 14.4697 2.21967C14.6103 2.07902 14.8011 2 15 2C15.5967 2 16.169 2.23705 16.591 2.65901C17.013 3.08097 17.25 3.65326 17.25 4.25C17.25 5.402 16.99 6.493 16.527 7.468C16.261 8.026 16.634 8.75 17.252 8.75H20.378C21.404 8.75 22.323 9.444 22.432 10.465C22.477 10.887 22.5 11.315 22.5 11.75C22.5041 14.4863 21.5691 17.1412 19.851 19.271C19.463 19.753 18.864 20 18.246 20H14.23C13.747 20 13.266 19.922 12.807 19.77L9.69301 18.73C9.23411 18.5774 8.75362 18.4997 8.27001 18.5H7.49301ZM2.33101 10.727C1.77993 12.1277 1.498 13.6198 1.50001 15.125C1.49875 16.3133 1.67399 17.4952 2.02001 18.632C2.28001 19.482 3.10501 20 3.99401 20H4.90001C5.34501 20 5.62001 19.502 5.42301 19.102C4.81315 17.8651 4.49695 16.5041 4.49901 15.125C4.49901 13.417 4.97501 11.82 5.80101 10.459C6.04601 10.056 5.77301 9.5 5.30101 9.5H4.25001C3.41801 9.5 2.63701 9.953 2.33101 10.727Z"
                               fill="currentColor"></path>
                           </svg>
 
-                          <span class="text-sm font-semibold tracking-tight">561</span>
+                          <span class="text-sm font-semibold tracking-tight max-md:text-mini">561</span>
                         </button>
 
                         <!-- Dislike Button -->
                         <button
                           class="comment-dislike flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g opacity="1">
                               <path
@@ -904,18 +978,18 @@
                                 fill="currentColor"></path>
                             </g>
                           </svg>
-                          <span class="text-sm font-semibold tracking-tight">32</span>
+                          <span class="text-sm font-semibold tracking-tight max-md:text-mini">32</span>
                         </button>
                       </div>
                       <!-- Reply Button -->
                       <button
                         class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.848 2.771C7.21613 2.4234 9.60649 2.24927 12 2.25C14.43 2.25 16.817 2.428 19.152 2.77C21.13 3.062 22.5 4.794 22.5 6.74V12.76C22.5 14.706 21.13 16.438 19.152 16.73C17.212 17.014 15.236 17.185 13.23 17.235C13.1303 17.2369 13.0351 17.277 12.964 17.347L8.78 21.53C8.67511 21.6348 8.54153 21.7061 8.39614 21.735C8.25074 21.7639 8.10004 21.749 7.96308 21.6923C7.82611 21.6356 7.70903 21.5395 7.62661 21.4163C7.54419 21.2931 7.50013 21.1482 7.5 21V17.045C6.61329 16.9639 5.72895 16.8585 4.848 16.729C2.87 16.439 1.5 14.705 1.5 12.759V6.741C1.5 4.795 2.87 3.061 4.848 2.771Z"
                             fill="currentColor"></path>
                         </svg>
-                        <span class="text-sm font-semibold tracking-tight">Reply</span>
+                        <span class="text-sm font-semibold tracking-tight max-md:text-mini">Reply</span>
                       </button>
                     </div>
                   </div>
@@ -926,20 +1000,20 @@
 
             <div class="comment-item" data-comment-id="2">
               <!-- Comment Header with Avatar, Name and Time -->
-              <div class="flex items-center gap-3 mb-1">
+              <div class="flex items-center gap-3 mb-1 max-md:mb-0.5">
                 <!-- Avatar -->
                 <div class="flex-shrink-0">
                   <img src="../assets/images/single-avatar-1.png" alt="Viktor Viktorov"
-                    class="w-10 h-10 rounded-full object-cover">
+                    class="w-10 h-10 rounded-full object-cover max-md:h-8 max-md:w-8">
                 </div>
 
                 <!-- Name and Time -->
                 <div class="flex items-center gap-4">
-                  <span class="text-white font-medium text-xl tracking-tight">Viktor Viktorov</span>
+                  <span class="text-white font-medium text-xl tracking-tight max-md:text-mobile-sm">Viktor Viktorov</span>
                   <span class="w-px h-4 opacity-20 bg-white/50"></span>
                   <span class="flex items-center gap-1">
                     <span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="max-md:w-3 max-md:h-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.5">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 1.875C5.5125 1.875 1.875 5.5125 1.875 10C1.875 14.4875 5.5125 18.125 10 18.125C14.4875 18.125 18.125 14.4875 18.125 10C18.125 5.5125 14.4875 1.875 10 1.875ZM10.625 5C10.625 4.83424 10.5592 4.67527 10.4419 4.55806C10.3247 4.44085 10.1658 4.375 10 4.375C9.83424 4.375 9.67527 4.44085 9.55806 4.55806C9.44085 4.67527 9.375 4.83424 9.375 5V10C9.375 10.345 9.655 10.625 10 10.625H13.75C13.9158 10.625 14.0747 10.5592 14.1919 10.4419C14.3092 10.3247 14.375 10.1658 14.375 10C14.375 9.83424 14.3092 9.67527 14.1919 9.55806C14.0747 9.44085 13.9158 9.375 13.75 9.375H10.625V5Z"
@@ -947,7 +1021,7 @@
                         </g>
                       </svg>
                     </span>
-                    <span class="text-white/50 text-base font-medium tracking-tight">56 min ago</span>
+                    <span class="text-white/50 text-base font-medium tracking-tight max-md:text-mobile-base">56 min ago</span>
                   </span>
                 </div>
               </div>
@@ -955,50 +1029,50 @@
               <!-- Comment Content -->
               <div class="comment-content">
                 <!-- Comment Text -->
-                <div class="comment-text mb-4 ml-13">
-                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%]">
+                <div class="comment-text mb-4 ml-13 max-md:mb-2">
+                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                     Theost Asia and Western Europe, which will be hosted from 13 to 17 June, and with two teams from
                     each qualifier advan
                   </p>
                 </div>
 
                 <!-- Comment Actions -->
-                <div class="flex items-center gap-10 ml-13">
+                <div class="flex items-center gap-10 ml-13 max-md:gap-6">
                   <!-- Like Button -->
-                  <div class="gap-6 flex items-center">
+                  <div class="gap-6 flex items-center max-md:gap-4">
                     <button
                       class="comment-like flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors group">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M7.49301 18.5C7.06801 18.5 6.67301 18.264 6.51801 17.868C6.17475 16.9943 5.99902 16.0637 6.00001 15.125C6.00001 13.375 6.59901 11.767 7.60201 10.491C7.75301 10.299 7.97501 10.182 8.20201 10.094C8.67501 9.911 9.09201 9.58 9.41401 9.17C10.1903 8.17964 11.1647 7.36221 12.275 6.77C12.998 6.386 13.625 5.814 13.928 5.055C14.1408 4.52325 14.2501 3.95575 14.25 3.383V2.75C14.25 2.55109 14.329 2.36032 14.4697 2.21967C14.6103 2.07902 14.8011 2 15 2C15.5967 2 16.169 2.23705 16.591 2.65901C17.013 3.08097 17.25 3.65326 17.25 4.25C17.25 5.402 16.99 6.493 16.527 7.468C16.261 8.026 16.634 8.75 17.252 8.75H20.378C21.404 8.75 22.323 9.444 22.432 10.465C22.477 10.887 22.5 11.315 22.5 11.75C22.5041 14.4863 21.5691 17.1412 19.851 19.271C19.463 19.753 18.864 20 18.246 20H14.23C13.747 20 13.266 19.922 12.807 19.77L9.69301 18.73C9.23411 18.5774 8.75362 18.4997 8.27001 18.5H7.49301ZM2.33101 10.727C1.77993 12.1277 1.498 13.6198 1.50001 15.125C1.49875 16.3133 1.67399 17.4952 2.02001 18.632C2.28001 19.482 3.10501 20 3.99401 20H4.90001C5.34501 20 5.62001 19.502 5.42301 19.102C4.81315 17.8651 4.49695 16.5041 4.49901 15.125C4.49901 13.417 4.97501 11.82 5.80101 10.459C6.04601 10.056 5.77301 9.5 5.30101 9.5H4.25001C3.41801 9.5 2.63701 9.953 2.33101 10.727Z"
                           fill="currentColor"></path>
                       </svg>
 
-                      <span class="text-sm font-semibold tracking-tight">561</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">561</span>
                     </button>
 
                     <!-- Dislike Button -->
                     <button
                       class="comment-dislike flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="1">
                           <path
                             d="M7.49301 5.5C7.06801 5.5 6.67301 5.736 6.51801 6.132C6.17475 7.00573 5.99902 7.93626 6.00001 8.875C6.00001 10.625 6.59901 12.233 7.60201 13.509C7.75301 13.701 7.97501 13.818 8.20201 13.906C8.67501 14.089 9.09201 14.42 9.41401 14.83C10.1903 15.8204 11.1647 16.6378 12.275 17.23C12.998 17.614 13.625 18.186 13.928 18.945C14.1408 19.4767 14.2501 20.0442 14.25 20.617V21.25C14.25 21.4489 14.329 21.6397 14.4697 21.7803C14.6103 21.921 14.8011 22 15 22C15.5967 22 16.169 21.7629 16.591 21.341C17.013 20.919 17.25 20.3467 17.25 19.75C17.25 18.598 16.99 17.507 16.527 16.532C16.261 15.974 16.634 15.25 17.252 15.25H20.378C21.404 15.25 22.323 14.556 22.432 13.535C22.477 13.113 22.5 12.685 22.5 12.25C22.5041 9.51365 21.5691 6.85877 19.851 4.729C19.463 4.247 18.864 4 18.246 4H14.23C13.747 4 13.266 4.078 12.807 4.23L9.69301 5.27C9.23411 5.42262 8.75362 5.50028 8.27001 5.5H7.49301ZM2.33101 13.273C1.77993 11.8723 1.498 10.3802 1.50001 8.875C1.49875 7.6867 1.67399 6.50481 2.02001 5.368C2.28001 4.518 3.10501 4 3.99401 4H4.90001C5.34501 4 5.62001 4.498 5.42301 4.898C4.81315 6.13493 4.49695 7.4959 4.49901 8.875C4.49901 10.583 4.97501 12.18 5.80101 13.541C6.04601 13.944 5.77301 14.5 5.30101 14.5H4.25001C3.41801 14.5 2.63701 14.047 2.33101 13.273Z"
                             fill="currentColor"></path>
                         </g>
                       </svg>
-                      <span class="text-sm font-semibold tracking-tight">32</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">32</span>
                     </button>
                   </div>
                   <!-- Reply Button -->
                   <button
-                    class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium max-md:text-mini">
+                    <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.848 2.771C7.21613 2.4234 9.60649 2.24927 12 2.25C14.43 2.25 16.817 2.428 19.152 2.77C21.13 3.062 22.5 4.794 22.5 6.74V12.76C22.5 14.706 21.13 16.438 19.152 16.73C17.212 17.014 15.236 17.185 13.23 17.235C13.1303 17.2369 13.0351 17.277 12.964 17.347L8.78 21.53C8.67511 21.6348 8.54153 21.7061 8.39614 21.735C8.25074 21.7639 8.10004 21.749 7.96308 21.6923C7.82611 21.6356 7.70903 21.5395 7.62661 21.4163C7.54419 21.2931 7.50013 21.1482 7.5 21V17.045C6.61329 16.9639 5.72895 16.8585 4.848 16.729C2.87 16.439 1.5 14.705 1.5 12.759V6.741C1.5 4.795 2.87 3.061 4.848 2.771Z"
                         fill="currentColor"></path>
                     </svg>
-                    <span class="text-sm font-semibold tracking-tight">Reply</span>
+                    <span class="text-sm font-semibold tracking-tight max-md:text-mini">Reply</span>
                   </button>
                 </div>
               </div>
@@ -1011,16 +1085,16 @@
                 <!-- Avatar -->
                 <div class="flex-shrink-0">
                   <img src="../assets/images/single-avatar-1.png" alt="Viktor Viktorov"
-                    class="w-10 h-10 rounded-full object-cover">
+                    class="w-10 h-10 rounded-full object-cover max-md:h-8 max-md:w-8">
                 </div>
 
                 <!-- Name and Time -->
-                <div class="flex items-center gap-4">
-                  <span class="text-white font-medium text-xl tracking-tight">Viktor Viktorov</span>
+                <div class="flex items-center gap-4 max-md:gap-3">
+                  <span class="text-white font-medium text-xl tracking-tight max-md:text-mobile-sm">Viktor Viktorov</span>
                   <span class="w-px h-4 opacity-20 bg-white/50"></span>
-                  <span class="flex items-center gap-1">
+                  <span class="flex items-center gap-1 max-md:gap-0.5">
                     <span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="max-md:w-3 max-md:h-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.5">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 1.875C5.5125 1.875 1.875 5.5125 1.875 10C1.875 14.4875 5.5125 18.125 10 18.125C14.4875 18.125 18.125 14.4875 18.125 10C18.125 5.5125 14.4875 1.875 10 1.875ZM10.625 5C10.625 4.83424 10.5592 4.67527 10.4419 4.55806C10.3247 4.44085 10.1658 4.375 10 4.375C9.83424 4.375 9.67527 4.44085 9.55806 4.55806C9.44085 4.67527 9.375 4.83424 9.375 5V10C9.375 10.345 9.655 10.625 10 10.625H13.75C13.9158 10.625 14.0747 10.5592 14.1919 10.4419C14.3092 10.3247 14.375 10.1658 14.375 10C14.375 9.83424 14.3092 9.67527 14.1919 9.55806C14.0747 9.44085 13.9158 9.375 13.75 9.375H10.625V5Z"
@@ -1028,7 +1102,7 @@
                         </g>
                       </svg>
                     </span>
-                    <span class="text-white/50 text-base font-medium tracking-tight">56 min ago</span>
+                    <span class="text-white/50 text-base font-medium tracking-tight max-md:text-mobile-base">56 min ago</span>
                   </span>
                 </div>
               </div>
@@ -1036,50 +1110,50 @@
               <!-- Comment Content -->
               <div class="comment-content">
                 <!-- Comment Text -->
-                <div class="comment-text mb-4 ml-13">
-                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%]">
+                <div class="comment-text mb-4 ml-13 max-md:mb-2">
+                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                     Theost Asia and Western Europe, which will be hosted from 13 to 17 June, and with two teams from
                     each qualifier advan
                   </p>
                 </div>
 
                 <!-- Comment Actions -->
-                <div class="flex items-center gap-10 ml-13">
+                <div class="flex items-center gap-10 ml-13 max-md:gap-6">
                   <!-- Like Button -->
-                  <div class="gap-6 flex items-center">
+                  <div class="gap-6 flex items-center max-md:gap-4">
                     <button
                       class="comment-like flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors group">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M7.49301 18.5C7.06801 18.5 6.67301 18.264 6.51801 17.868C6.17475 16.9943 5.99902 16.0637 6.00001 15.125C6.00001 13.375 6.59901 11.767 7.60201 10.491C7.75301 10.299 7.97501 10.182 8.20201 10.094C8.67501 9.911 9.09201 9.58 9.41401 9.17C10.1903 8.17964 11.1647 7.36221 12.275 6.77C12.998 6.386 13.625 5.814 13.928 5.055C14.1408 4.52325 14.2501 3.95575 14.25 3.383V2.75C14.25 2.55109 14.329 2.36032 14.4697 2.21967C14.6103 2.07902 14.8011 2 15 2C15.5967 2 16.169 2.23705 16.591 2.65901C17.013 3.08097 17.25 3.65326 17.25 4.25C17.25 5.402 16.99 6.493 16.527 7.468C16.261 8.026 16.634 8.75 17.252 8.75H20.378C21.404 8.75 22.323 9.444 22.432 10.465C22.477 10.887 22.5 11.315 22.5 11.75C22.5041 14.4863 21.5691 17.1412 19.851 19.271C19.463 19.753 18.864 20 18.246 20H14.23C13.747 20 13.266 19.922 12.807 19.77L9.69301 18.73C9.23411 18.5774 8.75362 18.4997 8.27001 18.5H7.49301ZM2.33101 10.727C1.77993 12.1277 1.498 13.6198 1.50001 15.125C1.49875 16.3133 1.67399 17.4952 2.02001 18.632C2.28001 19.482 3.10501 20 3.99401 20H4.90001C5.34501 20 5.62001 19.502 5.42301 19.102C4.81315 17.8651 4.49695 16.5041 4.49901 15.125C4.49901 13.417 4.97501 11.82 5.80101 10.459C6.04601 10.056 5.77301 9.5 5.30101 9.5H4.25001C3.41801 9.5 2.63701 9.953 2.33101 10.727Z"
                           fill="currentColor"></path>
                       </svg>
 
-                      <span class="text-sm font-semibold tracking-tight">561</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">561</span>
                     </button>
 
                     <!-- Dislike Button -->
                     <button
                       class="comment-dislike flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="1">
                           <path
                             d="M7.49301 5.5C7.06801 5.5 6.67301 5.736 6.51801 6.132C6.17475 7.00573 5.99902 7.93626 6.00001 8.875C6.00001 10.625 6.59901 12.233 7.60201 13.509C7.75301 13.701 7.97501 13.818 8.20201 13.906C8.67501 14.089 9.09201 14.42 9.41401 14.83C10.1903 15.8204 11.1647 16.6378 12.275 17.23C12.998 17.614 13.625 18.186 13.928 18.945C14.1408 19.4767 14.2501 20.0442 14.25 20.617V21.25C14.25 21.4489 14.329 21.6397 14.4697 21.7803C14.6103 21.921 14.8011 22 15 22C15.5967 22 16.169 21.7629 16.591 21.341C17.013 20.919 17.25 20.3467 17.25 19.75C17.25 18.598 16.99 17.507 16.527 16.532C16.261 15.974 16.634 15.25 17.252 15.25H20.378C21.404 15.25 22.323 14.556 22.432 13.535C22.477 13.113 22.5 12.685 22.5 12.25C22.5041 9.51365 21.5691 6.85877 19.851 4.729C19.463 4.247 18.864 4 18.246 4H14.23C13.747 4 13.266 4.078 12.807 4.23L9.69301 5.27C9.23411 5.42262 8.75362 5.50028 8.27001 5.5H7.49301ZM2.33101 13.273C1.77993 11.8723 1.498 10.3802 1.50001 8.875C1.49875 7.6867 1.67399 6.50481 2.02001 5.368C2.28001 4.518 3.10501 4 3.99401 4H4.90001C5.34501 4 5.62001 4.498 5.42301 4.898C4.81315 6.13493 4.49695 7.4959 4.49901 8.875C4.49901 10.583 4.97501 12.18 5.80101 13.541C6.04601 13.944 5.77301 14.5 5.30101 14.5H4.25001C3.41801 14.5 2.63701 14.047 2.33101 13.273Z"
                             fill="currentColor"></path>
                         </g>
                       </svg>
-                      <span class="text-sm font-semibold tracking-tight">32</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">32</span>
                     </button>
                   </div>
                   <!-- Reply Button -->
                   <button
                     class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.848 2.771C7.21613 2.4234 9.60649 2.24927 12 2.25C14.43 2.25 16.817 2.428 19.152 2.77C21.13 3.062 22.5 4.794 22.5 6.74V12.76C22.5 14.706 21.13 16.438 19.152 16.73C17.212 17.014 15.236 17.185 13.23 17.235C13.1303 17.2369 13.0351 17.277 12.964 17.347L8.78 21.53C8.67511 21.6348 8.54153 21.7061 8.39614 21.735C8.25074 21.7639 8.10004 21.749 7.96308 21.6923C7.82611 21.6356 7.70903 21.5395 7.62661 21.4163C7.54419 21.2931 7.50013 21.1482 7.5 21V17.045C6.61329 16.9639 5.72895 16.8585 4.848 16.729C2.87 16.439 1.5 14.705 1.5 12.759V6.741C1.5 4.795 2.87 3.061 4.848 2.771Z"
                         fill="currentColor"></path>
                     </svg>
-                    <span class="text-sm font-semibold tracking-tight">Reply</span>
+                    <span class="text-sm font-semibold tracking-tight max-md:text-mini">Reply</span>
                   </button>
                 </div>
               </div>
@@ -1091,16 +1165,16 @@
                 <!-- Avatar -->
                 <div class="flex-shrink-0">
                   <img src="../assets/images/single-avatar-1.png" alt="Viktor Viktorov"
-                    class="w-10 h-10 rounded-full object-cover">
+                    class="w-10 h-10 rounded-full object-cover max-md:h-8 max-md:w-8">
                 </div>
 
                 <!-- Name and Time -->
-                <div class="flex items-center gap-4">
-                  <span class="text-white font-medium text-xl tracking-tight">Viktor Viktorov</span>
+                <div class="flex items-center gap-4 max-md:gap-3">
+                  <span class="text-white font-medium text-xl tracking-tight max-md:text-mobile-sm">Viktor Viktorov</span>
                   <span class="w-px h-4 opacity-20 bg-white/50"></span>
-                  <span class="flex items-center gap-1">
+                  <span class="flex items-center gap-1 max-md:gap-0.5">
                     <span>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="max-md:w-3 max-md:h-3" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.5">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 1.875C5.5125 1.875 1.875 5.5125 1.875 10C1.875 14.4875 5.5125 18.125 10 18.125C14.4875 18.125 18.125 14.4875 18.125 10C18.125 5.5125 14.4875 1.875 10 1.875ZM10.625 5C10.625 4.83424 10.5592 4.67527 10.4419 4.55806C10.3247 4.44085 10.1658 4.375 10 4.375C9.83424 4.375 9.67527 4.44085 9.55806 4.55806C9.44085 4.67527 9.375 4.83424 9.375 5V10C9.375 10.345 9.655 10.625 10 10.625H13.75C13.9158 10.625 14.0747 10.5592 14.1919 10.4419C14.3092 10.3247 14.375 10.1658 14.375 10C14.375 9.83424 14.3092 9.67527 14.1919 9.55806C14.0747 9.44085 13.9158 9.375 13.75 9.375H10.625V5Z"
@@ -1108,7 +1182,7 @@
                         </g>
                       </svg>
                     </span>
-                    <span class="text-white/50 text-base font-medium tracking-tight">56 min ago</span>
+                    <span class="text-white/50 text-base font-medium tracking-tight max-md:text-mobile-base">56 min ago</span>
                   </span>
                 </div>
               </div>
@@ -1116,50 +1190,50 @@
               <!-- Comment Content -->
               <div class="comment-content">
                 <!-- Comment Text -->
-                <div class="comment-text mb-4 ml-13">
-                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%]">
+                <div class="comment-text mb-4 ml-13 max-md:mb-2">
+                  <p class="text-white/80 text-base font-normal tracking-tight leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                     Theost Asia and Western Europe, which will be hosted from 13 to 17 June, and with two teams from
                     each qualifier advan
                   </p>
                 </div>
 
                 <!-- Comment Actions -->
-                <div class="flex items-center gap-10 ml-13">
+                <div class="flex items-center gap-10 ml-13 max-md:gap-6">
                   <!-- Like Button -->
-                  <div class="gap-6 flex items-center">
+                  <div class="gap-6 flex items-center max-md:gap-4">
                     <button
                       class="comment-like flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors group">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M7.49301 18.5C7.06801 18.5 6.67301 18.264 6.51801 17.868C6.17475 16.9943 5.99902 16.0637 6.00001 15.125C6.00001 13.375 6.59901 11.767 7.60201 10.491C7.75301 10.299 7.97501 10.182 8.20201 10.094C8.67501 9.911 9.09201 9.58 9.41401 9.17C10.1903 8.17964 11.1647 7.36221 12.275 6.77C12.998 6.386 13.625 5.814 13.928 5.055C14.1408 4.52325 14.2501 3.95575 14.25 3.383V2.75C14.25 2.55109 14.329 2.36032 14.4697 2.21967C14.6103 2.07902 14.8011 2 15 2C15.5967 2 16.169 2.23705 16.591 2.65901C17.013 3.08097 17.25 3.65326 17.25 4.25C17.25 5.402 16.99 6.493 16.527 7.468C16.261 8.026 16.634 8.75 17.252 8.75H20.378C21.404 8.75 22.323 9.444 22.432 10.465C22.477 10.887 22.5 11.315 22.5 11.75C22.5041 14.4863 21.5691 17.1412 19.851 19.271C19.463 19.753 18.864 20 18.246 20H14.23C13.747 20 13.266 19.922 12.807 19.77L9.69301 18.73C9.23411 18.5774 8.75362 18.4997 8.27001 18.5H7.49301ZM2.33101 10.727C1.77993 12.1277 1.498 13.6198 1.50001 15.125C1.49875 16.3133 1.67399 17.4952 2.02001 18.632C2.28001 19.482 3.10501 20 3.99401 20H4.90001C5.34501 20 5.62001 19.502 5.42301 19.102C4.81315 17.8651 4.49695 16.5041 4.49901 15.125C4.49901 13.417 4.97501 11.82 5.80101 10.459C6.04601 10.056 5.77301 9.5 5.30101 9.5H4.25001C3.41801 9.5 2.63701 9.953 2.33101 10.727Z"
                           fill="currentColor"></path>
                       </svg>
 
-                      <span class="text-sm font-semibold tracking-tight">561</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">561</span>
                     </button>
 
                     <!-- Dislike Button -->
                     <button
                       class="comment-dislike flex items-center gap-1 text-white/50 hover:text-brand-red transition-colors">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="1">
                           <path
                             d="M7.49301 5.5C7.06801 5.5 6.67301 5.736 6.51801 6.132C6.17475 7.00573 5.99902 7.93626 6.00001 8.875C6.00001 10.625 6.59901 12.233 7.60201 13.509C7.75301 13.701 7.97501 13.818 8.20201 13.906C8.67501 14.089 9.09201 14.42 9.41401 14.83C10.1903 15.8204 11.1647 16.6378 12.275 17.23C12.998 17.614 13.625 18.186 13.928 18.945C14.1408 19.4767 14.2501 20.0442 14.25 20.617V21.25C14.25 21.4489 14.329 21.6397 14.4697 21.7803C14.6103 21.921 14.8011 22 15 22C15.5967 22 16.169 21.7629 16.591 21.341C17.013 20.919 17.25 20.3467 17.25 19.75C17.25 18.598 16.99 17.507 16.527 16.532C16.261 15.974 16.634 15.25 17.252 15.25H20.378C21.404 15.25 22.323 14.556 22.432 13.535C22.477 13.113 22.5 12.685 22.5 12.25C22.5041 9.51365 21.5691 6.85877 19.851 4.729C19.463 4.247 18.864 4 18.246 4H14.23C13.747 4 13.266 4.078 12.807 4.23L9.69301 5.27C9.23411 5.42262 8.75362 5.50028 8.27001 5.5H7.49301ZM2.33101 13.273C1.77993 11.8723 1.498 10.3802 1.50001 8.875C1.49875 7.6867 1.67399 6.50481 2.02001 5.368C2.28001 4.518 3.10501 4 3.99401 4H4.90001C5.34501 4 5.62001 4.498 5.42301 4.898C4.81315 6.13493 4.49695 7.4959 4.49901 8.875C4.49901 10.583 4.97501 12.18 5.80101 13.541C6.04601 13.944 5.77301 14.5 5.30101 14.5H4.25001C3.41801 14.5 2.63701 14.047 2.33101 13.273Z"
                             fill="currentColor"></path>
                         </g>
                       </svg>
-                      <span class="text-sm font-semibold tracking-tight">32</span>
+                      <span class="text-sm font-semibold tracking-tight max-md:text-mini">32</span>
                     </button>
                   </div>
                   <!-- Reply Button -->
                   <button
                     class="comment-reply flex items-center gap-1 text-white/50 hover:text-white transition-colors text-sm font-medium">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.848 2.771C7.21613 2.4234 9.60649 2.24927 12 2.25C14.43 2.25 16.817 2.428 19.152 2.77C21.13 3.062 22.5 4.794 22.5 6.74V12.76C22.5 14.706 21.13 16.438 19.152 16.73C17.212 17.014 15.236 17.185 13.23 17.235C13.1303 17.2369 13.0351 17.277 12.964 17.347L8.78 21.53C8.67511 21.6348 8.54153 21.7061 8.39614 21.735C8.25074 21.7639 8.10004 21.749 7.96308 21.6923C7.82611 21.6356 7.70903 21.5395 7.62661 21.4163C7.54419 21.2931 7.50013 21.1482 7.5 21V17.045C6.61329 16.9639 5.72895 16.8585 4.848 16.729C2.87 16.439 1.5 14.705 1.5 12.759V6.741C1.5 4.795 2.87 3.061 4.848 2.771Z"
                         fill="currentColor"></path>
                     </svg>
-                    <span class="text-sm font-semibold tracking-tight">Reply</span>
+                    <span class="text-sm font-semibold tracking-tight max-md:text-mini">Reply</span>
                   </button>
                 </div>
               </div>
@@ -1167,12 +1241,15 @@
           </div>
         </div>
     </section>
+    <!-- Divider that extends to edges -->
+    <div class="hidden max-md:block w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-0.5 mt-[47px] bg-brand-red/30"></div>
 
-    <div class="flex items-center justify-between mb-10 mt-[120px]">
-      <div class="flex flex-col gap-2">
+
+    <div class="flex items-center justify-between mb-10 mt-[120px] max-md:mt-[47px] max-md:mb-[37px]">
+      <div class="flex flex-col gap-2 max-md:gap-1">
         <div class="flex items-center gap-2">
           <span class="text-brand-red">
-            <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+            <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs />
               <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C" fill-opacity="1.000000"
@@ -1180,9 +1257,9 @@
             </svg>
           </span>
 
-          <span class="font-furore text-3.5xl font-normal tracking-tightest text-white">Next esports news</span>
+          <span class="font-furore text-3.5xl font-normal tracking-tightest text-white max-md:text-mobile-xs max-md:leading-[18px]">Next esports news</span>
         </div>
-        <div class="text-white/50 text-base font-medium leading-[160%] pl-9 tracking-tight">Select the suggested news. Continue reading</div>
+        <div class="text-white/50 text-base font-medium leading-[160%] pl-9 tracking-tight max-md:text-mobile-base max-md:pl-[28px] max-md:leadong-[15px]">Select the suggested news. Continue reading</div>
       </div>
     </div>  
 
@@ -1191,7 +1268,7 @@
 
 
     <!-- Sidebar Right -->
-    <aside class="w-[328px] hidden xl:block flex-shrink-0 space-y-4">
+    <aside class="w-[328px] hidden xl:block flex-shrink-0 space-y-4 ">
       <!-- Related News -->
       <div class="bg-brand-dark-gray rounded-2xl p-4 mb-2">
         <div class="flex items-center gap-2 mb-6">
@@ -1421,29 +1498,29 @@
   </main>
   <!-- /Main Content -->
 
-  <section id="single-slider" class="w-full relative overflow-hidden mb-[120px]">
+  <section id="single-slider" class="w-full relative overflow-hidden mb-[120px] max-md:mb-[64px]">
 
     <!-- News Slider Container -->
     <div class="news-slider-container relative">
       <!-- Left gradient overlay -->
-      <div class="absolute left-0 top-0 w-[451px] h-full z-10 pointer-events-none" style="background: linear-gradient(90deg, #0E0E10 13.65%, rgba(14, 14, 16, 0.00) 99.97%);"></div>
+      <div class="absolute left-0 top-0 w-[451px] h-full z-10 pointer-events-none max-md:w-[125px]" style="background: linear-gradient(90deg, #0E0E10 13.65%, rgba(14, 14, 16, 0.00) 99.97%);"></div>
       
       <!-- Right gradient overlay -->
-      <div class="absolute right-0 top-0 w-[451px] h-full   z-10 pointer-events-none" style="background: linear-gradient(270deg, #0E0E10 13.65%, rgba(14, 14, 16, 0.00) 99.97%);"></div>
+      <div class="absolute right-0 top-0 w-[451px] h-full   z-10 pointer-events-none max-md:w-[125px]" style="background: linear-gradient(270deg, #0E0E10 13.65%, rgba(14, 14, 16, 0.00) 99.97%);"></div>
       
       <!-- Slider Track -->
       <div class="news-slider-track flex gap-[24.5px] transition-transform duration-300 ease-out">
         <!-- News Card 1 -->
-        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden">
-          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px]">
-          <div class="pt-3">
-            <div class="text-base text-white font-semibold mb-2.5">The Give Back // V25 bundle raises over
+        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
               $5M for charity with player support</div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 max-md:gap-1.5">
               <span
-                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight">Valorant</span>
-              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight">
-                <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
@@ -1457,16 +1534,16 @@
           </div>
         </div>
         <!-- News Card 2 -->
-        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden">
-          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px]">
-          <div class="pt-3">
-            <div class="text-base text-white font-semibold mb-2.5">The Give Back // V25 bundle raises over
+        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
               $5M for charity with player support</div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 max-md:gap-1.5">
               <span
-                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight">Valorant</span>
-              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight">
-                <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
@@ -1481,16 +1558,16 @@
         </div>
 
         <!-- News Card 3 -->
-        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden">
-          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px]">
-          <div class="pt-3">
-            <div class="text-base text-white font-semibold mb-2.5">The Give Back // V25 bundle raises over
+        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
               $5M for charity with player support</div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 max-md:gap-1.5">
               <span
-                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight">Valorant</span>
-              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight">
-                <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
@@ -1505,16 +1582,16 @@
         </div>
 
         <!-- News Card 4 -->
-        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden">
-          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px]">
-          <div class="pt-3">
-            <div class="text-base text-white font-semibold mb-2.5">The Give Back // V25 bundle raises over
+        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
               $5M for charity with player support</div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 max-md:gap-1.5">
               <span
-                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight">Valorant</span>
-              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight">
-                <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
@@ -1527,18 +1604,17 @@
             </div>
           </div>
         </div>
-
         <!-- News Card 5 -->
-        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden">
-          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px]">
-          <div class="pt-3">
-            <div class="text-base text-white font-semibold mb-2.5">The Give Back // V25 bundle raises over
+        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
               $5M for charity with player support</div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 max-md:gap-1.5">
               <span
-                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight">Valorant</span>
-              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight">
-                <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
@@ -1552,16 +1628,16 @@
           </div>
         </div>
         <!-- News Card 6 -->
-        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden">
-          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px]">
-          <div class="pt-3">
-            <div class="text-base text-white font-semibold mb-2.5">The Give Back // V25 bundle raises over
+        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
               $5M for charity with player support</div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 max-md:gap-1.5">
               <span
-                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight">Valorant</span>
-              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight">
-                <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
@@ -1579,39 +1655,39 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-brand-dark rounded-3xl m-10 p-10">
-    <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
-      <div class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest">
-        <div class="flex gap-[88px]">
-          <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+  <footer class="bg-brand-dark-gray rounded-3xl m-10 p-10 max-md:m-5 max-md:px-9 max-md:py-8 max-md:rounded-6">
+    <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8 max-md:gap-6">
+      <div class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest max-md:text-mobile-xs max-md:text-center">
+        <div class="flex gap-[88px] max-md:flex-col max-md:gap-10">
+          <div class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full max-md:items-center">
+            <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="hidden max-w-[119.314px] w-[119.314px] min-h-[36px] h-[36px] max-md:block mb-[18px]">
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">PRIVACY POLICY</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACTS</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">ESPORTS BETTING</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">BC GAME</a>
           </div>
-          <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+          <div class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">GGBET</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">STAKE</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">THUNDERPICK</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">MYSTAKE</a>
           </div>
-          <div class="flex flex-col gap-10 min-w-[140px] min-h-[212px] justify-between">
+          <div class="flex flex-col gap-5 min-w-[140px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">TERMS OF USE</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">DISCLAIMER</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">COPYRIGHT HOLDER</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACT</a>
           </div>
         </div>
-        <div class="mt-12">
+        <div class="mt-12 max-md:mt-[55px]">
           <span
-            class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal">В©VPESPORTS
-            All Rights Reserved. v0.7.51</span>
+            class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal max-md:text-mobile-base max-md:min-h-6">©VPESPORTS All Rights Reserved. v0.7.51</span>
         </div>
       </div>
-      <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0">
-        <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px]">
-        <div class="flex gap-6">
-          <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg width="48" height="48"
+      <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0 max-md:items-center max-md:mt-0">
+        <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px] max-md:hidden">
+        <div class="flex gap-6 max-md:gap-4">
+          <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="48" height="48" rx="13.1507" fill="white" />
               <path
@@ -1622,7 +1698,7 @@
                 fill="#171719" />
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg width="48" height="48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M46.9996 7.4946C46.4498 4.54902 44.8233 2.2256 42.754 1.42923C39.0124 0 24 0 24 0C24 0 8.99529 0 5.24599 1.42923C3.18437 2.21461 1.55785 4.53831 1.00042 7.4946C-9.40902e-08 12.84 0 23.9999 0 23.9999C0 23.9999 -9.40902e-08 35.16 1.00042 40.5054C1.55016 43.451 3.17668 45.7744 5.24599 46.5708C8.99529 48 24 48 24 48C24 48 39.0124 48 42.754 46.5708C44.8158 45.7854 46.4421 43.4617 46.9996 40.5054C48 35.16 48 24.0001 48 24.0001C48 24.0001 48 12.84 46.9996 7.4946Z"
@@ -1632,7 +1708,7 @@
                 fill="#171719" />
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg width="48" height="48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2030_411)">
                 <path
@@ -1649,7 +1725,7 @@
               </defs>
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg width="48" height="48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2030_415)">
                 <path
@@ -1666,7 +1742,7 @@
               </defs>
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg width="53" height="48" viewBox="0 0 53 48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg class="max-md:w-8 max-md:h-8" width="53" height="48" viewBox="0 0 53 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2030_418)">
                 <path
@@ -1687,37 +1763,32 @@
   <!-- /Footer -->
 
   <!-- Scripts -->
-      <script src="../assets/js/pages/single/single-slider.js"></script>
+    <script src="../assets/js/pages/single/single-slider.js"></script>
     <script src="../assets/js/pages/single/comments.js"></script>
-    <script src="../assets/js/nav-widget.js"></script>
+
 
   <script>
-    // Select arrow management
     document.addEventListener('DOMContentLoaded', function () {
       const select = document.querySelector('.comment-select');
       const selectWrapper = document.querySelector('.select-wrapper');
 
       if (select && selectWrapper) {
-        // Add open class when dropdown opens
         select.addEventListener('mousedown', function () {
           selectWrapper.classList.add('open');
         });
 
-        // Remove open class when dropdown closes
         select.addEventListener('change', function () {
           setTimeout(() => {
             selectWrapper.classList.remove('open');
           }, 100);
         });
 
-        // Remove open class when clicking outside
         document.addEventListener('click', function (e) {
           if (!selectWrapper.contains(e.target)) {
             selectWrapper.classList.remove('open');
           }
         });
 
-        // Remove open class when select loses focus
         select.addEventListener('blur', function () {
           setTimeout(() => {
             selectWrapper.classList.remove('open');
@@ -1726,9 +1797,12 @@
       }
     });
   </script>
+  <script src="../assets/js/theme-manager.js"></script>
+  <script src="../assets/js/mobile-navigation.js"></script>
   <script src="../assets/js/nav-widget.js"></script>
 
 </body>
 
 </html>
+
 

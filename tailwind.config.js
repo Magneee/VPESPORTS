@@ -50,19 +50,32 @@ module.exports = {
         'furore': ['Furore', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'xs': ['0.75rem', { lineHeight: '15px' }],
-        'sm': ['0.875rem', { lineHeight: '1.0625rem' }],
-        'base': ['1rem', { lineHeight: '19px' }],
-        'lg': ['1.125rem', { lineHeight: '1.5625rem' }],
-        'xl': ['1.25rem', { lineHeight: '24px' }],
-        'xl-2': ['1.375rem', { lineHeight: '140%' }],
-        '2xl': ['1.5rem', { lineHeight: '140%' }],
-        '2.5xl': ['1.75rem', { lineHeight: '32px' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '3.5xl': ['2rem', { lineHeight: '2.4375rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
+        'xs': ['0.75rem', { lineHeight: '15px' }],           // 12px
+        'mini': ['0.6875rem', { lineHeight: '14px' }],        // 11px
+        'sm': ['0.875rem', { lineHeight: '1.0625rem' }],      // 14px
+        'base': ['1rem', { lineHeight: '19px' }],             // 16px
+        'lg': ['1.125rem', { lineHeight: '1.5625rem' }],      // 18px
+        'xl': ['1.25rem', { lineHeight: '24px' }],            // 20px
+        'xl-2': ['1.375rem', { lineHeight: '140%' }],         // 22px
+        '2xl': ['1.5rem', { lineHeight: '140%' }],            // 24px
+        '2.5xl': ['1.75rem', { lineHeight: '32px' }],         // 28px
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],       // 30px
+        '3.5xl': ['2rem', { lineHeight: '2.4375rem' }],       // 32px
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],         // 36px
+        '5xl': ['3rem', { lineHeight: '1' }],                 // 48px
+        '6xl': ['3.75rem', { lineHeight: '1' }],              // 60px
+        
+        'mobile-mini': ['0.625rem', { lineHeight: '10px' }],          // 10px
+        'mobile-base': ['0.75rem', { lineHeight: '160%' }],           // 12px
+        'mobile-sm': ['0.875rem', { lineHeight: '17px' }],            // 14px
+        'mobile-xs': ['1rem', { lineHeight: 'normal' }],              // 16px
+        'mobile-2xs': ['1.125rem', { lineHeight: '22px' }],           // 18px
+        'mobile-2.5xs': ['1.25rem', { lineHeight: '24px' }],           // 20px
+        'mobile-3xs': ['1.375rem', { lineHeight: '28px' }],           // 22px
+        'mobile-4xs-header': ['1.5rem', { lineHeight: '28px' }],           // 24px
+        'mobile-3xs': ['0.375rem', { lineHeight: '1.0625rem' }],      // 6px
+        'mobile-4xs': ['0.25rem', { lineHeight: '1.0625rem' }],       // 4px
+        'mobile-5xs': ['0.125rem', { lineHeight: '1.0625rem' }],      // 2px
       },
       maxHeight: {
         '8xl': '85rem',

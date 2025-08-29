@@ -8,13 +8,10 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/slider.css">
     <link rel="stylesheet" href="../assets/css/nav-widget.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
   <script src="../assets/js/config.js"></script>
   <style>
     @media (max-width: 768px) {
-      #profile .px-8 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
 
       #profile .flex.items-start.gap-6 {
         flex-direction: column;
@@ -27,15 +24,6 @@
         margin-top: 0;
       }
 
-      #profile .flex.justify-between.items-center {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      #profile .flex.justify-between.items-start {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
 
       #profile .min-w-64 {
         min-width: auto;
@@ -68,7 +56,6 @@
           class="relative nav-link font-furore text-lg tracking-tightest nav-link-active text-brand-red font-normal flex items-center gap-1">
           HOME
           <span class="ml-1 text-brand-red text-lg">
-            <!-- Р РѕРјР±РёРє -->
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 0L12 6L6 12L0 6L6 0Z" fill="#FF2C2C" />
             </svg>
@@ -114,11 +101,11 @@
           </form>
           <!-- Theme button -->
           <button
-            class="bg-brand-red bg-opacity-30 hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center">
+            class="bg-brand-red bg-opacity-30 text-brand-red hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center" data-theme-toggle>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14 2.625C14.2321 2.625 14.4546 2.71719 14.6187 2.88128C14.7828 3.04538 14.875 3.26794 14.875 3.5V6.125C14.875 6.35706 14.7828 6.57962 14.6187 6.74372C14.4546 6.90781 14.2321 7 14 7C13.7679 7 13.5454 6.90781 13.3813 6.74372C13.2172 6.57962 13.125 6.35706 13.125 6.125V3.5C13.125 3.26794 13.2172 3.04538 13.3813 2.88128C13.5454 2.71719 13.7679 2.625 14 2.625ZM8.75 14C8.75 12.6076 9.30312 11.2723 10.2877 10.2877C11.2723 9.30312 12.6076 8.75 14 8.75C15.3924 8.75 16.7277 9.30312 17.7123 10.2877C18.6969 11.2723 19.25 12.6076 19.25 14C19.25 15.3924 18.6969 16.7277 17.7123 17.7123C16.7277 18.6969 15.3924 19.25 14 19.25C12.6076 19.25 11.2723 18.6969 10.2877 17.7123C9.30312 16.7277 8.75 15.3924 8.75 14ZM22.043 7.19367C22.1976 7.0278 22.2817 6.80841 22.2777 6.58172C22.2737 6.35504 22.1819 6.13876 22.0216 5.97844C21.8612 5.81813 21.645 5.7263 21.4183 5.7223C21.1916 5.7183 20.9722 5.80244 20.8063 5.957L18.9502 7.812C18.8666 7.89268 18.7999 7.9892 18.7539 8.09593C18.708 8.20266 18.6838 8.31747 18.6828 8.43365C18.6817 8.54983 18.7038 8.66506 18.7477 8.77261C18.7917 8.88017 18.8566 8.97789 18.9387 9.06009C19.0209 9.14228 19.1185 9.2073 19.226 9.25134C19.3335 9.29539 19.4488 9.31758 19.5649 9.31663C19.6811 9.31568 19.7959 9.29159 19.9027 9.24579C20.0095 9.19998 20.1061 9.13337 20.1868 9.04983L22.043 7.19367ZM25.375 14C25.375 14.2321 25.2828 14.4546 25.1187 14.6187C24.9546 14.7828 24.7321 14.875 24.5 14.875H21.875C21.6429 14.875 21.4204 14.7828 21.2563 14.6187C21.0922 14.4546 21 14.2321 21 14C21 13.7679 21.0922 13.5454 21.2563 13.3813C21.4204 13.2172 21.6429 13.125 21.875 13.125H24.5C24.7321 13.125 24.9546 13.2172 25.1187 13.3813C25.2828 13.5454 25.375 13.7679 25.375 14ZM20.8063 22.043C20.9722 22.1976 21.1916 22.2817 21.4183 22.2777C21.645 22.2737 21.8612 22.1819 22.0216 22.0216C22.1819 21.8612 22.2737 21.645 22.2777 21.4183C22.2817 21.1916 22.1976 20.9722 22.043 20.8063L20.188 18.9502C20.1073 18.8666 20.0108 18.7999 19.9041 18.7539C19.7973 18.708 19.6825 18.6838 19.5664 18.6828C19.4502 18.6817 19.3349 18.7038 19.2274 18.7477C19.1198 18.7917 19.0221 18.8566 18.9399 18.9387C18.8577 19.0209 18.7927 19.1185 18.7487 19.226C18.7046 19.3335 18.6824 19.4488 18.6834 19.5649C18.6843 19.6811 18.7084 19.7959 18.7542 19.9027C18.8 20.0095 18.8666 20.1061 18.9502 20.1868L20.8063 22.043ZM14 21C14.2321 21 14.4546 21.0922 14.6187 21.2563C14.7828 21.4204 14.875 21.6429 14.875 21.875V24.5C14.875 24.7321 14.7828 24.9546 14.6187 25.1187C14.4546 25.2828 14.2321 25.375 14 25.375C13.7679 25.375 13.5454 25.2828 13.3813 25.1187C13.2172 24.9546 13.125 24.7321 13.125 24.5V21.875C13.125 21.6429 13.2172 21.4204 13.3813 21.2563C13.5454 21.0922 13.7679 21 14 21ZM9.051 20.1868C9.21031 20.0217 9.2984 19.8007 9.2963 19.5712C9.2942 19.3418 9.20208 19.1224 9.03977 18.9602C8.87746 18.7981 8.65795 18.7062 8.42853 18.7043C8.1991 18.7024 7.97812 18.7907 7.81317 18.9502L5.957 20.8052C5.79753 20.9701 5.70923 21.1911 5.71112 21.4205C5.713 21.65 5.80492 21.8695 5.96708 22.0318C6.12923 22.1941 6.34865 22.2862 6.57807 22.2883C6.8075 22.2904 7.02856 22.2023 7.19367 22.043L9.04983 20.188L9.051 20.1868ZM7 14C7 14.2321 6.90781 14.4546 6.74372 14.6187C6.57962 14.7828 6.35706 14.875 6.125 14.875H3.5C3.26794 14.875 3.04538 14.7828 2.88128 14.6187C2.71719 14.4546 2.625 14.2321 2.625 14C2.625 13.7679 2.71719 13.5454 2.88128 13.3813C3.04538 13.2172 3.26794 13.125 3.5 13.125H6.125C6.35706 13.125 6.57962 13.2172 6.74372 13.3813C6.90781 13.5454 7 13.7679 7 14ZM7.81317 9.04983C7.97904 9.20439 8.19842 9.28854 8.42511 9.28454C8.65179 9.28054 8.86808 9.18871 9.02839 9.02839C9.18871 8.86808 9.28054 8.65179 9.28454 8.42511C9.28854 8.19842 9.20439 7.97904 9.04983 7.81317L7.19483 5.957C7.02988 5.79753 6.8089 5.70923 6.57947 5.71112C6.35005 5.713 6.13054 5.80492 5.96823 5.96708C5.80592 6.12923 5.7138 6.34865 5.7117 6.57807C5.7096 6.8075 5.79769 7.02856 5.957 7.19367L7.81317 9.04983Z"
-                fill="#FF2C2C" />
+                fill="currentColor" />
             </svg>
           </button>
         </div>
@@ -138,7 +125,7 @@
   <!-- /Header -->
 
   <!-- Main Content -->
-  <main class="flex gap-6 max-w-8xl mx-auto mt-[33px]">
+  <main class="flex gap-6 max-w-8xl mx-auto mt-[33px] max-md:block max-md:px-5">
     <!-- Sidebar Left -->
     <aside class="w-[213px] hidden lg:block">
       <!-- User Card -->
@@ -210,10 +197,10 @@
     </aside>
 
     <!-- Main Section -->
-    <div class="flex-1 min-w-0">
+    <div class="flex-1 min-w-0 max-md:w-full max-md:order-1">
 
       <!-- Breadcrumbs -->
-      <nav class="flex items-center gap-2 mb-6 text-white text-base">
+      <nav class="flex items-center gap-2 mb-6 text-white text-base max-md:hidden">
         <a href="#" class="opacity-50 hover:opacity-100 transition truncate text-ellipsis overflow-hidden">VPEsports</a>
         <span class="opacity-80">/</span>
         <a href="#" class="opacity-50 hover:opacity-100 transition truncate text-ellipsis overflow-hidden">Profile</a>
@@ -224,23 +211,24 @@
       <!-- Profile Section -->
       <section id="profile" class="bg-brand-dark-gray rounded-2xl overflow-hidden">
         <!-- Background Cover Image -->
-        <div class="w-full h-[132px] rounded-t-2xl"
-          style="background: url(../assets/images/profile-cover.png) lightgray 0px -1008.25px / 100% 876.136% no-repeat">
+        <div class="bg-profile-cover w-full h-[132px] rounded-t-2xl max-md:h-20 "
+          style="background: url(../assets/images/profile-cover.png) lightgray 0px -1008.25px / 100% 876.136% no-repeat; --mobile-bg-pos-y: -611.06px;"
+        >
         </div>
 
         <!-- Profile Content -->
-        <div class="px-8 pb-8">
+        <div class="px-8 pb-8 max-md:pl-[13px] max-md:pr-[16px]">
           <!-- User Profile Header with Avatar -->
-          <div class="flex items-start gap-5 -mt-8 mb-8">
+          <div class="flex items-start gap-5 -mt-8 mb-8 max-md:flex-col max-md:items-center max-md:gap-3  max-md:mb-8">
             <!-- Profile Avatar -->
-            <div class="relative flex-shrink-0">
-              <img class="w-32 h-32 rounded-full object-cover outline outline-2 outline-red-600/80"
+            <div class="relative flex-shrink-0 max-md:w-[73px] max-md:h-[73px]">
+              <img class="w-32 h-32 rounded-full object-cover outline outline-2 outline-red-600/80 max-md:w-[73px] max-md:h-[73px] max-md:outline-[1.141px]"
                 src="../assets/images/profile-man.png" alt="Profile Avatar" />
               <!-- Edit Button -->
               <div
-                class="absolute right-0 bottom-0 p-2 bg-white/20 rounded-[12px] backdrop-blur-md flex items-center gap-2 cursor-pointer hover:bg-white/30 transition"
+                class="absolute right-0 bottom-0 p-2 bg-white/20 rounded-[12px] backdrop-blur-md flex items-center gap-2 cursor-pointer hover:bg-white/30 transition max-md:w-[24.333px] max-md:h-[24.333px] max-md:p-[4.563px]  max-md:rounded-[8.111px] max-md:backdrop-blur-[6.84px] max-md:right-[-1.141px] max-md:bottom-[-1.141px]"
                 id="edit-avatar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 21 21" fill="none">
+                <svg class="max-md:w-[12px] max-md:h-[12px]" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 21 21" fill="none">
                   <path
                     d="M20.2313 0.76869C19.739 0.276502 19.0714 0 18.3753 0C17.6791 0 17.0115 0.276502 16.5193 0.76869L15.3623 1.92569L19.0743 5.63769L20.2313 4.48069C20.7234 3.98842 20.9999 3.32081 20.9999 2.62469C20.9999 1.92857 20.7234 1.26096 20.2313 0.76869ZM18.0133 6.69869L14.3013 2.98669L2.15125 15.1367C1.53411 15.7535 1.08043 16.5145 0.831255 17.3507L0.0312546 20.0357C-0.00736926 20.1653 -0.0102499 20.3029 0.0229175 20.4339C0.0560849 20.565 0.124067 20.6847 0.21967 20.7803C0.315273 20.8759 0.434942 20.9439 0.566014 20.977C0.697085 21.0102 0.834686 21.0073 0.964255 20.9687L3.64925 20.1687C4.48548 19.9195 5.24642 19.4658 5.86325 18.8487L18.0133 6.69869Z"
                     fill="white" />
@@ -249,13 +237,13 @@
             </div>
 
             <!-- User Details -->
-            <div class="flex-1 mt-11">
-              <div class="text-white text-2xl font-bold font-primary mb-[5px]">Gomodril Viktorov</div>
-              <div class="flex items-center gap-[5px]">
-                <div class="text-white opacity-50 text-lg font-normal font-primary">vpesports.referal.njcej47365</div>
+            <div class="flex-1 mt-11 max-md:flex max-md:flex-col max-md:justify-start max-md:items-center max-md:mt-0">
+              <div class="text-white text-2xl font-bold font-primary mb-[5px] max-md:text-xl max-md:font-bold max-md:leading-7">Gomodril Viktorov</div>
+              <div class="flex items-center gap-[5px] max-md:inline-flex max-md:justify-start max-md:items-center max-md:gap-[5px]">
+                <div class="text-white opacity-50 text-lg font-normal font-primary max-md:opacity-50 max-md:text-white max-md:text-xs">vpesports.referal.njcej47365</div>
                 <div
-                  class="w-6 h-6 overflow-visible flex items-center justify-center cursor-pointer hover:opacity-75 transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  class="w-6 h-6 overflow-visible flex items-center justify-center cursor-pointer hover:opacity-75 transition max-md:w-3 max-md:h-3 max-md:relative max-md:opacity-50 max-md:overflow-hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="max-md:w-2.5 max-md:h-2.5">
                     <g opacity="0.5">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M19.9022 4.09817C19.5539 3.74984 19.1405 3.47353 18.6855 3.28502C18.2304 3.0965 17.7427 2.99947 17.2502 2.99947C16.7576 2.99947 16.2699 3.0965 15.8149 3.28502C15.3598 3.47353 14.9464 3.74984 14.5982 4.09817L10.0982 8.59817C9.67363 9.02234 9.35709 9.5422 9.17515 10.1141C8.99321 10.686 8.95117 11.2932 9.05258 11.8847C9.15399 12.4761 9.39587 13.0347 9.75792 13.5133C10.12 13.9919 10.5916 14.3766 11.1332 14.6352C11.3065 14.7245 11.4382 14.8778 11.5004 15.0625C11.5626 15.2473 11.5504 15.4491 11.4664 15.625C11.3824 15.8009 11.2332 15.9373 11.0504 16.0051C10.8676 16.0729 10.6656 16.0668 10.4872 15.9882C9.72928 15.6261 9.06931 15.0876 8.56268 14.4176C8.05605 13.7477 7.71755 12.966 7.57559 12.1382C7.43364 11.3104 7.49237 10.4606 7.74687 9.66013C8.00137 8.8597 8.44419 8.13201 9.03817 7.53817L13.5382 3.03817C14.0233 2.5403 14.6025 2.14374 15.2421 1.8715C15.8818 1.59926 16.5691 1.45675 17.2642 1.45226C17.9594 1.44776 18.6485 1.58136 19.2916 1.84531C19.9347 2.10925 20.519 2.49829 21.0105 2.98984C21.5021 3.48139 21.8911 4.06566 22.155 4.70876C22.419 5.35185 22.5526 6.04097 22.5481 6.7361C22.5436 7.43124 22.4011 8.11857 22.1288 8.7582C21.8566 9.39783 21.46 9.97702 20.9622 10.4622L19.2052 12.2192C19.1365 12.2929 19.0537 12.352 18.9617 12.393C18.8697 12.4339 18.7704 12.456 18.6697 12.4578C18.569 12.4595 18.469 12.441 18.3756 12.4033C18.2822 12.3656 18.1973 12.3094 18.1261 12.2382C18.0549 12.167 17.9988 12.0822 17.961 11.9888C17.9233 11.8954 17.9048 11.7954 17.9066 11.6946C17.9084 11.5939 17.9304 11.4946 17.9714 11.4026C18.0124 11.3106 18.0715 11.2278 18.1452 11.1592L19.9022 9.40217C20.2505 9.05394 20.5268 8.6405 20.7153 8.18546C20.9038 7.73043 21.0009 7.24271 21.0009 6.75017C21.0009 6.25763 20.9038 5.76991 20.7153 5.31488C20.5268 4.85984 20.2505 4.4464 19.9022 4.09817ZM12.5132 8.36517C12.599 8.18577 12.7526 8.04781 12.9401 7.98161C13.1276 7.91542 13.3337 7.92641 13.5132 8.01217C14.2711 8.3742 14.931 8.91278 15.4377 9.58269C15.9443 10.2526 16.2828 11.0343 16.4247 11.8621C16.5667 12.69 16.508 13.5398 16.2535 14.3402C15.999 15.1406 15.5561 15.8683 14.9622 16.4622L10.4622 20.9622C9.97702 21.46 9.39783 21.8566 8.7582 22.1288C8.11857 22.4011 7.43124 22.5436 6.7361 22.5481C6.04097 22.5526 5.35185 22.419 4.70876 22.155C4.06566 21.8911 3.48139 21.5021 2.98984 21.0105C2.49829 20.519 2.10925 19.9347 1.84531 19.2916C1.58136 18.6485 1.44776 17.9594 1.45226 17.2642C1.45675 16.5691 1.59926 15.8818 1.8715 15.2421C2.14374 14.6025 2.5403 14.0233 3.03817 13.5382L4.79517 11.7812C4.86383 11.7075 4.94663 11.6484 5.03863 11.6074C5.13063 11.5664 5.22994 11.5444 5.33065 11.5426C5.43135 11.5408 5.53138 11.5593 5.62477 11.597C5.71815 11.6348 5.80299 11.6909 5.87421 11.7621C5.94543 11.8334 6.00157 11.9182 6.03929 12.0116C6.07701 12.105 6.09554 12.205 6.09376 12.3057C6.09198 12.4064 6.06994 12.5057 6.02895 12.5977C5.98796 12.6897 5.92886 12.7725 5.85517 12.8412L4.09817 14.5982C3.7499 14.9464 3.47364 15.3599 3.28516 15.8149C3.09668 16.2699 2.99967 16.7576 2.99967 17.2502C2.99967 17.7427 3.09668 18.2304 3.28516 18.6854C3.47364 19.1405 3.7499 19.5539 4.09817 19.9022C4.44643 20.2504 4.85989 20.5267 5.31492 20.7152C5.76995 20.9037 6.25765 21.0007 6.75017 21.0007C7.24269 21.0007 7.73039 20.9037 8.18542 20.7152C8.64045 20.5267 9.0539 20.2504 9.40217 19.9022L13.9022 15.4022C14.3267 14.978 14.6432 14.4581 14.8252 13.8863C15.0071 13.3144 15.0492 12.7072 14.9478 12.1157C14.8464 11.5242 14.6045 10.9657 14.2424 10.4871C13.8804 10.0084 13.4088 9.6237 12.8672 9.36517C12.7783 9.32276 12.6986 9.26326 12.6327 9.19005C12.5667 9.11684 12.5159 9.03136 12.483 8.9385C12.4501 8.84564 12.4359 8.74721 12.4411 8.64884C12.4462 8.55046 12.4707 8.45407 12.5132 8.36517Z"
@@ -268,43 +256,43 @@
           </div>
 
           <!-- Profile Actions Section -->
-          <div class="flex flex-col gap-8">
-            <div class="flex justify-between items-center">
-              <div class="flex flex-col gap-1 max-w-[256px]">
-                <div class="text-white text-xl-2 font-semibold font-primary">Your Profile</div>
-                <div class="text-white opacity-50 text-base font-normal font-primary">Update your profile photo and
+          <div class="flex flex-col gap-8 max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-start max-md:items-start max-md:gap-8">
+            <div class="flex justify-between items-center max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-start max-md:items-center max-md:gap-5">
+              <div class="flex flex-col gap-1 max-w-[256px] max-md:w-64 max-md:flex max-md:flex-col max-md:justify-start max-md:items-center max-md:gap-0.5">
+                <div class="text-white text-xl-2 font-semibold font-primary max-md:justify-start max-md:text-base">Your Profile</div>
+                <div class="text-white opacity-50 text-base font-normal font-primary max-md:justify-start max-md:text-mobile-base">Update your profile photo and
                   detail here.</div>
               </div>
-              <div class="flex gap-2">
+              <div class="flex gap-2 max-md:self-stretch max-md:inline-flex max-md:justify-start max-md:items-center max-md:gap-2">
                 <button
-                  class="h-12 px-4 py-2 rounded-[11px] border border-brand-red/30 flex items-center gap-2 hover:border-brand-red/50 transition">
-                  <div class="text-brand-red text-base font-normal font-primary" id="cancel-button">Cancel</div>
+                  class="h-12 px-4 py-2 rounded-[11px] border border-brand-red/30 flex items-center gap-2 hover:border-brand-red/50 transition max-md:flex-1 max-md:h-10 max-md:px-4 max-md:py-2 max-md:rounded-[11px] max-md:outline max-md:outline-1 max-md:outline-offset-[-1px] max-md:outline-red-600/30 max-md:flex max-md:justify-center max-md:items-center max-md:gap-2 max-md:max-w-[156.5px]">
+                  <div class="text-brand-red text-base font-normal font-primary max-md:justify-start max-md:text-red-600 max-md:text-mobile-base max-md:leading-[15px] ] max-md:tracking-tightest" id="cancel-button">Cancel</div>
                 </button>
                 <button
-                  class="h-12 px-4 py-2 btn-primary rounded-[11px]">
-                  <div class="text-white text-base font-medium font-primary" id="save-button">Save Changes</div>
+                  class="h-12 px-4 py-2 btn-primary rounded-[11px] max-md:flex-1 max-md:h-10 max-md:px-4 max-md:py-2 max-md:bg-red-600 max-md:rounded-[11px] max-md:flex max-md:justify-center max-md:items-center max-md:gap-2">
+                  <div class="text-white text-base font-medium font-primary max-md:justify-start max-md:text-mobile-base max-md:leading-[15px] max-md:tracking-tightest" id="save-button">Save Changes</div>
                 </button>
               </div>
             </div>
-            <div class="h-px bg-white opacity-20 rounded-[12px] mb-[17px]"></div>
+            <div class="h-px bg-white opacity-20 rounded-[12px] mb-[17px] max-md:self-stretch max-md:h-px max-md:opacity-20 max-md:bg-white max-md:rounded-2xl"></div>
 
             <!-- Personal Data Section -->
-            <div class="flex flex-col gap-10">
-              <div class="flex justify-between items-start gap-8">
-                <div class="flex flex-col gap-1 max-w-[256px]">
-                  <div class="text-white text-lg font-semibold font-primary">Personal data</div>
-                  <div class="text-white opacity-50 text-sm font-normal font-primary">Update your profile photo and
+            <div class="flex flex-col gap-10 max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-start max-md:items-start max-md:gap-5">
+              <div class="flex justify-between items-start gap-8 max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-start max-md:items-start max-md:gap-5">
+                <div class="flex flex-col gap-1 max-w-[256px] max-md:w-64 max-md:flex max-md:flex-col max-md:justify-start max-md:items-start max-md:gap-0.5">
+                  <div class="text-white text-lg font-semibold font-primary max-md:self-stretch max-md:justify-start max-md:text-white max-md:text-base max-md:font-semibold max-md:font-['Inter'] max-md:leading-snug">Personal data</div>
+                  <div class="text-white opacity-50 text-sm font-normal font-primary max-md:self-stretch max-md:opacity-50 max-md:justify-start max-md:text-white max-md:text-xs max-md:font-normal max-md:font-['Inter']">Update your profile photo and
                     detail here.</div>
                 </div>
-                <div class="flex-1 max-w-80 flex flex-col gap-3">
+                <div class="flex-1 max-w-80 flex flex-col gap-3 max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-center max-md:items-start max-md:gap-3">
                   <!-- Username Field -->
-                  <div class="flex flex-col gap-2">
-                    <div class="text-white opacity-50 text-sm font-normal font-primary">Username</div>
+                  <div class="flex flex-col gap-2 max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-start max-md:items-start max-md:gap-2">
+                    <div class="text-white opacity-50 text-sm font-normal font-primary max-md:opacity-50 max-md:justify-start max-md:text-white max-md:text-mini max-md:leading-[13px]">Username</div>
                     <div
-                      class="h-10 px-4 rounded-[56px] border border-white/30 flex items-center gap-2 hover:border-white/50 transition">
-                      <div class="flex-1 text-white text-base font-normal font-primary" id="username-field">Name123</div>
+                      class="h-10 px-4 rounded-[56px] border border-white/30 flex items-center gap-2 hover:border-white/50 transition max-md:self-stretch max-md:h-10 max-md:px-4 max-md:rounded-[56px] max-md:outline max-md:outline-1 max-md:outline-offset-[-1px] max-md:outline-white/30 max-md:inline-flex max-md:justify-start max-md:items-center max-md:gap-2">
+                      <div class="flex-1 text-white text-base font-normal font-primary max-md:flex-1 max-md:justify-start max-md:text-mobile-base max-md:leading-[15px] max-md:tracking-tight" id="username-field">Name123</div>
                       <div
-                        class="w-4 h-4 p-[0.70px] flex items-center gap-1.5 overflow-hidden cursor-pointer hover:opacity-75 transition"
+                        class="w-4 h-4 p-[0.70px] flex items-center gap-1.5 overflow-hidden cursor-pointer hover:opacity-75 transition max-md:w-4 max-md:h-4 max-md:p-[0.70px] max-md:flex max-md:justify-start max-md:items-center max-md:gap-1.5 max-md:overflow-hidden"
                         id="edit-username-button">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_313_1917)">
@@ -323,13 +311,13 @@
                   </div>
 
                   <!-- Email Field -->
-                  <div class="flex flex-col gap-2">
-                    <div class="text-white opacity-50 text-sm font-normal font-primary">Email post</div>
+                  <div class="flex flex-col gap-2 max-md:self-stretch max-md:flex max-md:flex-col max-md:justify-start max-md:items-start max-md:gap-2">
+                    <div class="text-white opacity-50 text-sm font-normal font-primary max-md:opacity-50 max-md:justify-start  max-md:text-mini max-md:leading-[13px]">Email post</div>
                     <div
-                      class="h-10 px-4 rounded-[56px] border border-white/30 flex items-center gap-2 hover:border-white/50 transition">
-                      <div class="flex-1 text-white text-base font-normal font-primary" id="email-field">vpesports@gmail.com</div>
+                      class="h-10 px-4 rounded-[56px] border border-white/30 flex items-center gap-2 hover:border-white/50 transition max-md:self-stretch max-md:h-10 max-md:px-4 max-md:rounded-[56px] max-md:outline max-md:outline-1 max-md:outline-offset-[-1px] max-md:outline-white/30 max-md:inline-flex max-md:justify-start max-md:items-center max-md:gap-2">
+                      <div class="flex-1 text-white text-base font-normal font-primary max-md:flex-1 max-md:justify-start max-md:text-mobile-base max-md:leading-[15px] max-md:tracking-tight" id="email-field">vpesports@gmail.com</div>
                       <div
-                        class="w-4 h-4 p-[0.70px] flex items-center gap-1.5 overflow-hidden cursor-pointer hover:opacity-75 transition"
+                        class="w-4 h-4 p-[0.70px] flex items-center gap-1.5 overflow-hidden cursor-pointer hover:opacity-75 transition max-md:w-4 max-md:h-4 max-md:p-[0.70px] max-md:flex max-md:justify-start max-md:items-center max-md:gap-1.5 max-md:overflow-hidden"
                         id="edit-email-button">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_313_1917)">
@@ -361,27 +349,27 @@
 
 
     <!-- Sidebar Right -->
-    <aside class="w-[328px] hidden xl:block flex-shrink-0 space-y-4">
+    <aside class="w-[328px] hidden xl:block flex-shrink-0 space-y-4 max-md:block max-md:w-full max-md:order-3 max-md:mt-6 max-md:mb-[61px]">
       <!-- Related News -->
       <div class="bg-brand-dark-gray rounded-2xl p-4 mb-2">
-        <div class="flex items-center gap-2 mb-6">
+        <div class="flex items-center gap-2 mb-6 max-md:gap-1.5">
           <span class="text-brand-red">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="mobile-svg-icon-mini" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 0L20 10L10 20L0 10L10 0Z" fill="#FF2C2C" />
             </svg>
           </span>
-          <span class="font-heading text-2xl font-normal tracking-tightest text-white leading-7">RELATED NEWS</span>
+          <span class="font-heading text-2xl font-normal tracking-tightest text-white leading-7 max-md:text-mobile-2xs max-md:leading-[21px]">RELATED NEWS</span>
         </div>
         <ul class="space-y-6">
-          <li class="flex flex-col gap-3 items-center">
+          <li class="flex flex-col gap-3 items-center max-md:gap-4">
             <img src="../assets/images/related-news-secondary.png" alt="news"
               class="w-full h-[150px] object-cover rounded-[12px]">
-            <div class="flex-1 flex flex-col  gap-[6px]">
+            <div class="flex-1 flex flex-col  gap-[6px] max-md:gap-2 max-md:w-full">
               <div class="flex items-center gap-[6px]">
                 <span
-                  class="bg-[rgba(238,130,238,0.2)] text-[rgba(238,130,238,1)] text-xs px-[6px] py-[2.5px] rounded-full font-medium tracking-tight">Fortnite</span>
+                  class="bg-[rgba(238,130,238,0.2)] text-[rgba(238,130,238,1)] text-xs px-[6px] py-[2.5px] rounded-full font-medium tracking-tight max-md:text-mini max-md:leading-[13px] max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Fortnite</span>
                 <div class="flex items-center gap-0.5">
-                  <span><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <span><svg class="max-md:w-3 max-md:h-3" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.5">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M7 2.01416C3.85875 2.01416 1.3125 4.56041 1.3125 7.70166C1.3125 10.8429 3.85875 13.3892 7 13.3892C10.1412 13.3892 12.6875 10.8429 12.6875 7.70166C12.6875 4.56041 10.1412 2.01416 7 2.01416ZM7.4375 4.20166C7.4375 4.08563 7.39141 3.97435 7.30936 3.8923C7.22731 3.81025 7.11603 3.76416 7 3.76416C6.88397 3.76416 6.77269 3.81025 6.69064 3.8923C6.60859 3.97435 6.5625 4.08563 6.5625 4.20166V7.70166C6.5625 7.94316 6.7585 8.13916 7 8.13916H9.625C9.74103 8.13916 9.85231 8.09307 9.93436 8.01102C10.0164 7.92897 10.0625 7.81769 10.0625 7.70166C10.0625 7.58563 10.0164 7.47435 9.93436 7.3923C9.85231 7.31025 9.74103 7.26416 9.625 7.26416H7.4375V4.20166Z"
@@ -389,23 +377,23 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="text-white opacity-50 text-xs font-medium tracking-tight">56 min ago</span>
+                  <span class="text-white opacity-50 text-xs font-medium tracking-tight max-md:text-mini max-md:leading-[13px]">56 min ago</span>
                 </div>
               </div>
-              <div class="text-base text-white font-semibold tracking-tight font-primary">BEST MS DOS GAMES
+              <div class="text-base text-white font-semibold tracking-tight font-primary max-md:text-mobile-sm">BEST MS DOS GAMES
                 YOU CAN PLAY
                 TODAY</div>
             </div>
           </li>
-          <li class="flex flex-col gap-3 items-center">
+          <li class="flex flex-col gap-3 items-center max-md:gap-4">
             <img src="../assets/images/related-news-secondary.png" alt="news"
               class="w-full h-[150px] object-cover rounded-[12px]">
-            <div class="flex-1 flex flex-col  gap-[6px]">
+            <div class="flex-1 flex flex-col  gap-[6px] max-md:gap-2 max-md:w-full">
               <div class="flex items-center gap-[6px]">
                 <span
-                  class="bg-[rgba(238,130,238,0.2)] text-[rgba(238,130,238,1)] text-xs px-[6px] py-[2.5px] rounded-full font-medium tracking-tight">Fortnite</span>
+                  class="bg-[rgba(238,130,238,0.2)] text-[rgba(238,130,238,1)] text-xs px-[6px] py-[2.5px] rounded-full font-medium tracking-tight max-md:text-mini max-md:leading-[13px] max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Fortnite</span>
                 <div class="flex items-center gap-0.5">
-                  <span><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <span><svg class="max-md:w-3 max-md:h-3" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.5">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M7 2.01416C3.85875 2.01416 1.3125 4.56041 1.3125 7.70166C1.3125 10.8429 3.85875 13.3892 7 13.3892C10.1412 13.3892 12.6875 10.8429 12.6875 7.70166C12.6875 4.56041 10.1412 2.01416 7 2.01416ZM7.4375 4.20166C7.4375 4.08563 7.39141 3.97435 7.30936 3.8923C7.22731 3.81025 7.11603 3.76416 7 3.76416C6.88397 3.76416 6.77269 3.81025 6.69064 3.8923C6.60859 3.97435 6.5625 4.08563 6.5625 4.20166V7.70166C6.5625 7.94316 6.7585 8.13916 7 8.13916H9.625C9.74103 8.13916 9.85231 8.09307 9.93436 8.01102C10.0164 7.92897 10.0625 7.81769 10.0625 7.70166C10.0625 7.58563 10.0164 7.47435 9.93436 7.3923C9.85231 7.31025 9.74103 7.26416 9.625 7.26416H7.4375V4.20166Z"
@@ -413,23 +401,23 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="text-white opacity-50 text-xs font-medium tracking-tight">56 min ago</span>
+                  <span class="text-white opacity-50 text-xs font-medium tracking-tight max-md:text-mini max-md:leading-[13px]">56 min ago</span>
                 </div>
               </div>
-              <div class="text-base text-white font-semibold tracking-tight font-primary">BEST MS DOS GAMES
+              <div class="text-base text-white font-semibold tracking-tight font-primary max-md:text-mobile-sm">BEST MS DOS GAMES
                 YOU CAN PLAY
                 TODAY</div>
             </div>
           </li>
-          <li class="flex flex-col gap-3 items-center">
+          <li class="flex flex-col gap-3 items-center max-md:gap-4">
             <img src="../assets/images/related-news-secondary.png" alt="news"
               class="w-full h-[150px] object-cover rounded-[12px]">
-            <div class="flex-1 flex flex-col  gap-[6px]">
+            <div class="flex-1 flex flex-col  gap-[6px] max-md:gap-2 max-md:w-full">
               <div class="flex items-center gap-[6px]">
                 <span
-                  class="bg-[rgba(238,130,238,0.2)] text-[rgba(238,130,238,1)] text-xs px-[6px] py-[2.5px] rounded-full font-medium tracking-tight">Fortnite</span>
+                  class="bg-[rgba(238,130,238,0.2)] text-[rgba(238,130,238,1)] text-xs px-[6px] py-[2.5px] rounded-full font-medium tracking-tight max-md:text-mini max-md:leading-[13px] max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Fortnite</span>
                 <div class="flex items-center gap-0.5">
-                  <span><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <span><svg class="max-md:w-3 max-md:h-3" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g opacity="0.5">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M7 2.01416C3.85875 2.01416 1.3125 4.56041 1.3125 7.70166C1.3125 10.8429 3.85875 13.3892 7 13.3892C10.1412 13.3892 12.6875 10.8429 12.6875 7.70166C12.6875 4.56041 10.1412 2.01416 7 2.01416ZM7.4375 4.20166C7.4375 4.08563 7.39141 3.97435 7.30936 3.8923C7.22731 3.81025 7.11603 3.76416 7 3.76416C6.88397 3.76416 6.77269 3.81025 6.69064 3.8923C6.60859 3.97435 6.5625 4.08563 6.5625 4.20166V7.70166C6.5625 7.94316 6.7585 8.13916 7 8.13916H9.625C9.74103 8.13916 9.85231 8.09307 9.93436 8.01102C10.0164 7.92897 10.0625 7.81769 10.0625 7.70166C10.0625 7.58563 10.0164 7.47435 9.93436 7.3923C9.85231 7.31025 9.74103 7.26416 9.625 7.26416H7.4375V4.20166Z"
@@ -437,10 +425,10 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="text-white opacity-50 text-xs font-medium tracking-tight">56 min ago</span>
+                  <span class="text-white opacity-50 text-xs font-medium tracking-tight max-md:text-mini max-md:leading-[13px]">56 min ago</span>
                 </div>
               </div>
-              <div class="text-base text-white font-semibold tracking-tight font-primary">BEST MS DOS GAMES
+              <div class="text-base text-white font-semibold tracking-tight font-primary max-md:text-mobile-sm">BEST MS DOS GAMES
                 YOU CAN PLAY
                 TODAY</div>
             </div>
@@ -452,39 +440,39 @@
   <!-- /Main Content -->
 
   <!-- Footer -->
-  <footer class="bg-brand-dark rounded-3xl m-10 p-10">
-    <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
-      <div class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest">
-        <div class="flex gap-[88px]">
-          <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+  <footer class="bg-brand-dark-gray rounded-3xl m-10 p-10 max-md:m-5 max-md:px-9 max-md:py-8 max-md:rounded-6">
+    <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8 max-md:gap-6">
+      <div class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest max-md:text-mobile-xs max-md:text-center">
+        <div class="flex gap-[88px] max-md:flex-col max-md:gap-10">
+          <div class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full max-md:items-center">
+            <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="hidden max-w-[119.314px] w-[119.314px] min-h-[36px] h-[36px] max-md:block mb-[18px]">
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">PRIVACY POLICY</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACTS</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">ESPORTS BETTING</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">BC GAME</a>
           </div>
-          <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+          <div class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">GGBET</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">STAKE</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">THUNDERPICK</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">MYSTAKE</a>
           </div>
-          <div class="flex flex-col gap-10 min-w-[140px] min-h-[212px] justify-between">
+          <div class="flex flex-col gap-5 min-w-[140px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">TERMS OF USE</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">DISCLAIMER</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">COPYRIGHT HOLDER</a>
             <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACT</a>
           </div>
         </div>
-        <div class="mt-12">
+        <div class="mt-12 max-md:mt-[55px]">
           <span
-            class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal">В©VPESPORTS
-            All Rights Reserved. v0.7.51</span>
+            class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal max-md:text-mobile-base max-md:min-h-6">©VPESPORTS All Rights Reserved. v0.7.51</span>
         </div>
       </div>
-      <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0">
-        <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px]">
-        <div class="flex gap-6">
-          <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg width="48" height="48"
+      <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0 max-md:items-center max-md:mt-0">
+        <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px] max-md:hidden">
+        <div class="flex gap-6 max-md:gap-4">
+          <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="48" height="48" rx="13.1507" fill="white" />
               <path
@@ -495,7 +483,7 @@
                 fill="#171719" />
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg width="48" height="48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M46.9996 7.4946C46.4498 4.54902 44.8233 2.2256 42.754 1.42923C39.0124 0 24 0 24 0C24 0 8.99529 0 5.24599 1.42923C3.18437 2.21461 1.55785 4.53831 1.00042 7.4946C-9.40902e-08 12.84 0 23.9999 0 23.9999C0 23.9999 -9.40902e-08 35.16 1.00042 40.5054C1.55016 43.451 3.17668 45.7744 5.24599 46.5708C8.99529 48 24 48 24 48C24 48 39.0124 48 42.754 46.5708C44.8158 45.7854 46.4421 43.4617 46.9996 40.5054C48 35.16 48 24.0001 48 24.0001C48 24.0001 48 12.84 46.9996 7.4946Z"
@@ -505,7 +493,7 @@
                 fill="#171719" />
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg width="48" height="48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2030_411)">
                 <path
@@ -522,7 +510,7 @@
               </defs>
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg width="48" height="48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
               viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2030_415)">
                 <path
@@ -539,7 +527,7 @@
               </defs>
             </svg>
           </a>
-          <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg width="53" height="48" viewBox="0 0 53 48"
+          <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg class="max-md:w-8 max-md:h-8" width="53" height="48" viewBox="0 0 53 48"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2030_418)">
                 <path
@@ -560,13 +548,17 @@
   <!-- /Footer -->
 
   <!-- Scripts -->
-      <script src="../assets/js/pages/index/slider.js"></script>
-    <script src="../assets/js/dragscroll.js"></script>
-    <script src="../assets/js/pages/profile/profile.js"></script>
+
+  <script src="../assets/js/pages/index/slider.js"></script>
+  <script src="../assets/js/dragscroll.js"></script>
+  <script src="../assets/js/pages/profile/profile.js"></script>
+  <script src="../assets/js/theme-manager.js"></script>
+  <script src="../assets/js/mobile-navigation.js"></script>
   <script src="../assets/js/nav-widget.js"></script>
 
 
 </body>
 
 </html>
+
 

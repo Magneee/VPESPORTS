@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/slider.css">
     <link rel="stylesheet" href="../../assets/css/nav-widget.css">
-      <link rel="stylesheet" href="../assets/css/nav-widget.css">
-  <script src="../../assets/js/config.js"></script>
-    <link rel="stylesheet" href="../../assets/css/slot.css">
-    <style>
-    </style>
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <script src="../../assets/js/config.js"></script>
+    <link rel="stylesheet" href="../../assets/css/slot.css">    
 </head>
 
 
@@ -80,11 +78,11 @@
                     </form>
                     <!-- Theme button -->
                     <button
-                        class="bg-brand-red bg-opacity-30 hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center">
+                        class="bg-brand-red bg-opacity-30 text-brand-red hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center max-md:hidden" data-theme-toggle>
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14 2.625C14.2321 2.625 14.4546 2.71719 14.6187 2.88128C14.7828 3.04538 14.875 3.26794 14.875 3.5V6.125C14.875 6.35706 14.7828 6.57962 14.6187 6.74372C14.4546 6.90781 14.2321 7 14 7C13.7679 7 13.5454 6.90781 13.3813 6.74372C13.2172 6.57962 13.125 6.35706 13.125 6.125V3.5C13.125 3.26794 13.2172 3.04538 13.3813 2.88128C13.5454 2.71719 13.7679 2.625 14 2.625ZM8.75 14C8.75 12.6076 9.30312 11.2723 10.2877 10.2877C11.2723 9.30312 12.6076 8.75 14 8.75C15.3924 8.75 16.7277 9.30312 17.7123 10.2877C18.6969 11.2723 19.25 12.6076 19.25 14C19.25 15.3924 18.6969 16.7277 17.7123 17.7123C16.7277 18.6969 15.3924 19.25 14 19.25C12.6076 19.25 11.2723 18.6969 10.2877 17.7123C9.30312 16.7277 8.75 15.3924 8.75 14ZM22.043 7.19367C22.1976 7.0278 22.2817 6.80841 22.2777 6.58172C22.2737 6.35504 22.1819 6.13876 22.0216 5.97844C21.8612 5.81813 21.645 5.7263 21.4183 5.7223C21.1916 5.7183 20.9722 5.80244 20.8063 5.957L18.9502 7.812C18.8666 7.89268 18.7999 7.9892 18.7539 8.09593C18.708 8.20266 18.6838 8.31747 18.6828 8.43365C18.6817 8.54983 18.7038 8.66506 18.7477 8.77261C18.7917 8.88017 18.8566 8.97789 18.9387 9.06009C19.0209 9.14228 19.1185 9.2073 19.226 9.25134C19.3335 9.29539 19.4488 9.31758 19.5649 9.31663C19.6811 9.31568 19.7959 9.29159 19.9027 9.24579C20.0095 9.19998 20.1061 9.13337 20.1868 9.04983L22.043 7.19367ZM25.375 14C25.375 14.2321 25.2828 14.4546 25.1187 14.6187C24.9546 14.7828 24.7321 14.875 24.5 14.875H21.875C21.6429 14.875 21.4204 14.7828 21.2563 14.6187C21.0922 14.4546 21 14.2321 21 14C21 13.7679 21.0922 13.5454 21.2563 13.3813C21.4204 13.2172 21.6429 13.125 21.875 13.125H24.5C24.7321 13.125 24.9546 13.2172 25.1187 13.3813C25.2828 13.5454 25.375 13.7679 25.375 14ZM20.8063 22.043C20.9722 22.1976 21.1916 22.2817 21.4183 22.2777C21.645 22.2737 21.8612 22.1819 22.0216 22.0216C22.1819 21.8612 22.2737 21.645 22.2777 21.4183C22.2817 21.1916 22.1976 20.9722 22.043 20.8063L20.188 18.9502C20.1073 18.8666 20.0108 18.7999 19.9041 18.7539C19.7973 18.708 19.6825 18.6838 19.5664 18.6828C19.4502 18.6817 19.3349 18.7038 19.2274 18.7477C19.1198 18.7917 19.0221 18.8566 18.9399 18.9387C18.8577 19.0209 18.7927 19.1185 18.7487 19.226C18.7046 19.3335 18.6824 19.4488 18.6834 19.5649C18.6843 19.6811 18.7084 19.7959 18.7542 19.9027C18.8 20.0095 18.8666 20.1061 18.9502 20.1868L20.8063 22.043ZM14 21C14.2321 21 14.4546 21.0922 14.6187 21.2563C14.7828 21.4204 14.875 21.6429 14.875 21.875V24.5C14.875 24.7321 14.7828 24.9546 14.6187 25.1187C14.4546 25.2828 14.2321 25.375 14 25.375C13.7679 25.375 13.5454 25.2828 13.3813 25.1187C13.2172 24.9546 13.125 24.7321 13.125 24.5V21.875C13.125 21.6429 13.2172 21.4204 13.3813 21.2563C13.5454 21.0922 13.7679 21 14 21ZM9.051 20.1868C9.21031 20.0217 9.2984 19.8007 9.2963 19.5712C9.2942 19.3418 9.20208 19.1224 9.03977 18.9602C8.87746 18.7981 8.65795 18.7062 8.42853 18.7043C8.1991 18.7024 7.97812 18.7907 7.81317 18.9502L5.957 20.8052C5.79753 20.9701 5.70923 21.1911 5.71112 21.4205C5.713 21.65 5.80492 21.8695 5.96708 22.0318C6.12923 22.1941 6.34865 22.2862 6.57807 22.2883C6.8075 22.2904 7.02856 22.2023 7.19367 22.043L9.04983 20.188L9.051 20.1868ZM7 14C7 14.2321 6.90781 14.4546 6.74372 14.6187C6.57962 14.7828 6.35706 14.875 6.125 14.875H3.5C3.26794 14.875 3.04538 14.7828 2.88128 14.6187C2.71719 14.4546 2.625 14.2321 2.625 14C2.625 13.7679 2.71719 13.5454 2.88128 13.3813C3.04538 13.2172 3.26794 13.125 3.5 13.125H6.125C6.35706 13.125 6.57962 13.2172 6.74372 13.3813C6.90781 13.5454 7 13.7679 7 14ZM7.81317 9.04983C7.97904 9.20439 8.19842 9.28854 8.42511 9.28454C8.65179 9.28054 8.86808 9.18871 9.02839 9.02839C9.18871 8.86808 9.28054 8.65179 9.28454 8.42511C9.28854 8.19842 9.20439 7.97904 9.04983 7.81317L7.19483 5.957C7.02988 5.79753 6.8089 5.70923 6.57947 5.71112C6.35005 5.713 6.13054 5.80492 5.96823 5.96708C5.80592 6.12923 5.7138 6.34865 5.7117 6.57807C5.7096 6.8075 5.79769 7.02856 5.957 7.19367L7.81317 9.04983Z"
-                                fill="#FF2C2C" />
+                                fill="currentColor" />
                         </svg>
                     </button>
                 </div>
@@ -104,7 +102,7 @@
     <!-- /Header -->
 
     <!-- Main Content -->
-    <main class="flex gap-6 max-w-8xl mx-auto mt-[33px]">
+    <main class="flex gap-6 max-w-8xl mx-auto mt-[33px] max-md:block max-md:px-5">
 
 
         <!-- Main Section -->
@@ -117,7 +115,7 @@
                     <div class="flex flex-col gap-2">
                         <div class="flex items-center gap-2">
                             <span class="text-brand-red">
-                                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                                <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs />
                                     <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C"
@@ -125,14 +123,14 @@
                                 </svg>
                             </span>
 
-                            <h1 class="font-furore text-3.5xl font-normal tracking-tightest text-white">Buby Jade slot
+                            <h1 class="font-furore text-3.5xl font-normal tracking-tightest text-white max-md:text-mobile-2xs max-md:leading-[21px]">Buby Jade slot
                             </h1>
                         </div>
                     </div>
                 </div>
               
             <!-- Breadcrumbs -->
-            <nav class="flex items-center gap-2 mb-6 text-white text-base">
+            <nav class="flex items-center gap-2 mb-6 text-white text-base max-md:hidden">
                 <a href="#" class="opacity-50 hover:opacity-100 transition max-w-[158px] truncate">VPEsports</a>
                 <span class="opacity-80">/</span>
                 <a href="#" class="opacity-50 hover:opacity-100 transition max-w-[158px] truncate">Slots</a>
@@ -147,7 +145,7 @@
                         <div class="slot-game-container relative bg-black rounded-2xl overflow-hidden">
                             <!-- Game Iframe (initially hidden) -->
                             <iframe id="game-iframe" src="about:blank"
-                                class="w-full h-[712px] opacity-0 pointer-events-none transition-opacity duration-300"
+                                class="w-full h-[712px] opacity-0 pointer-events-none transition-opacity duration-300 max-md:h-[427px]"
                                 frameborder="0">
                             </iframe>
 
@@ -159,10 +157,10 @@
                                 <!-- Play Now Button Overlay -->
                                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
                                     <button id="play-now-btn"
-                                        class="btn-secondary-small px-4 py-2 h-12 text-white font-semibold rounded-[11px] text-base tracking-tightest transition-all duration-300 transform hover:scale-105">
+                                        class="btn-secondary-small px-4 py-2 h-12 text-white font-semibold rounded-[11px] text-base tracking-tightest transition-all duration-300 transform hover:scale-105 max-md:text-mobile-sm max-md:h-10">
                                         <span class="flex items-center gap-2">
                                             Play now
-                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="mobile-svg-icon-mini" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 5.65289C5 4.22589 6.529 3.32289 7.779 4.00989L19.319 10.3569C20.614 11.0689 20.614 12.9299 19.319 13.6429L7.78 19.9899C6.53 20.6769 5.001 19.7729 5.001 18.3469L5 5.65289Z" fill="white"/>
                                             </svg>                                                
                                         </span>
@@ -173,139 +171,139 @@
 
                         <!-- Game Theme Section -->
                         <div class="game-theme-section mt-6">
-                            <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl">
-                                <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white">GAME THEME
+                            <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl max-md:p-4 max-md:rounded-xl max-md:mb-3">
+                                <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white max-md:text-mobile-2xs max-md:leading-[21px]">GAME THEME
                                 </h3>   
                                 <div class="flex items-center gap-1">
-                                    <span class="text-brand-red text-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <span class="text-brand-red text-lg"><svg  class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.25 5.337C11.25 4.982 11.064 4.661 10.849 4.378C10.6251 4.09137 10.5024 3.7387 10.5 3.375C10.5 2.339 11.507 1.5 12.75 1.5C13.993 1.5 15 2.34 15 3.375C15 3.744 14.872 4.088 14.651 4.378C14.436 4.661 14.25 4.982 14.25 5.337C14.25 5.669 14.528 5.935 14.86 5.915C16.77 5.801 18.65 5.573 20.492 5.239C20.5923 5.22081 20.6953 5.22327 20.7947 5.24623C20.894 5.26919 20.9876 5.31217 21.0698 5.37254C21.152 5.43291 21.221 5.5094 21.2726 5.59734C21.3242 5.68528 21.3574 5.78282 21.37 5.884C21.5963 7.69296 21.7218 9.5131 21.746 11.336C21.7469 11.4231 21.7305 11.5096 21.6977 11.5903C21.6649 11.671 21.6164 11.7444 21.555 11.8062C21.4936 11.868 21.4205 11.9169 21.34 11.9502C21.2595 11.9835 21.1731 12.0004 21.086 12C20.732 12 20.411 11.814 20.128 11.599C19.8414 11.3751 19.4887 11.2524 19.125 11.25C18.09 11.25 17.25 12.257 17.25 13.5C17.25 14.743 18.09 15.75 19.125 15.75C19.494 15.75 19.838 15.622 20.128 15.401C20.411 15.186 20.732 15 21.087 15C21.397 15 21.644 15.262 21.621 15.571C21.5037 17.1949 21.3051 18.8119 21.026 20.416C20.9995 20.5681 20.9267 20.7083 20.8175 20.8175C20.7083 20.9267 20.5681 20.9995 20.416 21.026C18.596 21.343 16.743 21.559 14.861 21.668C14.7822 21.6722 14.7033 21.6603 14.6293 21.633C14.5552 21.6057 14.4875 21.5635 14.4303 21.5091C14.3731 21.4547 14.3276 21.3893 14.2966 21.3167C14.2656 21.2441 14.2498 21.1659 14.25 21.087C14.25 20.732 14.436 20.411 14.651 20.128C14.872 19.838 15 19.494 15 19.125C15 18.09 13.993 17.25 12.75 17.25C11.507 17.25 10.5 18.09 10.5 19.125C10.5 19.494 10.628 19.838 10.849 20.128C11.064 20.411 11.25 20.732 11.25 21.087C11.2503 21.1728 11.2334 21.2578 11.2002 21.3369C11.1671 21.416 11.1184 21.4877 11.057 21.5477C10.9956 21.6076 10.9229 21.6547 10.843 21.686C10.7631 21.7173 10.6778 21.7323 10.592 21.73C9.0178 21.6855 7.44665 21.5654 5.884 21.37C5.78282 21.3574 5.68528 21.3242 5.59734 21.2726C5.5094 21.221 5.43291 21.152 5.37254 21.0698C5.31217 20.9876 5.26919 20.894 5.24623 20.7947C5.22327 20.6953 5.22081 20.5923 5.239 20.492C5.532 18.878 5.743 17.235 5.868 15.568C5.87323 15.4952 5.86337 15.4221 5.83903 15.3533C5.81468 15.2844 5.77638 15.2214 5.72653 15.1681C5.67668 15.1147 5.61634 15.0723 5.54931 15.0434C5.48228 15.0144 5.41 14.9997 5.337 15C4.982 15 4.661 15.186 4.378 15.401C4.088 15.622 3.744 15.75 3.375 15.75C2.339 15.75 1.5 14.743 1.5 13.5C1.5 12.257 2.34 11.25 3.375 11.25C3.744 11.25 4.088 11.378 4.378 11.599C4.661 11.814 4.982 12 5.337 12C5.42399 12.0004 5.51019 11.9835 5.59059 11.9503C5.67099 11.917 5.74397 11.8682 5.8053 11.8065C5.86663 11.7448 5.91507 11.6715 5.94781 11.5909C5.98055 11.5103 5.99693 11.424 5.996 11.337C5.97412 9.72613 5.87066 8.1174 5.686 6.517C5.67292 6.40475 5.68537 6.291 5.72242 6.18424C5.75948 6.07748 5.82018 5.98048 5.89999 5.90047C5.9798 5.82047 6.07666 5.75953 6.18333 5.72222C6.29 5.68491 6.40372 5.67219 6.516 5.685C7.859 5.84 9.219 5.939 10.593 5.979C10.6786 5.98128 10.7639 5.96634 10.8436 5.93507C10.9234 5.9038 10.996 5.85684 11.0573 5.79697C11.1186 5.7371 11.1672 5.66554 11.2003 5.58653C11.2334 5.50752 11.2503 5.42266 11.25 5.337Z" fill="currentColor"/>
                                         </svg>
                                         </span>
-                                    <span class="text-brand-red text-xl font-medium tracking-tight">Ancient Greek Mythology, Kalavassos</span>
+                                    <span class="text-brand-red text-xl font-medium tracking-tight max-md:text-mobile-sm">Ancient Greek Mythology, Kalavassos</span>
                                 </div>
                             </div>
 
 
                             <!-- Game Stats -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl">
-                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white">Return to player
+                            <div class="grid grid-cols-2 gap-4 max-md:gap-3">
+                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl max-md:p-4 max-md:rounded-xl max-md:mb-3">
+                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white max-md:text-mobile-2xs max-md:leading-[21px]"><span class="max-md:hidden">Return to player</span><span class="md:hidden">Return</span>
                                     </h3>   
                                     <div class="flex items-center gap-1">
-                                        <span class="text-brand-red text-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red text-lg"><svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.5C10.079 1.5 8.184 1.611 6.32 1.827C4.823 2.001 3.75 3.287 3.75 4.757V21.75C3.75003 21.8726 3.78011 21.9933 3.8376 22.1016C3.8951 22.2099 3.97826 22.3024 4.0798 22.3711C4.18135 22.4397 4.29818 22.4825 4.42008 22.4956C4.54197 22.5086 4.66521 22.4916 4.779 22.446L8.25 21.058L11.722 22.446C11.9005 22.5172 12.0995 22.5172 12.278 22.446L15.75 21.058L19.221 22.446C19.3348 22.4916 19.458 22.5086 19.5799 22.4956C19.7018 22.4825 19.8186 22.4397 19.9202 22.3711C20.0217 22.3024 20.1049 22.2099 20.1624 22.1016C20.2199 21.9933 20.25 21.8726 20.25 21.75V4.757C20.25 3.287 19.177 2.001 17.68 1.827C15.7945 1.60865 13.8981 1.49947 12 1.5ZM11.03 8.03C11.1037 7.96134 11.1628 7.87854 11.2038 7.78654C11.2448 7.69454 11.2668 7.59523 11.2686 7.49452C11.2704 7.39382 11.2518 7.29379 11.2141 7.2004C11.1764 7.10702 11.1203 7.02218 11.049 6.95096C10.9778 6.87974 10.893 6.8236 10.7996 6.78588C10.7062 6.74816 10.6062 6.72963 10.5055 6.73141C10.4048 6.73319 10.3055 6.75523 10.2135 6.79622C10.1215 6.83721 10.0387 6.89632 9.97 6.97L7.72 9.22C7.57955 9.36063 7.50066 9.55125 7.50066 9.75C7.50066 9.94875 7.57955 10.1394 7.72 10.28L9.97 12.53C10.0387 12.6037 10.1215 12.6628 10.2135 12.7038C10.3055 12.7448 10.4048 12.7668 10.5055 12.7686C10.6062 12.7704 10.7062 12.7518 10.7996 12.7141C10.893 12.6764 10.9778 12.6203 11.049 12.549C11.1203 12.4778 11.1764 12.393 11.2141 12.2996C11.2518 12.2062 11.2704 12.1062 11.2686 12.0055C11.2668 11.9048 11.2448 11.8055 11.2038 11.7135C11.1628 11.6215 11.1037 11.5387 11.03 11.47L10.06 10.5H13.125C13.6223 10.5 14.0992 10.6975 14.4508 11.0492C14.8025 11.4008 15 11.8777 15 12.375C15 12.8723 14.8025 13.3492 14.4508 13.7008C14.0992 14.0525 13.6223 14.25 13.125 14.25H12C11.8011 14.25 11.6103 14.329 11.4697 14.4697C11.329 14.6103 11.25 14.8011 11.25 15C11.25 15.1989 11.329 15.3897 11.4697 15.5303C11.6103 15.671 11.8011 15.75 12 15.75H13.125C13.5682 15.75 14.0071 15.6627 14.4166 15.4931C14.826 15.3235 15.1981 15.0749 15.5115 14.7615C15.8249 14.4481 16.0735 14.076 16.2431 13.6666C16.4127 13.2571 16.5 12.8182 16.5 12.375C16.5 11.9318 16.4127 11.4929 16.2431 11.0834C16.0735 10.674 15.8249 10.3019 15.5115 9.98852C15.1981 9.67512 14.826 9.42652 14.4166 9.25691C14.0071 9.0873 13.5682 9 13.125 9H10.061L11.031 8.03H11.03Z" fill="#FF2C2C"/>
                                             </svg>
                                             
                                             </span>
-                                        <span class="text-brand-red text-xl font-medium tracking-tight">96,4%</span>
+                                        <span class="text-brand-red text-xl font-medium tracking-tight max-md:text-mobile-sm">96,4%</span>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl">
-                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white">Fun raiting
+                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl max-md:p-4 max-md:rounded-xl max-md:mb-3">
+                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white max-md:text-mobile-2xs max-md:leading-[21px]">Fun raiting
                                     </h3>   
                                     <div class="flex items-center gap-1">
-                                        <span class="text-brand-red text-lg"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red text-lg"><svg class="mobile-svg-icon-mini" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66554 2.62103V3.47903C4.63054 3.62703 3.60654 3.80902 2.59454 4.02202C2.40515 4.06215 2.23861 4.17396 2.12977 4.33406C2.02092 4.49416 1.9782 4.69015 2.01054 4.88103C2.26311 6.36505 3.00429 7.72214 4.11636 8.73674C5.22844 9.75134 6.64764 10.3653 8.14854 10.481C8.94759 11.1341 9.88611 11.5946 10.8915 11.827C10.796 12.962 10.413 14.054 9.77854 15H9.03954C8.00354 15 7.16454 15.84 7.16454 16.875V19.5H6.41454C5.8178 19.5 5.24551 19.7371 4.82355 20.159C4.40159 20.581 4.16454 21.1533 4.16454 21.75C4.16454 22.164 4.50054 22.5 4.91454 22.5H19.9145C20.1135 22.5 20.3042 22.421 20.4449 22.2804C20.5855 22.1397 20.6645 21.9489 20.6645 21.75C20.6645 21.1533 20.4275 20.581 20.0055 20.159C19.5836 19.7371 19.0113 19.5 18.4145 19.5H17.6645V16.875C17.6645 15.839 16.8245 15 15.7895 15H15.0505C14.4164 14.0539 14.0337 12.962 13.9385 11.827C14.9441 11.5943 15.8826 11.1334 16.6815 10.48C18.1826 10.3645 19.6021 9.75064 20.7143 8.73603C21.8266 7.72141 22.5679 6.36421 22.8205 4.88003C22.8526 4.68916 22.8096 4.4933 22.7006 4.3334C22.5915 4.1735 22.4249 4.06193 22.2355 4.02202C21.2185 3.80718 20.1946 3.62608 19.1655 3.47903V2.62003C19.1655 2.4371 19.0985 2.26052 18.9773 2.1235C18.8562 1.98647 18.6891 1.89846 18.5075 1.87603C16.4863 1.62441 14.4514 1.4985 12.4145 1.49903C10.3515 1.49903 8.31854 1.62703 6.32154 1.87603C6.14018 1.89869 5.97334 1.9868 5.85236 2.1238C5.73138 2.26079 5.66459 2.43726 5.66454 2.62003L5.66554 2.62103ZM5.66554 5.25003C5.66554 6.44602 5.97754 7.57002 6.52254 8.54402C5.8466 8.24092 5.24222 7.79861 4.74888 7.24599C4.25554 6.69337 3.88434 6.04288 3.65954 5.33702C4.32557 5.20778 4.99441 5.09342 5.66554 4.99402V5.25003ZM19.1655 5.25003V4.99402C19.8395 5.09402 20.5085 5.20802 21.1715 5.33702C20.9468 6.04291 20.5756 6.69343 20.0823 7.24605C19.5889 7.79868 18.9845 8.24097 18.3085 8.54402C18.8722 7.53776 19.1673 6.40338 19.1655 5.25003Z" fill="#FF2C2C"/>
                                             </svg>
                                             
                                             </span>
-                                        <span class="text-brand-red text-xl font-medium tracking-tight">9.3<span class="text-white">/10</span></span>
+                                        <span class="text-brand-red text-xl font-medium tracking-tight max-md:text-mobile-sm">9.3<span class="text-white">/10</span></span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Paylines and Max Win -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl">
-                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white">Paylines
+                            <div class="grid grid-cols-2 gap-4 max-md:gap-3">
+                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl max-md:p-4 max-md:rounded-xl max-md:mb-3 max-md:overflow-auto">
+                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white max-md:text-mobile-2xs max-md:leading-[21px]">Paylines
                                     </h3>   
                                     <div class="flex items-center gap-1">
-                                        <span class="text-brand-red text-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red text-lg"><svg class="mobile-svg-icon-mini" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7875 3.21009C11.2355 2.13309 12.7635 2.13309 13.2115 3.21009L15.2935 8.21609L20.6975 8.65009C21.8615 8.74309 22.3335 10.1951 21.4465 10.9551L17.3295 14.4821L18.5865 19.7551C18.8575 20.8911 17.6225 21.7881 16.6265 21.1801L11.9995 18.3541L7.37251 21.1801C6.37651 21.7881 5.14151 20.8901 5.41251 19.7551L6.66951 14.4821L2.55251 10.9551C1.66551 10.1951 2.13751 8.74309 3.30151 8.65009L8.70551 8.21609L10.7875 3.21009Z" fill="#FF2C2C"/>
                                             </svg>
                                             </span>
-                                        <span class="text-brand-red text-xl font-medium tracking-tight">Adventure, Fairy Tale</span>
+                                        <span class="text-brand-red text-xl font-medium tracking-tight max-md:text-mobile-sm max-md:text-nowrap ">Adventure, Fairy Tale</span>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl">
-                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white">GAME THEME
+                                <div class="flex items-start gap-4 mb-4 flex-col justify-start p-6 bg-brand-dark-gray rounded-2xl max-md:p-4 max-md:rounded-xl max-md:mb-3">
+                                    <h3 class="font-furore text-2xl leading-7 font-normal tracking-tightest text-white max-md:text-mobile-2xs max-md:leading-[21px]">MAX WIN
                                     </h3>   
                                     <div class="flex items-center gap-1">
-                                        <span class="text-brand-red text-lg"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red text-lg"><svg class="mobile-svg-icon-mini" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.964 8.74605C11.191 8.56605 11.461 8.43505 11.75 8.35205V11.1471C11.4647 11.0689 11.1976 10.9354 10.964 10.7541C10.57 10.4411 10.418 10.0731 10.418 9.75005C10.418 9.42705 10.57 9.05905 10.964 8.74605ZM13.25 15.6621V12.8381C13.597 12.9231 13.914 13.0661 14.171 13.2591C14.598 13.5791 14.75 13.9451 14.75 14.2501C14.75 14.5551 14.598 14.9211 14.171 15.2411C13.8953 15.4416 13.5821 15.5854 13.25 15.6621Z" fill="#FF2C2C"/>
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 2.25C7.115 2.25 2.75 6.615 2.75 12C2.75 17.385 7.115 21.75 12.5 21.75C17.885 21.75 22.25 17.385 22.25 12C22.25 6.615 17.885 2.25 12.5 2.25ZM13.25 6C13.25 5.80109 13.171 5.61032 13.0303 5.46967C12.8897 5.32902 12.6989 5.25 12.5 5.25C12.3011 5.25 12.1103 5.32902 11.9697 5.46967C11.829 5.61032 11.75 5.80109 11.75 6V6.816C11.1229 6.92153 10.5318 7.18132 10.03 7.572C9.318 8.138 8.918 8.922 8.918 9.75C8.918 10.579 9.318 11.362 10.031 11.928C10.533 12.328 11.133 12.575 11.75 12.684V15.662C11.4178 15.585 11.1046 15.4418 10.829 15.241L9.95 14.581C9.87121 14.5219 9.78155 14.4789 9.68614 14.4545C9.59073 14.43 9.49144 14.4246 9.39393 14.4385C9.19702 14.4667 9.01935 14.5719 8.9 14.731C8.78065 14.8901 8.72941 15.0902 8.75754 15.2871C8.78567 15.484 8.89087 15.6617 9.05 15.781L9.929 16.441C10.462 16.841 11.098 17.086 11.75 17.191V18C11.75 18.1989 11.829 18.3897 11.9697 18.5303C12.1103 18.671 12.3011 18.75 12.5 18.75C12.6989 18.75 12.8897 18.671 13.0303 18.5303C13.171 18.3897 13.25 18.1989 13.25 18V17.19C13.9086 17.091 14.5334 16.834 15.071 16.441C15.816 15.882 16.25 15.097 16.25 14.25C16.25 13.403 15.816 12.618 15.071 12.059C14.5335 11.6655 13.9087 11.4082 13.25 11.309V8.354C13.54 8.436 13.809 8.567 14.036 8.747L14.451 9.077C14.6068 9.20072 14.8054 9.25748 15.0031 9.23479C15.2007 9.2121 15.3813 9.11181 15.505 8.956C15.6287 8.80019 15.6855 8.6016 15.6628 8.40394C15.6401 8.20628 15.5398 8.02572 15.384 7.902L14.969 7.572C14.4674 7.18183 13.8767 6.92239 13.25 6.817V6Z" fill="#FF2C2C"/>
                                             </svg>
                                             
                                             </span>
-                                        <span class="text-brand-red text-xl font-medium tracking-tight">$80,272</span>
+                                        <span class="text-brand-red text-xl font-medium tracking-tight max-md:text-mobile-sm">$80,272</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Slot Overview Section -->
-                        <div class="slot-overview-section mt-12">
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="text-brand-red">
-                                    <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                        <div class="slot-overview-section mt-[31px] max-md:mt-[43px]">
+                            <div class="flex items-center gap-2 mb-4 max-md:items-start max-md:mb-2">
+                                <span class="text-brand-red max-md:pt-0.5">
+                                    <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <defs />
                                         <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C"
                                             fill-opacity="1.000000" fill-rule="evenodd" />
                                     </svg>
                                 </span>
-                                <h2 class="font-primary text-3.5xl font-bold tracking-tight text-white">Call of Zeus вЂ” Slot Overview (Nucleus Gaming)
+                                <h2 class="font-primary text-3.5xl font-bold tracking-tight text-white max-md:text-mobile-2xs max-md:leading-[21px]">Call of Zeus — Slot Overview (Nucleus Gaming)  
                                 </h2>
                             </div>  
                             <div>
-                                    <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Call of ZeusВ transports you to the summit of Mount Olympus for a brisk, mythology-themed spin. The game runs on aВ 5Г—3 reel grid with 5 fixed paylines, pairing classic slot simplicity with a few punchy extras:
+                                    <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base">Call of ZeusВ transports you to the summit of Mount Olympus for a brisk, mythology-themed spin. The game runs on aВ 5Г—3 reel grid with 5 fixed paylines, pairing classic slot simplicity with a few punchy extras:
                                     </p>
 
-                                <h3 class="text-white text-2xl font-primary font-bold mt-8 mb-3 tracking-tight">Main Features</h3>
+                                <h3 class="text-white text-2xl font-primary font-bold mt-8 mb-3 tracking-tight max-md:text-mobile-2xs">Main Features</h3>
                                 <ul class="space-y-[21px]">
                                     <li class="flex items-start gap-2">
-                                        <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red mt-[5px] flex-shrink-0 max-md:mt-1">
+                                            <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C" stroke-width="1.5"/>
                                                 </svg>
                                                 
                                         </span>
-                                        <div class="flex gap-1 flex-col">
-                                            <strong class="text-lg tracking-tight">Stacked-Reel Respins</strong>
-                                            <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Matching stacks on reels 1 & 2 lock in place and award a free respin, giving you another shot at full-grid combos.
+                                        <div class="flex gap-1 flex-col max-md:gap-0">
+                                            <strong class="text-lg tracking-tight max-md:text-mobile-sm max-md:leading-[20px]">Stacked-Reel Respins</strong>
+                                            <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base">Matching stacks on reels 1 & 2 lock in place and award a free respin, giving you another shot at full-grid combos.
                                             </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red mt-[5px] flex-shrink-0 max-md:mt-1">
+                                            <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C" stroke-width="1.5"/>
                                                 </svg>
                                                 
                                         </span>
-                                        <div class="flex gap-1 flex-col">
-                                            <strong class="text-lg tracking-tight">Stacked-Reel Respins</strong>
-                                            <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Matching stacks on reels 1 & 2 lock in place and award a free respin, giving you another shot at full-grid combos.
+                                        <div class="flex gap-1 flex-col max-md:gap-0">
+                                            <strong class="text-lg tracking-tight max-md:text-mobile-sm max-md:leading-[20px]">Stacked-Reel Respins</strong>
+                                            <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base">Matching stacks on reels 1 & 2 lock in place and award a free respin, giving you another shot at full-grid combos.
                                             </p>
                                         </div>
                                     </li>
                                     <li class="flex items-start gap-2">
-                                        <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span class="text-brand-red mt-[5px] flex-shrink-0 max-md:mt-1">
+                                            <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C" stroke-width="1.5"/>
                                                 </svg>
                                                 
                                         </span>
-                                        <div class="flex gap-1 flex-col">
-                                            <strong class="text-lg tracking-tight">Stacked-Reel Respins</strong>
-                                            <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Matching stacks on reels 1 & 2 lock in place and award a free respin, giving you another shot at full-grid combos.
+                                        <div class="flex gap-1 flex-col max-md:gap-0">
+                                            <strong class="text-lg tracking-tight max-md:text-mobile-sm max-md:leading-[20px]">Stacked-Reel Respins</strong>
+                                            <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base">Matching stacks on reels 1 & 2 lock in place and award a free respin, giving you another shot at full-grid combos.
                                             </p>
                                         </div>
                                     </li>
                                 </ul>
 
-                                <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight">Why Play It</h3>
-                                <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">IfВ you prefer straightforward gameplay with intermittent bursts ofВ excitementвЂ”rather than labyrinthine bonus roundsвЂ”Call ofВ ZeusВ isВ aВ smoothВ fit. Low entry bets make itВ welcoming for casual spins, while the 1 700Г— cap and $200 ceiling keep high-rollers engaged. All action stays right here onВ VPEsports: launch the demo orВ play for real money without leaving the site.
+                                <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight max-md:mt-8 max-md:text-mobile-2xs">Why Play It</h3>
+                                <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">If you prefer straightforward gameplay with intermittent bursts of excitement—rather than labyrinthine bonus rounds—Call of Zeus is a smooth fit. Low entry bets make it welcoming for casual spins, while the 1 700× cap and $200 ceiling keep high-rollers engaged. All action stays right here on VPEsports: launch the demo or play for real money without leaving the site.
                                 </p>
                             </div>
                         </div>
@@ -317,12 +315,12 @@
                         <div class="game-info-block bg-brand-dark-gray rounded-2xl">
                             <div class="flex items-center gap-2 mb-4">
                                 <span class="text-brand-red">
-                                    <svg width="24" height="24" viewBox="0 0 20 20" fill="none"
+                                    <svg class="mobile-svg-icon-header" width="24" height="24" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 0L20 10L10 20L0 10L10 0Z" fill="#FF2C2C" />
                                     </svg>
                                 </span>
-                                <h2 class="font-furore text-2.5xl font-normal tracking-tightest text-white">GAME
+                                <h2 class="font-furore text-2.5xl font-normal tracking-tightest text-white max-md:text-mobile-2xs">GAME
                                     INFORMATION</h2>
                             </div>
 
@@ -330,46 +328,46 @@
                             <div class="wrapper-game-info">
                                 <!-- Developer -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Developer</span>
-                                    <span class="text-white/50 text-xl font-medium tracking-tightest">Nucleus
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Developer</span>
+                                    <span class="text-white/50 text-xl font-medium tracking-tightest max-md:text-mobile-sm">Nucleus
                                         Gaming</span>
                                 </div>
 
                                 <!-- Reels -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Reels</span>
-                                    <span class="text-white/50 text-xl font-medium tracking-tightest">7x7</span>
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Reels</span>
+                                    <span class="text-white/50 text-xl font-medium tracking-tightest max-md:text-mobile-sm">7x7</span>
                                 </div>
 
                                 <!-- Volatility -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Volatility</span>
-                                    <span class="text-white/50 text-xl font-medium tracking-tightest">Medium</span>
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Volatility</span>
+                                    <span class="text-white/50 text-xl font-medium tracking-tightest max-md:text-mobile-sm">Medium</span>
                                 </div>
 
                                 <!-- RTP -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">RTP</span>
-                                    <span class="text-white/50 text-xl font-medium tracking-tightest">96.4%</span>
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">RTP</span>
+                                    <span class="text-white/50 text-xl font-medium tracking-tightest max-md:text-mobile-sm">96.4%</span>
                                 </div>
 
                                 <!-- Min Bet -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Min bet</span>
-                                    <span class="text-white/50 text-xl font-medium tracking-tightest">$0.30</span>
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Min bet</span>
+                                    <span class="text-white/50 text-xl font-medium tracking-tightest max-md:text-mobile-sm">$0.30</span>
                                 </div>
 
                                 <!-- Max Bet -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Max bet</span>
-                                    <span class="text-white/50 text-xl font-medium tracking-tightest">$0.30</span>
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Max bet</span>
+                                    <span class="text-white/50 text-xl font-medium tracking-tightest max-md:text-mobile-sm">$0.30</span>
                                 </div>
 
                                 <!-- Progressive Jackpot -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Progressive
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Progressive
                                         Jackpot</span>
-                                    <div class="h-full"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    <div class="h-full"><svg class="max-md:w-[15px] max-md:-[15px]" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M6.70833 6.70833L21.2917 21.2917M14 24.5C8.20101 24.5 3.5 19.799 3.5 14C3.5 8.20101 8.20101 3.5 14 3.5C19.799 3.5 24.5 8.20101 24.5 14C24.5 19.799 19.799 24.5 14 24.5Z"
@@ -381,9 +379,9 @@
 
                                 <!-- Configurable Winlines -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Configurable
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Configurable
                                         Winlines</span>
-                                    <div class="h-full"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    <div class="h-full"><svg class="max-md:w-[15px] max-md:-[15px]" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M6.70833 6.70833L21.2917 21.2917M14 24.5C8.20101 24.5 3.5 19.799 3.5 14C3.5 8.20101 8.20101 3.5 14 3.5C19.799 3.5 24.5 8.20101 24.5 14C24.5 19.799 19.799 24.5 14 24.5Z"
@@ -395,8 +393,8 @@
 
                                 <!-- Bonus Feature -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Bonus Feature</span>
-                                    <div class="h-full"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Bonus Feature</span>
+                                    <div class="h-full"><svg class="max-md:w-[15px] max-md:-[15px]" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M6.70833 6.70833L21.2917 21.2917M14 24.5C8.20101 24.5 3.5 19.799 3.5 14C3.5 8.20101 8.20101 3.5 14 3.5C19.799 3.5 24.5 8.20101 24.5 14C24.5 19.799 19.799 24.5 14 24.5Z"
@@ -408,8 +406,8 @@
 
                                 <!-- Free Spins -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Free Spins</span>
-                                    <div class="h-full"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Free Spins</span>
+                                    <div class="h-full"><svg class="max-md:w-[15px] max-md:-[15px]" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M6.70833 6.70833L21.2917 21.2917M14 24.5C8.20101 24.5 3.5 19.799 3.5 14C3.5 8.20101 8.20101 3.5 14 3.5C19.799 3.5 24.5 8.20101 24.5 14C24.5 19.799 19.799 24.5 14 24.5Z"
@@ -421,8 +419,8 @@
 
                                 <!-- Autoplay -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Autoplay</span>
-                                    <div class="h-full"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Autoplay</span>
+                                    <div class="h-full"><svg class="max-md:w-[15px] max-md:-[15px]" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M2.625 14C2.625 7.7175 7.7175 2.625 14 2.625C20.2825 2.625 25.375 7.7175 25.375 14C25.375 20.2825 20.2825 25.375 14 25.375C7.7175 25.375 2.625 20.2825 2.625 14ZM18.2117 11.8837C18.2817 11.7904 18.3323 11.6841 18.3606 11.5709C18.389 11.4578 18.3944 11.3402 18.3766 11.2249C18.3588 11.1097 18.3181 10.9991 18.257 10.8998C18.1959 10.8005 18.1155 10.7144 18.0206 10.6466C17.9258 10.5788 17.8183 10.5306 17.7045 10.5049C17.5908 10.4793 17.473 10.4766 17.3582 10.497C17.2434 10.5175 17.1339 10.5607 17.036 10.6241C16.9381 10.6876 16.8539 10.7699 16.7883 10.8663L13.013 16.1513L11.1183 14.2567C10.9525 14.1021 10.7331 14.018 10.5064 14.022C10.2797 14.026 10.0634 14.1178 9.90311 14.2781C9.74279 14.4384 9.65096 14.6547 9.64696 14.8814C9.64296 15.1081 9.72711 15.3275 9.88167 15.4933L12.5067 18.1183C12.5965 18.2081 12.7048 18.2772 12.824 18.3209C12.9432 18.3646 13.0705 18.3819 13.1971 18.3714C13.3236 18.361 13.4464 18.3231 13.5568 18.2605C13.6673 18.1979 13.7628 18.1119 13.8367 18.0087L18.2117 11.8837Z"
@@ -433,8 +431,8 @@
 
                                 <!-- Quickspin -->
                                 <div class="flex justify-between items-center">
-                                    <span class="text-white text-xl font-medium tracking-tightest">Quickspin</span>
-                                    <div class="h-full"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    <span class="text-white text-xl font-medium tracking-tightest max-md:text-mobile-sm">Quickspin</span>
+                                    <div class="h-full"><svg class="max-md:w-[15px] max-md:-[15px]" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M2.625 14C2.625 7.7175 7.7175 2.625 14 2.625C20.2825 2.625 25.375 7.7175 25.375 14C25.375 20.2825 20.2825 25.375 14 25.375C7.7175 25.375 2.625 20.2825 2.625 14ZM18.2117 11.8837C18.2817 11.7904 18.3323 11.6841 18.3606 11.5709C18.389 11.4578 18.3944 11.3402 18.3766 11.2249C18.3588 11.1097 18.3181 10.9991 18.257 10.8998C18.1959 10.8005 18.1155 10.7144 18.0206 10.6466C17.9258 10.5788 17.8183 10.5306 17.7045 10.5049C17.5908 10.4793 17.473 10.4766 17.3582 10.497C17.2434 10.5175 17.1339 10.5607 17.036 10.6241C16.9381 10.6876 16.8539 10.7699 16.7883 10.8663L13.013 16.1513L11.1183 14.2567C10.9525 14.1021 10.7331 14.018 10.5064 14.022C10.2797 14.026 10.0634 14.1178 9.90311 14.2781C9.74279 14.4384 9.65096 14.6547 9.64696 14.8814C9.64296 15.1081 9.72711 15.3275 9.88167 15.4933L12.5067 18.1183C12.5965 18.2081 12.7048 18.2772 12.824 18.3209C12.9432 18.3646 13.0705 18.3819 13.1971 18.3714C13.3236 18.361 13.4464 18.3231 13.5568 18.2605C13.6673 18.1979 13.7628 18.1119 13.8367 18.0087L18.2117 11.8837Z"
@@ -446,7 +444,7 @@
                         </div>
 
                         <!-- Related News Block -->
-                        <div class="related-news-block bg-brand-dark-gray rounded-2xl p-4">
+                        <div class="related-news-block bg-brand-dark-gray rounded-2xl p-4 max-md:hidden">
                             <div class="flex items-center gap-2 mb-6">
                                 <span class="text-brand-red">
                                     <svg width="24" height="24" viewBox="0 0 20 20" fill="none"
@@ -509,9 +507,178 @@
                         </div>
                     </aside>
                 </div>
+                <div class="flex items-center justify-between mb-10 mt-[120px] max-md:mt-[62px] max-md:mb-[29px] lg:hidden">
+                    <div class="flex flex-col gap-2 max-md:gap-1">
+                      <div class="flex items-center gap-2">
+                        <span class="text-brand-red">
+                          <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs />
+                            <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C" fill-opacity="1.000000"
+                              fill-rule="evenodd" />
+                          </svg>
+                        </span>
+              
+                        <span class="font-furore text-3.5xl font-normal tracking-tightest text-white max-md:text-mobile-xs max-md:leading-[18px]">Next esports news</span>
+                      </div>
+                      <div class="text-white/50 text-base font-medium leading-[160%] pl-9 tracking-tight max-md:text-mobile-base max-md:pl-[28px] max-md:leadong-[15px]">Select the suggested news. Continue reading</div>
+                    </div>
+                  </div>  
+                  <section id="single-slider" class="w-full relative overflow-hidden mb-[120px] max-md:mb-[84px] lg:hidden">
 
-
-
+                    <!-- News Slider Container -->
+                    <div class="news-slider-container relative">
+                      <!-- Left gradient overlay -->
+                      <div class="absolute left-0 top-0 w-[451px] h-full z-10 pointer-events-none max-md:w-[125px]" style="background: linear-gradient(90deg, #0E0E10 13.65%, rgba(14, 14, 16, 0.00) 99.97%);"></div>
+                      
+                      <!-- Right gradient overlay -->
+                      <div class="absolute right-0 top-0 w-[451px] h-full   z-10 pointer-events-none max-md:w-[125px]" style="background: linear-gradient(270deg, #0E0E10 13.65%, rgba(14, 14, 16, 0.00) 99.97%);"></div>
+                      
+                      <!-- Slider Track -->
+                      <div class="news-slider-track flex gap-[24.5px] transition-transform duration-300 ease-out">
+                        <!-- News Card 1 -->
+                        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+                          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+                          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+                            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
+                              $5M for charity with player support</div>
+                            <div class="flex items-center gap-2 max-md:gap-1.5">
+                              <span
+                                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+                              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
+                                        fill="white" />
+                                    </g>
+                                  </svg>
+                                </span>
+                                <span>56 min ago</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- News Card 2 -->
+                        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+                          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+                          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+                            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
+                              $5M for charity with player support</div>
+                            <div class="flex items-center gap-2 max-md:gap-1.5">
+                              <span
+                                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+                              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
+                                        fill="white" />
+                                    </g>
+                                  </svg>
+                                </span>
+                                <span>56 min ago</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <!-- News Card 3 -->
+                        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+                          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+                          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+                            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
+                              $5M for charity with player support</div>
+                            <div class="flex items-center gap-2 max-md:gap-1.5">
+                              <span
+                                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+                              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
+                                        fill="white" />
+                                    </g>
+                                  </svg>
+                                </span>
+                                <span>56 min ago</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                
+                        <!-- News Card 4 -->
+                        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+                          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+                          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+                            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
+                              $5M for charity with player support</div>
+                            <div class="flex items-center gap-2 max-md:gap-1.5">
+                              <span
+                                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+                              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
+                                        fill="white" />
+                                    </g>
+                                  </svg>
+                                </span>
+                                <span>56 min ago</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- News Card 5 -->
+                        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+                          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+                          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+                            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
+                              $5M for charity with player support</div>
+                            <div class="flex items-center gap-2 max-md:gap-1.5">
+                              <span
+                                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+                              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
+                                        fill="white" />
+                                    </g>
+                                  </svg>
+                                </span>
+                                <span>56 min ago</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- News Card 6 -->
+                        <div class="news-card flex-shrink-0 w-[373px] card p-0 overflow-hidden max-md:w-[250px]">
+                          <img src="../assets/images/NEWS-2.png" alt="news" class="w-full h-[200px] object-cover rounded-[12px] max-md:h-[150px]">
+                          <div class="pt-3 max-md:flex max-md:flex-col-reverse max-md:gap-1.5">
+                            <div class="text-base text-white font-semibold mb-2.5 max-md:text-mobile-xs">The Give Back // V25 bundle raises over
+                              $5M for charity with player support</div>
+                            <div class="flex items-center gap-2 max-md:gap-1.5">
+                              <span
+                                class="bg-brand-red/20 text-brand-red text-sm px-2 py-[3px] rounded-full font-medium tracking-tight max-md:text-mobile-base max-md:py-2 max-md:px-1.5 max-md:h-5 max-md:flex max-md:items-center max-md:justify-center">Valorant</span>
+                              <span class="text-white/50 text-sm flex items-center gap-0.5 font-medium tracking-tight max-md:text-mobile-base">
+                                <span><svg class="mobile-svg-icon-max-mini" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8 1.75C4.41 1.75 1.5 4.66 1.5 8.25C1.5 11.84 4.41 14.75 8 14.75C11.59 14.75 14.5 11.84 14.5 8.25C14.5 4.66 11.59 1.75 8 1.75ZM8.5 4.25C8.5 4.11739 8.44732 3.99021 8.35355 3.89645C8.25979 3.80268 8.13261 3.75 8 3.75C7.86739 3.75 7.74022 3.80268 7.64645 3.89645C7.55268 3.99021 7.5 4.11739 7.5 4.25V8.25C7.5 8.526 7.724 8.75 8 8.75H11C11.1326 8.75 11.2598 8.69732 11.3536 8.60355C11.4473 8.50979 11.5 8.38261 11.5 8.25C11.5 8.11739 11.4473 7.99022 11.3536 7.89645C11.2598 7.80268 11.1326 7.75 11 7.75H8.5V4.25Z"
+                                        fill="white" />
+                                    </g>
+                                  </svg>
+                                </span>
+                                <span>56 min ago</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
         </div>
 
     </main>
@@ -520,47 +687,39 @@
 
 
     <!-- Footer -->
-    <footer class="bg-brand-dark rounded-3xl m-10 p-10">
-        <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
-            <div
-                class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest">
-                <div class="flex gap-[88px]">
-                    <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
-                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">PRIVACY
-                            POLICY</a>
-                        <a href="#"
-                            class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACTS</a>
-                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">ESPORTS
-                            BETTING</a>
+    <footer class="bg-brand-dark-gray rounded-3xl m-10 p-10 max-md:m-5 max-md:px-9 max-md:py-8 max-md:rounded-6">
+        <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8 max-md:gap-6">
+          <div class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest max-md:text-mobile-xs max-md:text-center">
+            <div class="flex gap-[88px] max-md:flex-col max-md:gap-10">
+              <div class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full max-md:items-center">
+                <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="hidden max-w-[119.314px] w-[119.314px] min-h-[36px] h-[36px] max-md:block mb-[18px]">
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">PRIVACY POLICY</a>
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACTS</a>
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">ESPORTS BETTING</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">BC GAME</a>
                     </div>
-                    <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+              <div class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">GGBET</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">STAKE</a>
-                        <a href="#"
-                            class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">THUNDERPICK</a>
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">THUNDERPICK</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">MYSTAKE</a>
                     </div>
-                    <div class="flex flex-col gap-10 min-w-[140px] min-h-[212px] justify-between">
-                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">TERMS OF
-                            USE</a>
-                        <a href="#"
-                            class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">DISCLAIMER</a>
-                        <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">COPYRIGHT
-                            HOLDER</a>
+              <div class="flex flex-col gap-5 min-w-[140px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">TERMS OF USE</a>
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">DISCLAIMER</a>
+                <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">COPYRIGHT HOLDER</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACT</a>
                     </div>
                 </div>
-                <div class="mt-12">
+            <div class="mt-12 max-md:mt-[55px]">
                     <span
-                        class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal">В©VPESPORTS
-                        All Rights Reserved. v0.7.51</span>
-                </div>
+                class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal max-md:text-mobile-base max-md:min-h-6">©VPESPORTS All Rights Reserved. v0.7.51</span>
             </div>
-            <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0">
-                <img src="../../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px]">
-                <div class="flex gap-6">
-                    <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg width="48" height="48"
+          </div>
+          <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0 max-md:items-center max-md:mt-0">
+            <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px] max-md:hidden">
+            <div class="flex gap-6 max-md:gap-4">
+              <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="48" height="48" rx="13.1507" fill="white" />
                             <path
@@ -571,7 +730,7 @@
                                 fill="#171719" />
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg width="48" height="48"
+              <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M46.9996 7.4946C46.4498 4.54902 44.8233 2.2256 42.754 1.42923C39.0124 0 24 0 24 0C24 0 8.99529 0 5.24599 1.42923C3.18437 2.21461 1.55785 4.53831 1.00042 7.4946C-9.40902e-08 12.84 0 23.9999 0 23.9999C0 23.9999 -9.40902e-08 35.16 1.00042 40.5054C1.55016 43.451 3.17668 45.7744 5.24599 46.5708C8.99529 48 24 48 24 48C24 48 39.0124 48 42.754 46.5708C44.8158 45.7854 46.4421 43.4617 46.9996 40.5054C48 35.16 48 24.0001 48 24.0001C48 24.0001 48 12.84 46.9996 7.4946Z"
@@ -581,7 +740,7 @@
                                 fill="#171719" />
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg width="48" height="48"
+              <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2030_411)">
                                 <path
@@ -598,7 +757,7 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg width="48" height="48"
+              <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg class="max-md:w-8 max-md:h-8" width="48" height="48"
                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2030_415)">
                                 <path
@@ -615,8 +774,8 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg width="53" height="48"
-                            viewBox="0 0 53 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg class="max-md:w-8 max-md:h-8" width="53" height="48" viewBox="0 0 53 48"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2030_418)">
                                 <path
                                     d="M41.7406 0.00195312H49.8676L32.1125 20.3322L53 47.9971H36.6453L23.8356 31.2184L9.17854 47.9971H1.04654L20.0375 26.2516L0 0.00195312H16.7698L28.3486 15.3383L41.7406 0.00195312ZM38.8883 43.1237H43.3915L14.323 4.6193H9.4905L38.8883 43.1237Z"
@@ -634,10 +793,13 @@
         </div>
     </footer>
     <!-- /Footer -->
-    <script src="../../assets/js/nav-widget.js"></script>
+<script src="../assets/js/pages/single/single-slider.js"></script>
+  <script src="../assets/js/theme-manager.js"></script>
+  <script src="../assets/js/mobile-navigation.js"></script>
   <script src="../assets/js/nav-widget.js"></script>
 
 </body>
 
 </html>
+
 

@@ -1,0 +1,502 @@
+/* ===== CUSTOM STYLES FOR MOBILE & THEMES ===== */
+/* Кастомные стили для мобильной версии и системы тем */
+
+/* ===== CSS VARIABLES FOR THEMES ===== */
+:root {
+  /* Основные цвета темной темы (по умолчанию) */
+  --bg-primary: #171719;
+  --bg-secondary: #222224;
+  --bg-tertiary: #2D2D2D;
+  --bg-dark: #111113;
+  --bg-gray: #393939;
+  
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-tertiary: rgba(255, 255, 255, 0.6);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  
+  --brand-red: #FF2C2C;
+  --brand-red-hover: #CC0000;
+  --brand-red-opacity: rgba(255, 44, 44, 0.3);
+  
+  --border-primary: rgba(255, 255, 255, 0.1);
+  --border-secondary: rgba(255, 255, 255, 0.2);
+  --border-tertiary: rgba(255, 255, 255, 0.3);
+  
+  /* Тени */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --bg-dark: #212529;
+  --bg-gray: #6c757d;
+  
+  --text-primary: #212529;
+  --text-secondary: rgba(33, 37, 41, 0.8);
+  --text-tertiary: rgba(33, 37, 41, 0.6);
+  --text-muted: rgba(33, 37, 41, 0.5);
+  
+  --brand-red: #dc3545;
+  --brand-red-hover: #bb2d3b;
+  --brand-red-opacity: rgba(220, 53, 69, 0.2);
+  
+  --border-primary: rgba(33, 37, 41, 0.1);
+  --border-secondary: rgba(33, 37, 41, 0.2);
+  --border-tertiary: rgba(33, 37, 41, 0.3);
+  
+  /* Тени для светлой темы */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== CUSTOM UTILITY CLASSES ===== */
+/* Кастомные утилитарные классы для переопределения Tailwind */
+
+/* Backgrounds */
+.bg-custom-primary { background-color: var(--bg-primary) !important; }
+.bg-custom-secondary { background-color: var(--bg-secondary) !important; }
+.bg-custom-tertiary { background-color: var(--bg-tertiary) !important; }
+.bg-custom-dark { background-color: var(--bg-dark) !important; }
+.bg-custom-gray { background-color: var(--bg-gray) !important; }
+
+/* Text Colors */
+.text-custom-primary { color: var(--text-primary) !important; }
+.text-custom-secondary { color: var(--text-secondary) !important; }
+.text-custom-tertiary { color: var(--text-tertiary) !important; }
+.text-custom-muted { color: var(--text-muted) !important; }
+
+/* Brand Colors */
+.text-custom-red { color: var(--brand-red) !important; }
+.bg-custom-red { background-color: var(--brand-red) !important; }
+.border-custom-red { border-color: var(--brand-red) !important; }
+
+/* Borders */
+.border-custom-primary { border-color: var(--border-primary) !important; }
+.border-custom-secondary { border-color: var(--border-secondary) !important; }
+.border-custom-tertiary { border-color: var(--border-tertiary) !important; }
+.mobile-dropdown{
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+}
+/* Header Mobile Styles */
+@media (max-width: 768px) {
+  /* Мобильная шапка */
+  .mobile-header {
+    padding: 24px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(20px);
+  }
+  
+  /* Скрыть десктопную навигацию на мобильных */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  /* Показать мобильную навигацию */
+  .mobile-nav {
+    display: flex !important;
+  }
+  
+  /* Мобильный логотип 4PX */
+  .mobile-logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mobile-logo {
+    height: 24px;
+    width: auto;
+    filter: brightness(1.1) contrast(1.2);
+  }
+  
+  /* Мобильные кнопки справа */
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  /* Общие стили для мобильных кнопок */
+  .mobile-action-button {
+    width: 44px;
+    height: 44px;
+    background: var(--brand-red-opacity);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .mobile-action-button:hover {
+    background: var(--brand-red);
+    transform: scale(1.05);
+  }
+  
+  .mobile-action-button svg {
+    width: 20px;
+    height: 20px;
+    color: var(--brand-red);
+    transition: color 0.3s ease;
+  }
+  
+  .mobile-action-button:hover svg {
+    color: white;
+  }
+  
+  /* Кнопка переключения темы */
+  .mobile-theme-button {
+    /* Наследует стили от mobile-action-button */
+  }
+  
+  /* Кнопка гамбургер меню */
+  .mobile-menu-button {
+    /* Наследует стили от mobile-action-button */
+    background: transparent;
+    border: 1px solid var(--brand-red-opacity);
+
+  }
+  .mobile-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.max-md\:text-xs.text-base{
+  font-size: 0.625rem !important;
+}
+.mobile-close-button {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.mobile-close-button:hover {
+    background: var(--brand-red-opacity);
+    border-color: var(--brand-red);
+}
+
+.mobile-close-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.mobile-nav-actions {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-nav-button {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-button-outline {
+    color: var(--brand-red);
+    border: 1px solid var(--brand-red);
+    background: transparent;
+}
+
+.mobile-nav-button-outline:hover {
+    background: var(--brand-red);
+    color: white;
+}
+
+.mobile-nav-button-primary {
+    background: var(--brand-red);
+    color: white;
+    border: 1px solid var(--brand-red);
+}
+
+.mobile-nav-button-primary:hover {
+    background: var(--brand-red-hover);
+    border-color: var(--brand-red-hover);
+}
+
+.mobile-theme-toggle {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-primary);
+}
+
+
+.mobile-theme-button:hover {
+    background: var(--bg-tertiary);
+}
+  /* Мобильное выпадающее меню */
+  .mobile-dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  .bg-profile-cover {
+      background-position-y: var(--mobile-bg-pos-y, -611.06px) !important;
+  }
+
+  .mobile-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    display: block
+  }
+  
+  .mobile-dropdown-content {
+    background: var(--bg-primary);
+    margin: 60px 16px 16px 16px;
+    border-radius: 16px;
+    padding: 24px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    border: 1px solid var(--border-primary);
+  }
+  
+  /* Мобильные ссылки навигации */
+  .mobile-nav-link {
+    display: block;
+    padding: 16px 0;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-primary);
+    transition: color 0.3s ease;
+  }
+  
+  .mobile-nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: var(--brand-red);
+  }
+  
+  /* Мобильный логотип */
+  .mobile-logo {
+    height: 29.87px;
+    width: 99px;
+  }
+  
+  /* Переопределения для мобильного контента */
+  .mobile-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .mobile-text-header {
+    font-size: 18px !important;
+    line-height: normal !important;
+  }
+  .text-mobile-16.text-3\.5xl{
+    font-size: 16px !important;
+    line-height: normal !important;
+  }
+  .mobile-slider-dots{
+    display: none !important;
+  }
+  .mobile-text-sm {
+    font-size: 1.25rem !important;
+  }
+  
+  .mobile-text-base {
+    font-size: 16px !important;
+  }
+  
+  .mobile-text-lg {
+    font-size: 18px !important;
+  }
+  
+  .mobile-text-xl {
+    font-size: 20px !important;
+  }
+  .fix-width.btn-outline{
+    max-width: 100% !important;
+  }
+  .mobile-text-2xl {
+    font-size: 24px !important;
+  }
+  .mobile-svg-icon-header {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-svg-icon-mini{
+    width: 16px;
+    height: 16px;
+  }
+  .mobile-svg-icon-max-mini{
+    width: 14px;
+    height: 14px;
+  }
+  .text-mini.text-sm{
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+  
+  .meta-single-slider{
+    left:16px !important;
+    right:16px !important;
+    height: 48px !important;
+    width: 318px !important;
+  }
+  /* Мобильные отступы */
+  .mobile-mt-4 { margin-top: 16px !important; }
+  .mobile-mb-4 { margin-bottom: 16px !important; }
+  .mobile-mx-4 { margin-left: 16px !important; margin-right: 16px !important; }
+  .mobile-p-4 { padding: 16px !important; }
+  
+  /* Скрыть элементы на мобильных */
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  /* Показать только на мобильных */
+  .mobile-only {
+    display: flex !important;
+  }
+
+}
+
+/* Показать только на десктопе */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .desktop-nav {
+    display: flex !important;
+  }
+}
+
+/* ===== THEME TRANSITION ANIMATIONS ===== */
+/* Анимации для смены тем */
+
+
+/* ===== RESPONSIVE UTILITIES ===== */
+/* Адаптивные утилиты */
+
+/* Скрыть элементы на определенных размерах экрана */
+@media (max-width: 640px) {
+  .sm-hidden { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  .md-hidden { display: none !important; }
+}
+
+@media (max-width: 1024px) {
+  .lg-hidden { display: none !important; }
+}
+
+/* Показать элементы только на определенных размерах */
+@media (min-width: 641px) {
+  .sm-only { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .md-only { display: none !important; }
+}
+
+@media (min-width: 1025px) {
+  .lg-only { display: none !important; }
+}
+
+/* Navigation Widget Mobile Adjustments */
+@media (max-width: 768px) {
+  .nav-widget {
+    bottom: 15px !important;
+    right: 15px !important;
+  }
+  
+  .nav-widget-toggle {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 18px !important;
+  }
+  .btn-outline{
+    max-height: 40px !important;
+    height: 40px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    display: flex;
+    max-width: 92px !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px !important;
+  }
+  .max-md\:hidden.btn-outline{
+    display: none !important;
+  }
+  
+  .nav-widget-menu {
+    min-width: 250px !important;
+    max-height: 60vh !important;
+    bottom: 60px !important;
+  }
+}
+
+/* Slider Mobile Adjustments */
+@media (max-width: 768px) {
+  
+  
+  .slider-meta {
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+/* Стили для печати */
+@media print {
+  .mobile-only,
+  .nav-widget,
+  .mobile-menu-button {
+    display: none !important;
+  }
+}

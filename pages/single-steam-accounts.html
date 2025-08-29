@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../../assets/css/slider.css">
     <link rel="stylesheet" href="../../assets/css/steam-account-slider.css">
       <link rel="stylesheet" href="../assets/css/nav-widget.css">
-  <script src="../../assets/js/config.js"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css">
+    <script src="../../assets/js/config.js"></script>
     <style>
     </style>
 </head>
@@ -78,11 +79,11 @@
                     </form>
                     <!-- Theme button -->
                     <button
-                        class="bg-brand-red bg-opacity-30 hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center">
+                        class="bg-brand-red bg-opacity-30 text-brand-red hover:bg-brand-accent transition rounded-lg px-4 py-[10px] flex items-center justify-center" data-theme-toggle>
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14 2.625C14.2321 2.625 14.4546 2.71719 14.6187 2.88128C14.7828 3.04538 14.875 3.26794 14.875 3.5V6.125C14.875 6.35706 14.7828 6.57962 14.6187 6.74372C14.4546 6.90781 14.2321 7 14 7C13.7679 7 13.5454 6.90781 13.3813 6.74372C13.2172 6.57962 13.125 6.35706 13.125 6.125V3.5C13.125 3.26794 13.2172 3.04538 13.3813 2.88128C13.5454 2.71719 13.7679 2.625 14 2.625ZM8.75 14C8.75 12.6076 9.30312 11.2723 10.2877 10.2877C11.2723 9.30312 12.6076 8.75 14 8.75C15.3924 8.75 16.7277 9.30312 17.7123 10.2877C18.6969 11.2723 19.25 12.6076 19.25 14C19.25 15.3924 18.6969 16.7277 17.7123 17.7123C16.7277 18.6969 15.3924 19.25 14 19.25C12.6076 19.25 11.2723 18.6969 10.2877 17.7123C9.30312 16.7277 8.75 15.3924 8.75 14ZM22.043 7.19367C22.1976 7.0278 22.2817 6.80841 22.2777 6.58172C22.2737 6.35504 22.1819 6.13876 22.0216 5.97844C21.8612 5.81813 21.645 5.7263 21.4183 5.7223C21.1916 5.7183 20.9722 5.80244 20.8063 5.957L18.9502 7.812C18.8666 7.89268 18.7999 7.9892 18.7539 8.09593C18.708 8.20266 18.6838 8.31747 18.6828 8.43365C18.6817 8.54983 18.7038 8.66506 18.7477 8.77261C18.7917 8.88017 18.8566 8.97789 18.9387 9.06009C19.0209 9.14228 19.1185 9.2073 19.226 9.25134C19.3335 9.29539 19.4488 9.31758 19.5649 9.31663C19.6811 9.31568 19.7959 9.29159 19.9027 9.24579C20.0095 9.19998 20.1061 9.13337 20.1868 9.04983L22.043 7.19367ZM25.375 14C25.375 14.2321 25.2828 14.4546 25.1187 14.6187C24.9546 14.7828 24.7321 14.875 24.5 14.875H21.875C21.6429 14.875 21.4204 14.7828 21.2563 14.6187C21.0922 14.4546 21 14.2321 21 14C21 13.7679 21.0922 13.5454 21.2563 13.3813C21.4204 13.2172 21.6429 13.125 21.875 13.125H24.5C24.7321 13.125 24.9546 13.2172 25.1187 13.3813C25.2828 13.5454 25.375 13.7679 25.375 14ZM20.8063 22.043C20.9722 22.1976 21.1916 22.2817 21.4183 22.2777C21.645 22.2737 21.8612 22.1819 22.0216 22.0216C22.1819 21.8612 22.2737 21.645 22.2777 21.4183C22.2817 21.1916 22.1976 20.9722 22.043 20.8063L20.188 18.9502C20.1073 18.8666 20.0108 18.7999 19.9041 18.7539C19.7973 18.708 19.6825 18.6838 19.5664 18.6828C19.4502 18.6817 19.3349 18.7038 19.2274 18.7477C19.1198 18.7917 19.0221 18.8566 18.9399 18.9387C18.8577 19.0209 18.7927 19.1185 18.7487 19.226C18.7046 19.3335 18.6824 19.4488 18.6834 19.5649C18.6843 19.6811 18.7084 19.7959 18.7542 19.9027C18.8 20.0095 18.8666 20.1061 18.9502 20.1868L20.8063 22.043ZM14 21C14.2321 21 14.4546 21.0922 14.6187 21.2563C14.7828 21.4204 14.875 21.6429 14.875 21.875V24.5C14.875 24.7321 14.7828 24.9546 14.6187 25.1187C14.4546 25.2828 14.2321 25.375 14 25.375C13.7679 25.375 13.5454 25.2828 13.3813 25.1187C13.2172 24.9546 13.125 24.7321 13.125 24.5V21.875C13.125 21.6429 13.2172 21.4204 13.3813 21.2563C13.5454 21.0922 13.7679 21 14 21ZM9.051 20.1868C9.21031 20.0217 9.2984 19.8007 9.2963 19.5712C9.2942 19.3418 9.20208 19.1224 9.03977 18.9602C8.87746 18.7981 8.65795 18.7062 8.42853 18.7043C8.1991 18.7024 7.97812 18.7907 7.81317 18.9502L5.957 20.8052C5.79753 20.9701 5.70923 21.1911 5.71112 21.4205C5.713 21.65 5.80492 21.8695 5.96708 22.0318C6.12923 22.1941 6.34865 22.2862 6.57807 22.2883C6.8075 22.2904 7.02856 22.2023 7.19367 22.043L9.04983 20.188L9.051 20.1868ZM7 14C7 14.2321 6.90781 14.4546 6.74372 14.6187C6.57962 14.7828 6.35706 14.875 6.125 14.875H3.5C3.26794 14.875 3.04538 14.7828 2.88128 14.6187C2.71719 14.4546 2.625 14.2321 2.625 14C2.625 13.7679 2.71719 13.5454 2.88128 13.3813C3.04538 13.2172 3.26794 13.125 3.5 13.125H6.125C6.35706 13.125 6.57962 13.2172 6.74372 13.3813C6.90781 13.5454 7 13.7679 7 14ZM7.81317 9.04983C7.97904 9.20439 8.19842 9.28854 8.42511 9.28454C8.65179 9.28054 8.86808 9.18871 9.02839 9.02839C9.18871 8.86808 9.28054 8.65179 9.28454 8.42511C9.28854 8.19842 9.20439 7.97904 9.04983 7.81317L7.19483 5.957C7.02988 5.79753 6.8089 5.70923 6.57947 5.71112C6.35005 5.713 6.13054 5.80492 5.96823 5.96708C5.80592 6.12923 5.7138 6.34865 5.7117 6.57807C5.7096 6.8075 5.79769 7.02856 5.957 7.19367L7.81317 9.04983Z"
-                                fill="#FF2C2C" />
+                                fill="currentColor" />
                         </svg>
                     </button>
                 </div>
@@ -102,7 +103,7 @@
     <!-- /Header -->
 
     <!-- Main Content -->
-    <main class="flex gap-6 max-w-8xl mx-auto mt-[33px]">
+    <main class="flex gap-6 max-w-8xl mx-auto mt-[33px] max-md:block max-md:px-5">
         <!-- Sidebar Left -->
         <aside class="w-[213px] hidden lg:block">
             <!-- User Card -->
@@ -180,18 +181,18 @@
 
             <!-- Single Article Section -->
             <section id="single-steam-accounts-header">
-                <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center justify-between mb-6 max-md:mb-4">
                     <div class="flex flex-col gap-2">
                         <div class="flex items-center gap-2">
                             <span class="text-brand-red">
-                                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                                <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs />
                                     <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C"
                                         fill-opacity="1.000000" fill-rule="evenodd" />
                                 </svg>
                             </span>
-                            <h1 class="font-furore text-3.5xl font-normal leading-[37px] tracking-tightest text-white">
+                            <h1 class="font-furore text-3.5xl font-normal leading-[37px] tracking-tightest text-white max-md:text-mobile-2xs">
                                 Free steam accounts</h1>
                         </div>
                     </div>
@@ -244,7 +245,7 @@
                     <!-- Get account button -->
                     <div class="steam-account-button-container">
                         <button
-                            class="steam-account-button w-full btn-primary min-w-[77px] min-h-11 px-2 rounded-[11px]  font-medium text-base tracking-tightest font-primary"
+                            class="steam-account-button w-full btn-primary min-w-[77px] min-h-11 px-2 rounded-[11px]  font-medium text-base tracking-tightest font-primary max-md:text-mobile-sm"
                             id="getAccountBtn">
                             Get an account
                         </button>
@@ -330,35 +331,32 @@
                 </div>
             </section>
 
-            <section id="steam-account-details" class="mb-[80px]">
-                <div class="steam-account-details mt-12">
+            <section id="steam-account-details" class="mb-[80px] max-md:mb-[64px]">
+                <div class="steam-account-details mt-12 max-md:mt-[60px]">
                     <div class="flex items-center gap-2 mb-4">
                         <span class="text-brand-red">
-                            <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                            <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs />
                                 <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C"
                                     fill-opacity="1.000000" fill-rule="evenodd" />
                             </svg>
                         </span>
-                        <h2 class="font-primary text-3.5xl font-bold tracking-tight text-white">Account description
+                        <h2 class="font-primary text-3.5xl font-bold tracking-tight text-white max-md:text-mobile-2xs">Account description
                         </h2>
                     </div>
                     <div>
-                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Call of
-                            ZeusВ transports you to the summit of Mount Olympus for a brisk, mythology-themed spin. The
-                            game runs on aВ 5Г—3 reel grid with 5 fixed paylines, pairing classic slot simplicity with a
-                            few punchy extras:
+                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">Call of Zeus transports you to the summit of Mount Olympus for a brisk, mythology-themed spin. The game runs on a 5×3 reel grid with 5 fixed paylines, pairing classic slot simplicity with a few punchy extras:
                         </p>
-                        <h3 class="text-white text-2xl font-primary font-bold mt-8 mb-2 tracking-tight">AUTOMATIC DELIVERY 24/7</h3>
-                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Everything here is 100 % free вЂ” just claim and play.
+                        <h3 class="text-white text-2xl font-primary font-bold mt-8 mb-2 tracking-tight max-md:text-mobile-2xs max-md:leading-[25px]">AUTOMATIC DELIVERY 24/7</h3>
+                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">Everything here is 100 % free — just claim and play.
                         </p>
-                        <h3 class="text-white text-2xl font-primary font-bold mt-8 mb-3 tracking-tight">How it works
+                        <h3 class="text-white text-2xl font-primary font-bold mt-8 mb-3 tracking-tight max-md:text-mobile-2xs max-md:leading-[25px] max-md:mb-4">How it works
                         </h3>
-                        <ul class="space-y-[21px] mb-4">
+                        <ul class="space-y-[21px] mb-4 max-md:space-y-[20px]">
                             <li class="flex items-start gap-2">
-                                <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span class="text-brand-red mt-[5px] flex-shrink-0" >
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C"
                                             stroke-width="1.5" />
@@ -367,14 +365,14 @@
                                 </span>
                                 <div class="flex gap-1 flex-col">
                                     <p
-                                        class="text-whitetext-base font-normal tracking-tight text-left leading-[180%]">
+                                        class="text-whitetext-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
                                         Choose the region of your Steam account and drop the link to your profile
                                     </p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C"
                                             stroke-width="1.5" />
@@ -383,14 +381,14 @@
                                 </span>
                                 <div class="flex gap-1 flex-col">
                                     <p
-                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%]">
+                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
                                         Click Get gift
                                     </p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C"
                                             stroke-width="1.5" />
@@ -399,14 +397,14 @@
                                 </span>
                                 <div class="flex gap-1 flex-col">
                                     <p
-                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%]">
+                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
                                         Accept the friend-request from our delivery bot.
                                     </p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C"
                                             stroke-width="1.5" />
@@ -415,62 +413,62 @@
                                 </span>
                                 <div class="flex gap-1 flex-col">
                                     <p
-                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%]">
+                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
                                         Within seconds the game lands in your Steam inventory.
                                     </p>
                                 </div>
                             </li>
                         </ul>
                         <p
-                        class="text-white text-base font-normal tracking-tight text-left leading-[180%]">
+                        class="text-white text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
                         Average delivery time: about one minute. In rare cases a short delay is possible.
                     </p>
 
-                        <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight">Activation & platform
+                        <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight max-md:text-mobile-2xs max-md:leading-[25px] max-md:mb-4">Activation & platform
                         </h3>
                         <ul class="space-y-[21px]">
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C" stroke-width="1.5"/>
                                         </svg>
                                         
                                 </span>
                                 <div class="flex gap-1 flex-col">
-                                    <strong class="text-lg tracking-tight">Format</strong>
-                                    <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Steam Gift (sent directly to your account)
+                                    <strong class="text-lg tracking-tight max-md:text-mobile-2xs">Format</strong>
+                                    <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[160%]">Steam Gift (sent directly to your account)
                                     </p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C" stroke-width="1.5"/>
                                         </svg>
                                         
                                 </span>
                                 <div class="flex gap-1 flex-col">
-                                    <strong class="text-lg tracking-tight">Play on</strong>
-                                    <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">Personal Computer
+                                    <strong class="text-lg tracking-tight max-md:text-mobile-2xs">Play on</strong>
+                                    <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[160%]">Personal Computer
                                     </p>
                                 </div>
                             </li>
                         </ul>
                         
-                        <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight">Eligible regions
+                        <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight max-md:text-mobile-2xs max-md:leading-[25px]">Eligible regions
                         </h3>
-                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">
-                            Russia рџ‡·рџ‡є вЂў Azerbaijan вЂў Armenia вЂў Belarus вЂў Georgia вЂў Kyrgyzstan вЂў Moldova вЂў Tajikistan вЂў Turkmenistan вЂў Uzbekistan
+                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
+                            Russia 🇷🇺 • Azerbaijan • Armenia • Belarus • Georgia • 
                             <br>
-                            If a title offers multiple regions, simply pick the one that matches your Steam-account country.    
+                            Kyrgyzstan • Moldova • Tajikistan • Turkmenistan • Uzbekistan If a title offers multiple regions, simply pick the one that matches your Steam-account country. 
                         </p>
 
-                        <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight">Quality & support
+                        <h3 class="text-white text-2xl font-primary font-bold mt-10 mb-3 tracking-tight max-md:text-mobile-2xs max-md:leading-[25px]">Quality & support
                         </h3>
                         <ul class="space-y-[21px] mb-4">
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C"
                                             stroke-width="1.5" />
@@ -479,14 +477,14 @@
                                 </span>
                                 <div class="flex gap-1 flex-col">
                                     <p
-                                        class="text-whitetext-base font-normal tracking-tight text-left leading-[180%]">
+                                        class="text-whitetext-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
                                         All games are purchased through the official Steam store.
                                     </p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-brand-red mt-[5px] flex-shrink-0">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    <svg class="max-md:w-3 max-md:h-3" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.9395 8L8 14.9395L1.06055 8L8 1.06055L14.9395 8Z" stroke="#FF2C2C"
                                             stroke-width="1.5" />
@@ -495,13 +493,13 @@
                                 </span>
                                 <div class="flex gap-1 flex-col">
                                     <p
-                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%]">
-                                        Lifetime support until any issue is fully resolved вЂ” just ping us in chat.
+                                        class="text-white text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-xs max-md:leading-[140%]">
+                                        Lifetime support until any issue is fully resolved — just ping us in chat.
                                     </p>
                                 </div>
                             </li>
                         </ul>
-                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%]">
+                        <p class="text-white/80 text-base font-normal tracking-tight text-left leading-[180%] max-md:text-mobile-base max-md:leading-[180%]">
                             Average delivery time: about one minute. In rare cases a short delay is possible.
                         </p>
                     </div>
@@ -509,11 +507,11 @@
             </section>
 
             <section id="choose-game" class="mb-12">
-                <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center justify-between mb-6 max-md:mb-4">
                     <div class="flex flex-col gap-2">
                         <div class="flex items-center gap-2">
                             <span class="text-brand-red">
-                                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                                <svg class="mobile-svg-icon-header" width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <defs></defs>
                                     <path id="Polygon 1" d="M14 0L0 14L14 28L28 14L14 0Z" fill="#FF2C2C"
@@ -521,7 +519,7 @@
                                 </svg>
                             </span>
 
-                            <h1 class="font-furore text-3.5xl leading-[37px] font-normal tracking-tightest text-white">
+                            <h1 class="font-furore text-3.5xl leading-[37px] font-normal tracking-tightest text-white max-md:text-mobile-xs max-md:leading-normal">
                                 Choose your game</h1>
                         </div>
                     </div>
@@ -736,12 +734,15 @@
 
 
     <!-- Footer -->
-    <footer class="bg-brand-dark rounded-3xl m-10 p-10">
-        <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
+    <footer class="bg-brand-dark-gray rounded-3xl m-10 p-10 max-md:m-5 max-md:px-9 max-md:py-8 max-md:rounded-6">
+        <div class="max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between gap-8 max-md:gap-6">
             <div
-                class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest">
-                <div class="flex gap-[88px]">
-                    <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+                class="flex-1 flex flex-col justify-between text-white font-furore text-xl font-normal tracking-tightest max-md:text-mobile-xs max-md:text-center">
+                <div class="flex gap-[88px] max-md:flex-col max-md:gap-10">
+                    <div
+                        class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full max-md:items-center">
+                        <img src="../assets/images/logo-vpe.png" alt="VPEsports"
+                            class="hidden max-w-[119.314px] w-[119.314px] min-h-[36px] h-[36px] max-md:block mb-[18px]">
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">PRIVACY
                             POLICY</a>
                         <a href="#"
@@ -750,14 +751,16 @@
                             BETTING</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">BC GAME</a>
                     </div>
-                    <div class="flex flex-col gap-10 min-w-[120px] min-h-[212px] justify-between">
+                    <div
+                        class="flex flex-col gap-5 min-w-[120px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">GGBET</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">STAKE</a>
                         <a href="#"
                             class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">THUNDERPICK</a>
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">MYSTAKE</a>
                     </div>
-                    <div class="flex flex-col gap-10 min-w-[140px] min-h-[212px] justify-between">
+                    <div
+                        class="flex flex-col gap-5 min-w-[140px] min-h-[212px] justify-between max-md:min-w-full max-md:min-h-full">
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">TERMS OF
                             USE</a>
                         <a href="#"
@@ -767,17 +770,19 @@
                         <a href="#" class="hover:text-white opacity-60 hover:opacity-100 transition-opacity">CONTACT</a>
                     </div>
                 </div>
-                <div class="mt-12">
+                <div class="mt-12 max-md:mt-[55px]">
                     <span
-                        class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal">В©VPESPORTS
+                        class="block min-h-[39px] tracking-tightest text-brand-red border-b-2 border-brand-red pb-1 w-fit text-lg font-normal max-md:text-mobile-base max-md:min-h-6">©VPESPORTS
                         All Rights Reserved. v0.7.51</span>
                 </div>
             </div>
-            <div class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0">
-                <img src="../../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px]">
-                <div class="flex gap-6">
-                    <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg width="48" height="48"
-                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div
+                class="flex flex-col items-end gap-[154.07px] min-w-[180px] mt-8 md:mt-0 max-md:items-center max-md:mt-0">
+                <img src="../assets/images/logo-vpe.png" alt="VPEsports" class="h-[57.93px] w-[192px] max-md:hidden">
+                <div class="flex gap-6 max-md:gap-4">
+                    <a href="#" class="text-white hover:opacity-80" aria-label="Instagram"><svg
+                            class="max-md:w-8 max-md:h-8" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <rect width="48" height="48" rx="13.1507" fill="white" />
                             <path
                                 d="M23.9732 37.4259C22.1582 37.4259 20.3961 37.0699 18.7359 36.3678C17.1336 35.6902 15.6953 34.7205 14.4606 33.4858C13.2259 32.2511 12.2562 30.8128 11.5786 29.2105C10.8765 27.5506 10.5205 25.7886 10.5205 23.9732C10.5205 22.1578 10.8765 20.3961 11.5786 18.7359C12.2562 17.1336 13.2259 15.6953 14.4606 14.4606C15.6953 13.2259 17.1336 12.2562 18.7359 11.5786C20.3958 10.8765 22.1578 10.5205 23.9732 10.5205C25.7886 10.5205 27.5503 10.8765 29.2105 11.5786C30.8128 12.2562 32.2511 13.2259 33.4858 14.4606C34.7205 15.6953 35.6902 17.1336 36.3678 18.7359C37.0699 20.3958 37.4259 22.1578 37.4259 23.9732C37.4259 25.7886 37.0699 27.5503 36.3678 29.2105C35.6902 30.8128 34.7205 32.2511 33.4858 33.4858C32.2511 34.7205 30.8128 35.6902 29.2105 36.3678C27.5506 37.0699 25.7886 37.4259 23.9732 37.4259ZM23.9732 15.0978C19.0793 15.0978 15.0978 19.0793 15.0978 23.9732C15.0978 28.8671 19.0793 32.8486 23.9732 32.8486C28.8671 32.8486 32.8486 28.8671 32.8486 23.9732C32.8486 19.0793 28.8671 15.0978 23.9732 15.0978Z"
@@ -787,8 +792,9 @@
                                 fill="#171719" />
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg width="48" height="48"
-                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="text-white hover:opacity-80" aria-label="YouTube"><svg
+                            class="max-md:w-8 max-md:h-8" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M46.9996 7.4946C46.4498 4.54902 44.8233 2.2256 42.754 1.42923C39.0124 0 24 0 24 0C24 0 8.99529 0 5.24599 1.42923C3.18437 2.21461 1.55785 4.53831 1.00042 7.4946C-9.40902e-08 12.84 0 23.9999 0 23.9999C0 23.9999 -9.40902e-08 35.16 1.00042 40.5054C1.55016 43.451 3.17668 45.7744 5.24599 46.5708C8.99529 48 24 48 24 48C24 48 39.0124 48 42.754 46.5708C44.8158 45.7854 46.4421 43.4617 46.9996 40.5054C48 35.16 48 24.0001 48 24.0001C48 24.0001 48 12.84 46.9996 7.4946Z"
                                 fill="white" />
@@ -797,8 +803,9 @@
                                 fill="#171719" />
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg width="48" height="48"
-                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="text-white hover:opacity-80" aria-label="Telegram"><svg
+                            class="max-md:w-8 max-md:h-8" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2030_411)">
                                 <path
                                     d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
@@ -814,8 +821,9 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg width="48" height="48"
-                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="text-white hover:opacity-80" aria-label="Facebook"><svg
+                            class="max-md:w-8 max-md:h-8" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2030_415)">
                                 <path
                                     d="M24.0001 48C37.2549 48 48.0001 37.2548 48.0001 24C48.0001 10.7452 37.2549 0 24.0001 0C10.7452 0 6.10352e-05 10.7452 6.10352e-05 24C6.10352e-05 37.2548 10.7452 48 24.0001 48Z"
@@ -831,8 +839,8 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg width="53" height="48"
-                            viewBox="0 0 53 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="text-white hover:opacity-80" aria-label="X"><svg class="max-md:w-8 max-md:h-8"
+                            width="53" height="48" viewBox="0 0 53 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2030_418)">
                                 <path
                                     d="M41.7406 0.00195312H49.8676L32.1125 20.3322L53 47.9971H36.6453L23.8356 31.2184L9.17854 47.9971H1.04654L20.0375 26.2516L0 0.00195312H16.7698L28.3486 15.3383L41.7406 0.00195312ZM38.8883 43.1237H43.3915L14.323 4.6193H9.4905L38.8883 43.1237Z"
@@ -852,9 +860,12 @@
     <!-- /Footer -->
 
     <!-- Scripts -->
-    <script src="../../assets/js/dragscroll.js"></script>
+  
+<script src="../../assets/js/dragscroll.js"></script>
     <script src="../../assets/js/pages/archive-steam-accounts/filter.js"></script>
     <script src="../../assets/js/pages/single-steam-accounts/steam-account-slider.js"></script>
+  <script src="../assets/js/theme-manager.js"></script>
+  <script src="../assets/js/mobile-navigation.js"></script>
   <script src="../assets/js/nav-widget.js"></script>
 
 
@@ -863,4 +874,5 @@
 </body>
 
 </html>
+
 
